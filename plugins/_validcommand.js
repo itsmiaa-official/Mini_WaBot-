@@ -28,19 +28,19 @@ export async function before(m, { groupMetadata }) {
   if (chat.bannedGrupo && !owner) return
 
 try {
-let chtxt = ` ֯　ׅ🫗ֶ֟ㅤ *Usuario ›* ${m.pushName}
+let chtxt = ` ֯　ׅ🇨🇳ㅤ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨 ›* ${m.pushName}
 
- ׄ ★ ׅ り *Comando usado ›* #${command}
- ׄ ☆ ׅ り *Visita ›* instagram.com/its.chinitaaa_
- ׄ ★ ׅ り *Bot ›* ${wm}
- ׄ ☆ ׅ り *Versión del bot ›* ^1.0.0`
+ ׄ 💋 ׅ り *𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐔𝐬𝐚𝐝𝐨 ›* #${command}
+ ׄ 🔥 ׅ り *𝐕𝐢𝐬𝐢𝐭𝐚 ›* instagram.com/its.chinitaaa_
+ ׄ 💋 ׅ り *𝐁𝐨𝐭 ›* ${wm}
+ ׄ 🔥 ׅ り *𝐕𝐞𝐫𝐬𝐢𝐨́𝐧 𝐝𝐞𝐥 𝐛𝐨𝐭 ›* ^1.0.0`
 
 let ppch = await this.profilePictureUrl(m.sender, 'image').catch(_ => "https://stellarwa.xyz/files/1757206448404.jpeg")
 global.conn.sendMessage(my.ch, { text: chtxt,
 contextInfo: { 
 externalAdReply: {
-title: "🌟 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢́𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 🌟",
-body: '✨ ¡𝙉𝙪𝙚𝙫𝙤 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙪𝙨𝙖𝙙𝙤! ✨',
+title: "🇨🇳 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢́𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 🇨🇳",
+body: '🔥 ¡𝙉𝙪𝙚𝙫𝙤 𝙘𝙤𝙢𝙖𝙣𝙙𝙤 𝙪𝙨𝙖𝙙𝙤! 🔥',
 thumbnailUrl: ppch,
 sourceUrl: redes,
 mediaType: 2,
