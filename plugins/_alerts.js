@@ -13,8 +13,8 @@ let userss = m.messageStubParameters[0]
 const realSender = await resolveLidToRealJid(m?.sender, conn, m?.chat);
 
 let admingp, noadmingp
-admingp = `🕸 @${userss.split('@')[0]} ha sido promovido a Administrador por @${realSender.split('@')[0]}`
-noadmingp =  `🕸 @${userss.split('@')[0]} ha sido degradado de Administrador por @${realSender.split('@')[0]}`
+admingp = `🔥 @${userss.split('@')[0]} ha sido promovido a Administrador por @${realSender.split('@')[0]}`
+noadmingp =  `🔥 @${userss.split('@')[0]} ha sido degradado de Administrador por @${realSender.split('@')[0]}`
 
 if (chat.detect && m.messageStubType == 2) {
 const uniqid = (m.isGroup ? m.chat : m.sender).split('@')[0]
