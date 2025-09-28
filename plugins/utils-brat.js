@@ -46,6 +46,6 @@ let handler = async (m, { conn, args }) => {
 
 handler.help = ['brat <texto>']
 handler.tags = ['utils']
-handler.command = /^brat$/i
+handler.command = ['brat']
 
 export default handler
