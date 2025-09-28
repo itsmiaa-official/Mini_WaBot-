@@ -1,7 +1,7 @@
 # Código desarrollado por @gata_dios 
 
 #!/data/data/com.termux/files/usr/bin/bash 
-BOT_DIR="Luna"  
+BOT_DIR="Mitzuki-China"  
 BOT_REPO="https://github.com/ittschinitaaa/$BOT_DIR"
 DB_FILE="datos.json"
 
