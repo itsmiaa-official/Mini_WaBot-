@@ -4,13 +4,13 @@ import { fileURLToPath } from "url"
 
 global.botNumber = ""
 
-global.owner = ["923256941884"]
+global.owner = ["573243768166"]
 
-global.botname = '𝕮𝖍𝖎𝖓𝖆 - 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
-global.namebot = '𝕮𝖍𝖎𝖓𝖆 - 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
-global.bot = '⏤͟͟͞͞𝕮𝖍𝖎𝖓𝖆 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 💋🔥'
-global.packname = '𝕮𝖍𝖎𝖓𝖆 - 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
-global.wm = '𝕮𝖍𝖎𝖓𝖆 - 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
+global.botname = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
+global.namebot = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
+global.bot = '⏤͟͟͞͞𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 💋🔥'
+global.packname = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
+global.wm = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳'
 global.author = '𝕮𝖍𝖎𝖓𝖆 🔥💋'
 global.dev = '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜɪɴᴀ 🔥'
 
