@@ -40,7 +40,7 @@ termux-setup-storage
 apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 ```bash
-git clone https://github.com/ittschinitaaa/Luna && cd Luna
+git clone https://github.com/ittschinitaaa/Mitzuki-China && cd Mitzuki-China
 ```
 ```bash
 yarn install
