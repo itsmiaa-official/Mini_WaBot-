@@ -31,7 +31,7 @@ const ucapan = jam < '05:00:00' ? 'Buen día' : jam < '11:00:00' ? 'Buen día' :
 
 let menu = `\n\n`
     
-menu += `*¡𝙃𝙤𝙡𝙖!, 𝙎𝙤𝙮 𝕮𝖍𝖎𝖓𝖆 - 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳* \n`
+menu += `*¡𝙃𝙤𝙡𝙖!, 𝙎𝙤𝙮 ${botname}* \n`
 menu += `Aǫᴜɪ ᴇsᴛᴀ ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs: \n\n`
 menu += `╭┈ ↷\n`
 menu += `│ ✐ 𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂  𝑪𝑯𝑰𝑁𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ\n`
@@ -60,7 +60,7 @@ menu += `> "Muchas copias, Pero ninguna como la original." 💋\n`
         continue;
       }
       const catName = category.charAt(0).toUpperCase() + category.slice(1)
-      menu += `\n╭ֹ┈ ⵿❀⵿ ${catName} \n`
+      menu += `\n˚ ₊ ‧  ꒰🎀꒱  — \`『 ${catName} 』\`  \n`
       cmds.forEach(cmd => {
       const match = usedPrefix.match(/[#\/+.!-]$/);
 const separator = match ? match[0] : '';
