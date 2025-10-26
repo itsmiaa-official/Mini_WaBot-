@@ -27,13 +27,13 @@ if (!text.trim()) return conn.reply(m.chat, `🔔 *Por favor, ingresa el nombre 
     
 > *🎬 Canal:* ${canal}
      
-*👀 Vistas:* ${vistas}   
-*⏳ Duración:* ${timestamp}
-*🤩 Calidad:* 320kbps
-*📆 Publicado:* ${ago}
-*🔗 Link:* ${url}
+\`👀 Vistas:\` ${vistas}   
+\`⏳ Duración:\` ${timestamp}
+\`🤩 Calidad:\` 320kbps
+\`📆 Publicado:\` ${ago}
+\`🔗 Link:\` ${url}
 
-${botname} | ${dev}`
+${dev}`
 
     const thumb = (await conn.getFile(thumbnail))?.data
     const external = {
