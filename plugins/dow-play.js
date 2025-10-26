@@ -17,7 +17,7 @@ if (!text.trim()) return conn.reply(m.chat, `🔔 *Por favor, ingresa el nombre 
 
     if (!video) return conn.reply(m.chat, '❌ *No se encontraron resultados para tu búsqueda.*', m)
    
-    await m.react('⏱️')
+  //  await m.react('⏱️')
     const { title, thumbnail, timestamp, views, ago, url, author } = video
     const vistas = formatViews(views)
     const canal = author?.name || 'Desconocido'
@@ -77,7 +77,7 @@ ${botname} | ${etiqueta}`
           }
         }, { quoted: m })
 
-        await m.react('✅')
+     //   await m.react('✅')
       } catch (e) {
         return conn.reply(m.chat, '*❌ No se pudo enviar el audio. El archivo podría ser demasiado pesado o hubo un error en la generación del enlace.*', m)
       }
@@ -106,7 +106,7 @@ ${botname} | ${etiqueta}`
           m
         )
 
-        await m.react('✅')
+      //  await m.react('✅')
       } catch (e) {
         return conn.reply(m.chat, '⚠️ *No se pudo enviar el video. El archivo podría ser muy pesado o hubo un error en el enlace.*', m)
       }
