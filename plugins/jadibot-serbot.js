@@ -195,7 +195,7 @@ let chtxt = ` ֯　ׅ🫗ֶ֟ㅤ *Usuario ›* ${userName}
  ׄ 🔥 ׅ り *Bot ›* ${wm}
  ׄ 🇨🇳 ׅ り *Versión del bot ›* ^1.0.0
 
-> *¡Conviértete en un sub-bot ahora, únete al canal oficial!*\nhttps://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l`
+> *¡Conviértete en un sub-bot ahora!*\n @${m.sender.split('@')[0]}`
 
 let ppch = await sock.profilePictureUrl(m.sender, 'image').catch(_ => "https://stellarwa.xyz/files/1757206448404.jpeg")
 await global.conn.sendMessage(my.ch1, { text: chtxt,
