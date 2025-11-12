@@ -30,7 +30,7 @@ let handler = async (m, { conn, command }) => {
   }
 };
 
-handler.help = ['closet', 'open'];
+handler.help = ['close', 'open'];
 handler.tags = ['group'];
 handler.command = ['close', 'open'];
 handler.admin = true;
