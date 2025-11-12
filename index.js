@@ -34,7 +34,7 @@ let { say } = cfonts
 
 console.log(chalk.magentaBright('\n✧ Iniciando...'))
 
-say('China-Mitzuki', {
+say('Aenira', {
   font: 'simple',
   align: 'left',
   colors: ['cyan']
