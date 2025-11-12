@@ -2,9 +2,13 @@ import { watchFile, unwatchFile } from "fs"
 import chalk from "chalk"
 import { fileURLToPath } from "url"
 
+// coloca el numero para ser bot
 global.botNumber = ""
+// ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
 global.owner = ["573243768166"]
+
+// ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
 global.botname = '𝐀𝐞𝐧𝐢𝐫𝐚 🍒'
 global.namebot = '𝐀𝐞𝐧𝐢𝐫𝐚 𝐛𝐨𝐭 🍒'
@@ -14,16 +18,22 @@ global.wm = '𝐀𝐞𝐧𝐢𝐫𝐚-𝐌𝐃'
 global.author = '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ'
 global.dev = '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜɪɴᴀ 🔥'
 
-global.banner = 'https://files.catbox.moe/bw463n.jpg'
+// ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
+
+global.banner = 'https://files.catbox.moe/sgul0u.jpg'
 global.icon = 'https://files.catbox.moe/57djkj.jpg'
 global.currency = 'StarCoins'
 global.sessions = 'sessions/session-bot'
 global.jadi = 'sessions/session-sub'
 
+// ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
+
 global.api = { 
 url: 'https://api.stellarwa.xyz',
 key: 'Diamond'
 }
+
+// ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
 global.my = {
   ch: '120363402839382986@newsletter', 
