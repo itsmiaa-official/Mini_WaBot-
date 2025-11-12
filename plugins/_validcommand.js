@@ -27,7 +27,7 @@ export async function before(m, { groupMetadata }) {
   if (command === 'mute') return;
   if (chat.bannedGrupo && !owner) return
 
-try {
+/*try {
 let chtxt = ` ֯　ׅ🇨🇳ㅤ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨 ›* ${m.pushName}
 
  ׄ 💋 ׅ り *𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐔𝐬𝐚𝐝𝐨 ›* #${command}
@@ -50,7 +50,7 @@ renderLargerThumbnail: false
 } catch (e) {
 console.log(`[ 🐼  ]  Error al enviar el mensaje al canal.\n[ 🕸  ]  ${e}`)
 }
-
+*/
   if (validCommand(command, globalThis.plugins)) {
   } else {
     const comando = command;
