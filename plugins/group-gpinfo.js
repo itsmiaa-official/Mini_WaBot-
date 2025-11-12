@@ -44,12 +44,12 @@ const handler = async (m, { conn, groupMetadata }) => {
       message += `𖹭  ׄ  ְ 🫂 Registrados › *${registeredUsersInGroup}*\n`
       message += `𖹭  ׄ  ְ 🪙 Dinero › *${totalCoins.toLocaleString()} ${currency}*\n\n`
       message += `🫗۫᷒ᰰ⃘ׅ᷒  *Configuraciones:*\n`
-      message += `ׅ  ׄ 🔥 ׅ り ${bot} › *${settings.bot}*\n`
-      message += `ׅ  ׄ 💋 ׅ り AntiLinks › *${settings.antiLinks}*\n`
-      message += `ׅ  ׄ 🔥 ׅ り Bienvenidas › *${settings.welcomes}*\n`
-      message += `ׅ  ׄ 💋 ׅ り Alertas › *${settings.alerts}*\n`
-      message += `ׅ  ׄ 🔥 ׅ り Nsfw › *${settings.nsfw}*\n`
-      message += `ׅ  ׄ 💋 ׅ り ModoAdmin › *${settings.adminMode}*`
+      message += `ׅ  ׄ 🍒 ׅ り ${bot} › *${settings.bot}*\n`
+      message += `ׅ  ׄ 🍒 ׅ り AntiLinks › *${settings.antiLinks}*\n`
+      message += `ׅ  ׄ 🍒 ׅ り Bienvenidas › *${settings.welcomes}*\n`
+      message += `ׅ  ׄ 🍒 ׅ り Alertas › *${settings.alerts}*\n`
+      message += `ׅ  ׄ 🍒 ׅ り Nsfw › *${settings.nsfw}*\n`
+      message += `ׅ  ׄ 🍒 ׅ り ModoAdmin › *${settings.adminMode}*`
 
         const mentionOw = groupMetadata.ownerJid ? groupMetadata.ownerJid : groupMetadata.owner ? groupMetadata.owner : '';
         const mentions = [rawPrimary, mentionOw].filter(Boolean);
