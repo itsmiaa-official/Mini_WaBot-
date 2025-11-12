@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
     const start = new Date().getTime();
-    const { key } = await conn.sendMessage(m.chat, {text: `Status Charging...🔥`}, {quoted: m});
+    const { key } = await conn.sendMessage(m.chat, {text: `Status Charging...🍭`}, {quoted: m});
     const end = new Date().getTime();
 
     const latency = end - start;
@@ -16,13 +16,13 @@ let handler = async (m, { conn }) => {
 
     setTimeout(async () => {
         let response = 
-`﹒⌗﹒💋 .˚₊‧  Hola, @${m.sender.split('@')[0]}.
+`﹒⌗﹒🍒 .˚₊‧  Hola, @${m.sender.split('@')[0]}.
 
-🇨🇳  .→﹒ Ping Status .  ◌Ⳋ𝅄
+🍫  .→﹒ Ping Status .  ◌Ⳋ𝅄
 
-🔥 \`Ping:\` ${latency} ms
-🔥 \`Uptime:\` [ ${uptimeFormatted} ]
-🔥 \`RAM usada:\` ${usedRAM} MB`;
+🍒 \`Ping:\` ${latency} ms
+🍒 \`Uptime:\` [ ${uptimeFormatted} ]
+🍒 \`RAM usada:\` ${usedRAM} MB`;
 
         await conn.sendMessage(m.chat, { text: response, edit: key, mentions: [m.sender] }, { quoted: m });
     }, latency);
