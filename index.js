@@ -32,17 +32,17 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 let { say } = cfonts
 
-console.log(chalk.magentaBright('\nIniciando...'))
+console.log(chalk.magentaBright('\n✧ Iniciando...'))
 
 say('China-Mitzuki', {
   font: 'simple',
   align: 'left',
-  gradient: ['green', 'white']
+  colors: ['cyan']
 })
 say('Powered By China 🔥', {
   font: 'console',
   align: 'center',
-  colors: ['cyan', 'magenta', 'yellow']
+  colors: ['yellow']
 })
 
 protoType()
