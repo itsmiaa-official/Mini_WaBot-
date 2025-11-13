@@ -1,5 +1,4 @@
-
-/*import fs from 'fs'
+import fs from 'fs'
 
 let handler = async (m, { conn }) => {
   
@@ -53,7 +52,7 @@ https://github.com/danielalejandrobasado-glitch
 
 handler.command = ['staff', 'colaboradores']
 handler.owner = true
-export default handler*/
+export default handler
 
 /*Función para mostrar horas/min/seg
 function clockString(ms) {
