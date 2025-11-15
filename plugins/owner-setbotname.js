@@ -19,6 +19,7 @@ let handler = async (m, { text }) => {
 
 handler.help = ['setname <nombre>'];
 handler.tags = ['config'];
-handler.command = /^setname$/i;
+handler.command = ['setname']
+handler.owner = true
 
 export default handler;
