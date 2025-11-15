@@ -19,6 +19,7 @@ let handler = async (m, { text }) => {
 
 handler.help = ['setbanner <link>'];
 handler.tags = ['config'];
-handler.command = /^setbanner$/i;
+handler.command = ['setbanner']
+handler.owner = true
 
 export default handler;
