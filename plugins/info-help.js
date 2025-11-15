@@ -26,8 +26,8 @@ let handler = async (m, { conn }) => {
 ⭐ ¡𝖧𝗈𝗅𝖺! 𝖲𝗈𝗒 ${botName}, 𝖺𝗊𝗎𝗂 𝗍𝗂𝖾𝗇𝖾𝗌 𝗅𝖺 𝗅𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌 🍒
 💰 𝖬𝗈𝗇𝖾𝖽𝖺 𝖺𝖼𝗍𝗎𝖺𝗅: ¥ ${currency}
 
-Checa nuestro Canal Oficial de WhatsApp en donde se publican actualizaciones:
-https://whatsapp.com/channel/0029Vaj5mivLdQegrUZ1Xl3M
+Nuestro Canal Oficial de WhatsApp en donde se publican actualizaciones:
+https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x
 
 Canal secundario:
 https://whatsapp.com/channel/0029VbBCHSsJZg41QE3Ibl3O
