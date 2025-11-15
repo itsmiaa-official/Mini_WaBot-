@@ -140,7 +140,7 @@ https://whatsapp.com/channel/0029VbBCHSsJZg41QE3Ibl3O
 
 handler.help = ['menu'];
 handler.tags = ['info'];
-handler.command = /^(menu)$/i;
+handler.command = ['menu'];
 
 export default handler;
 
