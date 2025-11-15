@@ -299,7 +299,13 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
                 video: { url: randomVideoUrl },
                 gifPlayback: true,
                 caption: menuMessage,
-                mentions: [m.sender]
+                mentions: [m.sender], 
+                // inicio
+                forwardedNewsletterMessageInfo: {
+            newsletterJid: "120363345778623279@newsletter", 
+            serverMessageId: "1",
+            newsletterName: "𝐒𝐩𝐚𝐜𝐞 𝐖𝐨𝐫𝐥𝐝 𝐂𝐥𝐮𝐛'𝐬 - 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✰",
+                    //fin
             }
         );
     } catch (error) {
