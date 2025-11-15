@@ -12,6 +12,7 @@ global.owner = ["573243768166"]
 
 global.botname = '𝐀𝐞𝐧𝐢𝐫𝐚 🍒'
 global.namebot = '𝐀𝐞𝐧𝐢𝐫𝐚 𝐛𝐨𝐭 🍒'
+global.vs = '1.0.0'
 global.bot = '𝐀𝐞𝐧𝐢𝐫𝐚'
 global.packname = '𝐀́𝐄𝐍𝐈𝐑𝐀-𝐁𝐎𝐓 🍒'
 global.wm = '𝐀𝐞𝐧𝐢𝐫𝐚-𝐌𝐃'
