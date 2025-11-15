@@ -7,7 +7,7 @@ let handler = async (m, { conn, args }) => {
   try {
     const texto = args.join(' ').trim()
     if (!texto) {
-      await conn.sendMessage(m.chat, { react: { text: '🧃', key: m.key } })
+      await conn.sendMessage(m.chat, { react: { text: '⭐', key: m.key } })
       return m.reply(`⚠️ *Ejemplo de uso:* .brat hola mundo`)
     }
 
