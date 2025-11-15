@@ -303,6 +303,24 @@ https://whatsapp.com/channel/0029VbBCHSsJZg41QE3Ibl3O
                 caption: menuMessage,
                 mentions: [m.sender]
             }
+            const channelRD = canales[Math.floor(Math.random() * canales.length)]
+//inicio
+ await conn.sendMessage(m.chat, {
+document: await (await fetch(banner)).buffer(),
+fileName: '^1.0.0  | Lastest 💋',
+mimetype: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+fileLength: '0',
+pageCount: '1',
+caption: menu.trim(),
+contextInfo: {
+forwardingScore: 0,
+isForwarded: true,
+forwardedNewsletterMessageInfo: {
+newsletterJid: channelRD.id,
+serverMessageId: '0',
+newsletterName: channelRD.nombre
+},
+    // fin
         );
     } catch (error) {
         conn.reply(m.chat, `❌ Error al cargar el menú: ${error.message}`, m);
