@@ -19,6 +19,7 @@ let handler = async (m, { text }) => {
 
 handler.help = ['setmoneda <nombre de la moneda>'];
 handler.tags = ['config'];
-handler.command = /^setmoneda$/i;
+handler.command = ['setmoneda']
+handler.owner = true
 
 export default handler;
