@@ -311,7 +311,7 @@ fileName: '^1.0.0  | Lastest 💋',
 mimetype: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 fileLength: '0',
 pageCount: '1',
-caption: menu.trim(),
+caption: menuMessage,
 contextInfo: {
 forwardingScore: 0,
 isForwarded: true,
