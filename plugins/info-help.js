@@ -30,7 +30,7 @@ Nuestro Canal Oficial de WhatsApp en donde se publican actualizaciones:
 https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x
 
 Canal secundario:
-https://whatsapp.com/channel/0029VbBCHSsJZg41QE3Ibl3O
+https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 
 
 ˚ ₊ ‧  ꒰🍒꒱  — \`『 Personalice 』\`
