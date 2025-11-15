@@ -5,7 +5,7 @@ const filePath = './lib/personalize.json';
 // Datos predeterminados que se agregarán al archivo si no existe
 const defaultData = {
     default: {
-        botName: "Galaxy",
+        botName:`${botname}`, 
         currency: "Starcoins",
         videos: [
             "https://files.catbox.moe/b5n81s.mp4",
