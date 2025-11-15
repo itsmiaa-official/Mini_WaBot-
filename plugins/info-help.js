@@ -121,7 +121,7 @@ https://whatsapp.com/channel/0029VbBCHSsJZg41QE3Ibl3O
 │ ✧ .ono / .offoS
 ╰── ⋆⋅🚀⋅⋆ ──╯
 
-> ${copy} Hecho con mucho amor por ${dev}
+> ${copy} ${author}
 `;
 
         await conn.sendMessage(
