@@ -18,7 +18,7 @@ let handler = async (m, { text }) => {
 };
 
 handler.help = ['setname <nombre>'];
-handler.tags = ['config'];
+handler.tags = ['owner'];
 handler.command = ['setname']
 handler.owner = true
 
