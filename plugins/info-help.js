@@ -23,8 +23,8 @@ let handler = async (m, { conn }) => {
 ├̟̇❀ 𝑽𝒆𝒓𝒔𝒊𝒐́𝒏 : ${vs}
 ╰──────────╼
 
-💬¡Hola ! Soy ${botName}, aquí tienes la lista de comandos ✨
-💰 Moneda actual: ¥ ${currency}
+⭐ ¡𝖧𝗈𝗅𝖺! 𝖲𝗈𝗒 ${botName}, 𝖺𝗊𝗎𝗂 𝗍𝗂𝖾𝗇𝖾𝗌 𝗅𝖺 𝗅𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌 🍒
+💰 𝖬𝗈𝗇𝖾𝖽𝖺 𝖺𝖼𝗍𝗎𝖺𝗅: ¥ ${currency}
 
 Checa nuestro Canal Oficial de WhatsApp en donde se publican actualizaciones:
 https://whatsapp.com/channel/0029Vaj5mivLdQegrUZ1Xl3M
