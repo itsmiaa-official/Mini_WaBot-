@@ -18,7 +18,7 @@ let handler = async (m, { text }) => {
 };
 
 handler.help = ['setmoneda <nombre de la moneda>'];
-handler.tags = ['config'];
+handler.tags = ['owner'];
 handler.command = ['setmoneda']
 handler.owner = true
 
