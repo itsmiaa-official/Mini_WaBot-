@@ -292,7 +292,29 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#brat* + _<texto>_
 > _*Crea un sticker con texto.*_`;
 
-        await conn.sendMessage(
+await conn.sendMessage(
+  m.chat,
+  {
+    text: menuMessage,
+    mentions: [m.sender],
+    contextInfo: {
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: "12036340XXXXXXXX@newsletter", // tu ID
+        serverMessageId: '',
+        newsletterName: "Nombre de tu Canal"     // obligatorio si querés que aparezca
+      },
+      externalAdReply: {
+        body: `${botName}`,
+        thumbnailUrl: randomimagenesUrl,
+        mediaType: 1,
+        renderLargerThumbnail: true
+      }
+    }
+  }
+);
+        
+        /*await conn.sendMessage(
             m.chat,
             {
                 text: menuMessage,
@@ -307,7 +329,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
                     }
                 }
             }
-        );
+        ); */
 
     } catch (error) {
         conn.reply(m.chat, `❌ Error al cargar el menú: ${error.message}`, m);
