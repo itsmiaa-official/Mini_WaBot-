@@ -302,10 +302,11 @@ await conn.sendMessage(
       forwardedNewsletterMessageInfo: {
         newsletterJid: "12036340XXXXXXXX@newsletter", // tu ID
         serverMessageId: '',
-        newsletterName: "Nombre de tu Canal"     // obligatorio si querés que aparezca
+        newsletterName: "Canal de prueba"     // obligatorio si querés que aparezca
       },
       externalAdReply: {
-        body: `${botName}`,
+        title: `${botName}`,
+        body: `${copy} ${author}`,
         thumbnailUrl: randomimagenesUrl,
         mediaType: 1,
         renderLargerThumbnail: true
