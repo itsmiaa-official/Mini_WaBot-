@@ -5,17 +5,17 @@ const filePath = './lib/personalize.json';
 let handler = async (m) => {
     const data = JSON.parse(fs.readFileSync(filePath));
 
-    const videos = data.global?.videos?.length > 0 
-        ? data.global.videos 
-        : data.default.videos;
+    const imagenes = data.global?.imagenes?.length > 0 
+        ? data.global.imagenes 
+        : data.default.imagenes;
 
-    if (!videos.length) {
-        m.reply('❌ No hay videos configurados.');
+    if (!imagenes.length) {
+        m.reply('❌ No hay imagenes configuradas.');
         return;
     }
 
-    const videoList = videos.map((url, index) => `${index + 1}. ${url}`).join('\n');
-    m.reply(`🎥 *Videos configurados:*\n\n${videoList}`);
+    const imagenesList = imagenes.map((url, index) => `${index + 1}. ${url}`).join('\n');
+    m.reply(`🎥 *imágenes configuradas:*\n\n${imagenesList}`);
 };
 
 handler.help = ['viewbanner'];
