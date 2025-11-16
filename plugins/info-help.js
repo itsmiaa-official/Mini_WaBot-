@@ -223,7 +223,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 > _*Cambia el nombre del grupo.*_
 
 ˚ ₊ ‧  ꒰📝꒱  — \`『 Info 』\`
-✿ *#menu › #help* + _<category>_
+✿ *#menu › #help*
 > _*Muestra la lista de comandos.*_
 ✿ *#ping › #p* 
 > _*Muestra la velocidad del Bot.*_
@@ -321,6 +321,6 @@ await conn.sendMessage(
 
 handler.help = ['menu'];
 handler.tags = ['info'];
-handler.command = ['menu'];
+handler.command = ['menu','help'];
 
 export default handler;
