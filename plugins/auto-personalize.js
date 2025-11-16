@@ -8,9 +8,9 @@ const defaultData = {
         botName: "𝐒𝐮𝐦𝐢 𝐒𝐚𝐤𝐮𝐫𝐚𝐬𝐚𝐰𝐚", 
         currency: "Starcoins",
         imagenes: [
-            "https://files.catbox.moe/yfca39.mp4",
-            "https://files.catbox.moe/yfca39.mp4",
-            "https://files.catbox.moe/yfca39.mp4"
+            "https://files.catbox.moe/9su2ju.jpg",
+            "https://files.catbox.moe/9su2ju.jpg",
+            "https://files.catbox.moe/9su2ju.jpg"
         ]
     },
     global: {
