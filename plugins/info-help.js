@@ -302,7 +302,7 @@ await conn.sendMessage(
       forwardedNewsletterMessageInfo: {
         newsletterJid: my.ch,//"120363345778623279@newsletter",
         serverMessageId: '',
-        newsletterName: my.name //"Canal de prueba"  
+        newsletterName: my.name1 //"Canal de prueba"  
       },
       externalAdReply: {
         title: `${botName}`,
