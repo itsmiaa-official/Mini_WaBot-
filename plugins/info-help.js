@@ -12,9 +12,9 @@ let handler = async (m, { conn }) => {
 
         const botName = globalConfig.botName || defaultConfig.botName;
         const currency = globalConfig.currency || defaultConfig.currency;
-        const videos = globalConfig.videos.length > 0 ? globalConfig.videos : defaultConfig.videos;
+        const imagenes = globalConfig.imagenes.length > 0 ? globalConfig.imagenes : defaultConfig.imagenes;
 
-        const randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+        const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
 
         const menuMessage = `
 ├┈ ↷ ${botName}
@@ -297,7 +297,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
         await conn.sendMessage(
             m.chat,
             {
-                video: { url: randomVideoUrl },
+                imagenes: { url: randomimagenesUrl },
                 gifPlayback: true,
                 caption: menuMessage,
                 mentions: [m.sender], 
