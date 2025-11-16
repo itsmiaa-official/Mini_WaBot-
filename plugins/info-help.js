@@ -292,7 +292,39 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#brat* + _<texto>_
 > _*Crea un sticker con texto.*_`;
 
-await conn.sendMessage(
+ await conn.sendMessage(
+  m.chat,
+  {
+    text: menuMessage,
+    mentions: [m.sender],
+    contextInfo: {
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: my.ch,
+        serverMessageId: '',
+        newsletterName: my.name1
+      },
+      externalAdReply: {
+        title: `${botName}`,
+        body: `${copy} ${author}`,
+        thumbnailUrl: randomimagenesUrl,
+        mediaType: 1,
+        renderLargerThumbnail: true
+      }
+    },
+    // 🔽🔽 AQUÍ VAN LOS BOTONES 🔽🔽
+    buttons: [
+      {
+        buttonId: "#code",
+        buttonText: { displayText: "> 𝖲𝖤𝖱-𝖡𝖮𝖳" },
+        type: 1
+      }
+    ],
+    headerType: 1
+  }
+);
+        
+/*await conn.sendMessage(
   m.chat,
   {
     text: menuMessage,
@@ -313,7 +345,7 @@ await conn.sendMessage(
       }
     }
   }
-);
+);*/
     } catch (error) {
         conn.reply(m.chat, `❌ Error al cargar el menú: ${error.message}`, m);
     }
