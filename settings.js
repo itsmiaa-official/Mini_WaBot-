@@ -6,16 +6,16 @@ import { fileURLToPath } from "url"
 global.botNumber = ""
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.owner = ["573243768166"]
+global.owner = ["573243768166","5492644996684"]
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.botname = '𝐀𝐞𝐧𝐢𝐫𝐚 🍒'
-global.namebot = '𝐀𝐞𝐧𝐢𝐫𝐚 𝐛𝐨𝐭 🍒'
+global.botname = '𝐒𝐮𝐦𝐢 𝐒𝐚𝐤𝐮𝐫𝐚𝐬𝐚𝐰𝐚 🌸'
+global.namebot = '𝐒𝐮𝐦𝐢-𝐖𝐚 🌸'
 global.vs = '1.0.0'
 global.bot = '𝐀𝐞𝐧𝐢𝐫𝐚'
-global.packname = '𝐀́𝐄𝐍𝐈𝐑𝐀-𝐁𝐎𝐓 🍒'
-global.wm = '𝐀𝐞𝐧𝐢𝐫𝐚-𝐌𝐃'
+global.packname = '𝐒𝐔𝐌𝐈 𝐒𝐀𝐊𝐔𝐑𝐀𝐒𝐀𝐖𝐀 🌸'
+global.wm = '𝐒𝐮𝐦𝐢-𝐁𝐨𝐭 🌸'
 global.author = '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ'
 global.dev = '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜɪɴᴀ 🔥'
 global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🩷 𝐛𝐲'
