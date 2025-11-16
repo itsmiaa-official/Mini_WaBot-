@@ -18,7 +18,7 @@ global.packname = '𝐀́𝐄𝐍𝐈𝐑𝐀-𝐁𝐎𝐓 🍒'
 global.wm = '𝐀𝐞𝐧𝐢𝐫𝐚-𝐌𝐃'
 global.author = '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ'
 global.dev = '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜɪɴᴀ 🔥'
-global.copy = '❤ 𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐥𝐨𝐯𝐞 𝐛𝐲'
+global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🩷 𝐛𝐲'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
