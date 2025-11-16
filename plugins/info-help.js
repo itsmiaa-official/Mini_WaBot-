@@ -294,14 +294,14 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 `;
 
         await conn.sendMessage(m.chat, {
-            image: { url: randomimagenesUrl },
+           // image: { url: randomimagenesUrl },
             caption: menuMessage,
             mentions: [m.sender],
             contextInfo: {
                 externalAdReply: {
                     title: botName,
                     body: "✨ Menú actualizado ✨",
-                 //   thumbnailUrl: randomimagenesUrl,
+                    thumbnailUrl: randomimagenesUrl,
                     sourceUrl: "https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x",
                     mediaType: 1,
                     renderLargerThumbnail: true
