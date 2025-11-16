@@ -300,9 +300,9 @@ await conn.sendMessage(
     contextInfo: {
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363345778623279@newsletter", // tu ID
+        newsletterJid: my.ch,//"120363345778623279@newsletter",
         serverMessageId: '',
-        newsletterName: "Canal de prueba"     // obligatorio si querés que aparezca
+        newsletterName: my.name //"Canal de prueba"  
       },
       externalAdReply: {
         title: `${botName}`,
@@ -314,24 +314,6 @@ await conn.sendMessage(
     }
   }
 );
-        
-        /*await conn.sendMessage(
-            m.chat,
-            {
-                text: menuMessage,
-                mentions: [m.sender],
-                contextInfo: {
-                    externalAdReply: {
-                        title: `${botName}`,
-                        body: `${copy} ${author}`, 
-                        thumbnailUrl: randomimagenesUrl, // **Solo la tarjeta**
-                        mediaType: 1,
-                        renderLargerThumbnail: true
-                    }
-                }
-            }
-        ); */
-
     } catch (error) {
         conn.reply(m.chat, `❌ Error al cargar el menú: ${error.message}`, m);
     }
