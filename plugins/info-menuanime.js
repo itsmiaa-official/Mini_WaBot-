@@ -194,6 +194,6 @@ await conn.sendMessage(
 
 handler.help = ['menu'];
 handler.tags = ['info'];
-handler.command = ['menu'];
+handler.command = ['menuanime'];
 
 export default handler;
