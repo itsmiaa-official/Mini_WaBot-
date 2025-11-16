@@ -20,13 +20,13 @@ let handler = async (m, { conn }) => {
 ├┈• ✐; ₊˚✦୧︰${vs} .
 ├┈┈・──・──・﹕₊˚ ✦・୨୧・        
 
-⭐ ¡𝖧𝗈𝗅𝖺! 𝖲𝗈𝗒 ${botName}, 𝖺𝗊𝗎𝗂 𝗍𝗂𝖾𝗇𝖾𝗌 𝗅𝖺 𝗅𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌 🍒
-💰 𝖬𝗈𝗇𝖾𝖽𝖺 𝖺𝖼𝗍𝗎𝖺𝗅: ¥ ${currency}
+⭐ ¡𝖧𝗈𝗅𝖺! 𝖲𝗈𝗒 ${botName}, 𝖺𝗊𝗎𝗂 𝗍𝗂𝖾𝗇𝖾𝗌 𝗅𝖺 𝗅𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌 🌸
+\`💰 𝖬𝗈𝗇𝖾𝖽𝖺 𝖺𝖼𝗍𝗎𝖺𝗅:\` ¥ ${currency}
 
-Nuestro Canal Oficial de WhatsApp en donde se publican actualizaciones:
+\`Canal Oficial:\`
 https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x
 
-Canal secundario:
+\`Canal secundario:\`
 https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 
 
