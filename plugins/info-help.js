@@ -16,8 +16,8 @@ let handler = async (m, { conn }) => {
         const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
 
         const menuMessage = `
-├┈ ↷ ${botName}
-├┈• ✐; ₊˚✦୧︰${vs} .
+├┈ ↷ \`${botName}.\`
+├┈• ✐; ₊˚✦୧︰\`${vs}.\`
 ├┈┈・──・──・﹕₊˚ ✦・୨୧・        
 
 ⭐ ¡𝖧𝗈𝗅𝖺! 𝖲𝗈𝗒 ${botName}, 𝖺𝗊𝗎𝗂 𝗍𝗂𝖾𝗇𝖾𝗌 𝗅𝖺 𝗅𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌 🌸
@@ -32,17 +32,17 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 
 ˚ ₊ ‧  ꒰✏️꒱  — \`『 Personalice 』\`
 ✿ *#setname* + _<nombre>_
-> _*cambia el nombre del bot*_
-✿ *#setbanner* + _<videoURL>_
-> _*cambia el banner dek bot*_
+> _*cambia el nombre del bot.*_
+✿ *#setbanner* + _<imagenURL>_
+> _*cambia el banner dek bot.*_
 ✿ *#setmoneda* + _<moneda>_
-> _*cambia la moneda del bot*_
+> _*cambia la moneda del bot.*_
 ✿ *#viewbanner*
-> _*ver el banner configurado*_
+> _*ver el banner configurado.*_
 ✿ *#deletebanner*
-> _*eliminar el banner configurado*_
+> _*eliminar el banner configurado.*_
 ✿ *#resetpreferences*
-> _*elimina la personalización*_
+> _*elimina la personalización.*_
 
 ˚ ₊ ‧  ꒰🏮꒱  — \`『 Anime 』\`
 ✿ *#peek* + _<mention>_
