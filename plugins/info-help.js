@@ -297,7 +297,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
         await conn.sendMessage(
             m.chat,
             {
-                imagenes: { url: randomimagenesUrl },
+                image: { url: randomimagenesUrl },
                 gifPlayback: true,
                 caption: menuMessage,
                 mentions: [m.sender], 
