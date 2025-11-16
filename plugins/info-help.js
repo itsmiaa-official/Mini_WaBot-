@@ -300,7 +300,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
                 contextInfo: {
                     externalAdReply: {
                         title: `${botName}`,
-                        body: "Tu bot kawaii está listo para ayudarte 💗",
+                        body: `${copy} ${author}`, 
                         thumbnailUrl: randomimagenesUrl, // **Solo la tarjeta**
                         mediaType: 1,
                         renderLargerThumbnail: true
