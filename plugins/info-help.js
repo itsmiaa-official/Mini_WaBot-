@@ -30,7 +30,7 @@ Canal secundario:
 https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Personalice 』\`
+˚ ₊ ‧  ꒰✏️꒱  — \`『 Personalice 』\`
 ✿ *#setname* + _<nombre>_
 > _*cambia el nombre del bot*_
 ✿ *#setbanner* + _<videoURL>_
@@ -44,7 +44,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#resetpreferences*
 > _*elimina la personalización*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Anime 』\`
+˚ ₊ ‧  ꒰🏮꒱  — \`『 Anime 』\`
 ✿ *#peek* + _<mention>_
 > _*Espiar a alguien.*_
 ✿ *#comfort* + _<mention>_
@@ -180,7 +180,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#cuddle* + _<mention>_
 > _*Acurrucarse.*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Download 』\`
+˚ ₊ ‧  ꒰📲꒱  — \`『 Download 』\`
 ✿ *#play › #play2 › #mp3 › #mp4 › #playaudio › #playvideo* + _<url|query>_
 > _*Descarga videos de youtube.*_
 ✿ *#facebook › #fb* + _<url>_
@@ -190,7 +190,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#tiktok › #tt* + _<url|query>_
 > _*Descarga videos de tiktok.*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Grupo 』\`
+˚ ₊ ‧  ꒰👥꒱  — \`『 Grupo 』\`
 ✿ *#bot* + _<on|off>_
 > _*Activa y desactiva el bot en el grupo.*_
 ✿ *#promote* + _<mention>_
@@ -222,7 +222,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#gpname › #groupname* 
 > _*Cambia el nombre del grupo.*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Info 』\`
+˚ ₊ ‧  ꒰📝꒱  — \`『 Info 』\`
 ✿ *#menu › #help* + _<category>_
 > _*Muestra la lista de comandos.*_
 ✿ *#ping › #p* 
@@ -230,7 +230,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#staff* 
 > _*Muestra los colaboradores de la bot.*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Sockets 』\`
+˚ ₊ ‧  ꒰🤖꒱  — \`『 Sockets 』\`
 ✿ *#bots › #sockets* 
 > _*Muestra el número de sockets conectados.*_
 ✿ *#logout* 
@@ -242,11 +242,11 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#self* + _<on|off>_
 > _*Haz privado o público tu socket.*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Ia 』\`
+˚ ₊ ‧  ꒰🖥꒱  — \`『 Ia 』\`
 ✿ *#ia › #chatgpt* + _<query>_
 > _*Realiza una petición a chatgpt.*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Nsfw 』\`
+˚ ₊ ‧  ꒰🔞꒱  — \`『 Nsfw 』\`
 ✿ *#danbooru › #dbooru* + _<tag>_
 > _*Buscar imágenes en danbooru.*_
 ✿ *#gelbooru › #gbooru* + _<tag>_
@@ -280,7 +280,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
 ✿ *#suckboobs* + _<mention>_
 > _*Chupar las tetas de un usuario.*_
 
-˚ ₊ ‧  ꒰🍒꒱  — \`『 Utils 』\`
+˚ ₊ ‧  ꒰🛠꒱  — \`『 Utils 』\`
 ✿ *#sticker › #s* 
 > _*Convierte imágenes o videos a stickers.*_
 ✿ *#getpic › #pfp* + _<mention>_
