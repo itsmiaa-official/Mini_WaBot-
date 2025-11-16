@@ -301,7 +301,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
                 externalAdReply: {
                     title: botName,
                     body: "✨ Menú actualizado ✨",
-                    thumbnailUrl: randomimagenesUrl,
+                 //   thumbnailUrl: randomimagenesUrl,
                     sourceUrl: "https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x",
                     mediaType: 1,
                     renderLargerThumbnail: true
