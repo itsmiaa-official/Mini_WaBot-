@@ -1,0 +1,199 @@
+import fs from 'fs';
+
+const filePath = './lib/personalize.json';
+
+let handler = async (m, { conn }) => {
+    try {
+        const data = JSON.parse(fs.readFileSync(filePath));
+
+        const globalConfig = data.global;
+        const defaultConfig = data.default;
+
+        const botName = globalConfig.botName || defaultConfig.botName;
+        const currency = globalConfig.currency || defaultConfig.currency;
+        const imagenes = globalConfig.imagenes.length > 0 ? globalConfig.imagenes : defaultConfig.imagenes;
+
+        const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
+
+        const menuMessage = `
+├┈ ↷ \`${botName}.\`
+├┈• ✐; ₊˚✦୧︰ \`${vs}.\`
+├┈┈・──・──・﹕₊˚ ✦・୨୧・        
+
+⭐ ¡𝖧𝗈𝗅𝖺! 𝖲𝗈𝗒 ${botName}, 𝖺𝗊𝗎𝗂 𝗍𝗂𝖾𝗇𝖾𝗌 𝗅𝖺 𝗅𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌 🌸
+\`💰 𝖬𝗈𝗇𝖾𝖽𝖺 𝖺𝖼𝗍𝗎𝖺𝗅:\` ¥ ${currency}
+
+\`Canal Oficial:\`
+https://whatsapp.com/channel/0029Van1PcoFSAt50tWN4d0x
+
+\`Canal secundario:\`
+https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
+
+˚ ₊ ‧  ꒰🏮꒱  — \`『 Anime 』\`
+✿ *#peek* + _<mention>_
+> _*Espiar a alguien.*_
+✿ *#comfort* + _<mention>_
+> _*Consolar a alguien.*_
+✿ *#thinkhard* + _<mention>_
+> _*Pensar intensamente.*_
+✿ *#curious* + _<mention>_
+> _*Sentir curiosidad.*_
+✿ *#sniff* + _<mention>_
+> _*Olfatear a alguien.*_
+✿ *#stare* + _<mention>_
+> _*Mirar fijamente.*_
+✿ *#trip* + _<mention>_
+> _*Tropezar accidentalmente.*_
+✿ *#blowkiss* + _<mention>_
+> _*Lanzar un beso.*_
+✿ *#snuggle* + _<mention>_
+> _*Acurrucarse con alguien.*_
+✿ *#angry* + _<mention>_
+> _*Estar enojado.*_
+✿ *#bleh* + _<mention>_
+> _*Sacar la lengua.*_
+✿ *#bored › #aburrido* + _<mention>_
+> _*Estar aburrido.*_
+✿ *#clap* + _<mention>_
+> _*Aplaudir.*_
+✿ *#coffee › #cafe* + _<mention>_
+> _*Tomar café.*_
+✿ *#cold* + _<mention>_
+> _*Mucho frío.*_
+✿ *#sing* + _<mention>_
+> _*Cantarle a alguien.*_
+✿ *#tickle* + _<mention>_
+> _*Hacer cosquillas.*_
+✿ *#scream* + _<mention>_
+> _*Gritar fuerte.*_
+✿ *#push* + _<mention>_
+> _*Empujar a alguien.*_
+✿ *#nope* + _<mention>_
+> _*Expresar desacuerdo.*_
+✿ *#jump* + _<mention>_
+> _*Saltar de felicidad.*_
+✿ *#heat* + _<mention>_
+> _*Sentir calor.*_
+✿ *#gaming* + _<mention>_
+> _*Jugar videojuegos.*_
+✿ *#draw* + _<mention>_
+> _*Hacer un dibujo.*_
+✿ *#call* + _<mention>_
+> _*Llamar a alguien.*_
+✿ *#dramatic › #drama* + _<mention>_
+> _*Hacer un drama.*_
+✿ *#drunk* + _<mention>_
+> _*Estar borracho.*_
+✿ *#impregnate › #preg* + _<mention>_
+> _*Embarazar.*_
+✿ *#kisscheek › #beso* + _<mention>_
+> _*Besar en la mejilla.*_
+✿ *#laugh* + _<mention>_
+> _*Reírse.*_
+✿ *#love › #amor* + _<mention>_
+> _*Sentir atracción.*_
+✿ *#pout* + _<mention>_
+> _*Hacer pucheros.*_
+✿ *#punch* + _<mention>_
+> _*Dar un puñetazo.*_
+✿ *#run › #correr* + _<mention>_
+> _*Correr.*_
+✿ *#sad › #triste* + _<mention>_
+> _*Sentir tristeza.*_
+✿ *#scared* + _<mention>_
+> _*Estar asustado.*_
+✿ *#seduce* + _<mention>_
+> _*Seducir.*_
+✿ *#shy › #timido* + _<mention>_
+> _*Sentir timidez.*_
+✿ *#sleep* + _<mention>_
+> _*Dormir.*_
+✿ *#smoke › #fumar* + _<mention>_
+> _*Fumar.*_
+✿ *#spit › #escupir* + _<mention>_
+> _*Escupir.*_
+✿ *#step › #pisar* + _<mention>_
+> _*Pisar.*_
+✿ *#think* + _<mention>_
+> _*Pensar.*_
+✿ *#walk* + _<mention>_
+> _*Caminar.*_
+✿ *#hug* + _<mention>_
+> _*Dar un abrazo.*_
+✿ *#kill* + _<mention>_
+> _*Asesinar.*_
+✿ *#eat › #nom › #comer* + _<mention>_
+> _*Comer.*_
+✿ *#kiss › #muak* + _<mention>_
+> _*Dar un beso.*_
+✿ *#wink* + _<mention>_
+> _*Guiñar.*_
+✿ *#pat* + _<mention>_
+> _*Dar una caricia.*_
+✿ *#happy › #feliz* + _<mention>_
+> _*Saltos de felicidad.*_
+✿ *#bully* + _<mention>_
+> _*Hacer bullying.*_
+✿ *#bite › #morder* + _<mention>_
+> _*Morder.*_
+✿ *#blush* + _<mention>_
+> _*Sonrojarse.*_
+✿ *#wave* + _<mention>_
+> _*Saludar.*_
+✿ *#bath* + _<mention>_
+> _*Bañarse.*_
+✿ *#smug* + _<mention>_
+> _*Presumir.*_
+✿ *#smile* + _<mention>_
+> _*Sonreír.*_
+✿ *#highfive* + _<mention>_
+> _*Chocar los cinco.*_
+✿ *#handhold* + _<mention>_
+> _*Tomar de la mano.*_
+✿ *#cringe* + _<mention>_
+> _*Sentir cringe.*_
+✿ *#bonk* + _<mention>_
+> _*Golpear.*_
+✿ *#cry* + _<mention>_
+> _*Llorar.*_
+✿ *#lick* + _<mention>_
+> _*Lamer.*_
+✿ *#slap* + _<mention>_
+> _*Dar una bofetada.*_
+✿ *#dance* + _<mention>_
+> _*Bailar.*_
+✿ *#cuddle* + _<mention>_
+> _*Acurrucarse.*_`;
+
+await conn.sendMessage(
+  m.chat,
+  {
+    text: menuMessage,
+    mentions: [m.sender],
+    contextInfo: {
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: my.ch,//"120363345778623279@newsletter",
+        serverMessageId: '',
+        newsletterName: my.name1 //"Canal de prueba"  
+      },
+      externalAdReply: {
+        title: `${botName}`,
+        body: `${copy} ${author}`,
+        thumbnailUrl: randomimagenesUrl,
+        mediaType: 1,
+        renderLargerThumbnail: true
+      }
+    }
+  }
+);
+    } catch (error) {
+        conn.reply(m.chat, `❌ Error al cargar el menú: ${error.message}`, m);
+    }
+};
+
+handler.help = ['menu'];
+handler.tags = ['info'];
+handler.command = ['menu'];
+
+export default handler;
