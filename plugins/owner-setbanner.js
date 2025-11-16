@@ -8,13 +8,13 @@ let handler = async (m, { text }) => {
     const data = JSON.parse(fs.readFileSync(filePath));
 
     // Validar si existe el campo global
-    if (!data.global) data.global = { botName: null, currency: null, videos: [] };
+    if (!data.global) data.global = { botName: null, currency: null, imagenes: [] };
 
     // Agregar el video al array
-    data.global.videos.push(text);
+    data.global.imagenes.push(text);
 
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-    m.reply('✅ Video agregado correctamente.');
+    m.reply('✅ imagen agregada correctamente.');
 };
 
 handler.help = ['setbanner <link>'];
