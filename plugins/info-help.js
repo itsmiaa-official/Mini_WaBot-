@@ -316,7 +316,7 @@ https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l
     buttons: [
       {
         buttonId: "#code",
-        buttonText: { displayText: "> 𝖲𝖤𝖱-𝖡𝖮𝖳" },
+        buttonText: { displayText: "𝖲𝖤𝖱-𝖡𝖮𝖳" },
         type: 1
       }
     ],
