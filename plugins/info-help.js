@@ -300,7 +300,7 @@ await conn.sendMessage(
     contextInfo: {
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: "12036340XXXXXXXX@newsletter", // tu ID
+        newsletterJid: "120363345778623279@newsletter", // tu ID
         serverMessageId: '',
         newsletterName: "Canal de prueba"     // obligatorio si querés que aparezca
       },
