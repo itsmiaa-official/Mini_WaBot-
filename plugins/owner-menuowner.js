@@ -1,22 +1,21 @@
+import fs from 'fs';
 
-import fs from 'fs'
-import os from 'os'
-import { performance } from 'perf_hooks'
+const filePath = './lib/personalize.json';
 
-let handler = async (m, { conn, usedPrefix }) => {
-  
-  // Imagen que saldrá en la tarjeta
-//  let media = 'https://files.catbox.moe/bw463n.jpg' // cambia el link por tu foto
-  
-  // Tiempo activo
-  let uptime = process.uptime() * 1000
-  let tiempo = clockString(uptime)
+let handler = async (m, { conn }) => {
+    try {
+        const data = JSON.parse(fs.readFileSync(filePath));
 
-  const imagenes = globalConfig.imagenes.length > 0 ? globalConfig.imagenes : defaultConfig.imagenes;
-  const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
-  
-  // Texto del menú
-  let menu = `
+        const globalConfig = data.global;
+        const defaultConfig = data.default;
+
+        const botName = globalConfig.botName || defaultConfig.botName;
+        const currency = globalConfig.currency || defaultConfig.currency;
+        const imagenes = globalConfig.imagenes.length > 0 ? globalConfig.imagenes : defaultConfig.imagenes;
+
+        const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
+
+        const menuMessage = `
 ¡𝐇𝐨𝐥𝐚 𝐔𝐬𝐮𝐚𝐫𝐢𝐨! 𝐒𝐨𝐲 ${botName} 𝐀𝐪𝐮𝐢 𝐭𝐢𝐞𝐧𝐞𝐬 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬.
 
 ╭━━I N F O-B O-T━━
@@ -40,32 +39,38 @@ let handler = async (m, { conn, usedPrefix }) => {
 > ✧ La bot dará un aviso en Grupos.
 ✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #kickall
 > ✧ La creadora vaciara un grupo.
-`
 
-  // Enviar tarjeta con imagen y texto del menú
-  await conn.sendMessage(m.chat, {
-    text: menu,
+`;
+ 
+await conn.sendMessage(
+  m.chat,
+  {
+    text: menuMessage,
+    mentions: [m.sender],
     contextInfo: {
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: my.ch,
+        serverMessageId: '',
+        newsletterName: my.name1 
+      },
       externalAdReply: {
-        title:`${botName}`,
+        title: `${botName}`,
         body: `${copy} ${author}`,
         thumbnailUrl: randomimagenesUrl,
-        sourceUrl: 'https://github.com/ittschinitaaa', // pon tu enlace
         mediaType: 1,
         renderLargerThumbnail: true
       }
     }
-  }, { quoted: m })
-}
+  }
+);
+    } catch (error) {
+        conn.reply(m.chat, `❌ Error al cargar el menú: ${error.message}`, m);
+    }
+};
 
-handler.command = ['menuowner',`helpowner`,`menu2`]
-handler.owner = true
-export default handler
+handler.help = ['menu'];
+handler.tags = ['info'];
+handler.command = ['menuowner','helpowner'];
 
-// Función para mostrar horas/min/seg
-function clockString(ms) {
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-}
+export default handler;
