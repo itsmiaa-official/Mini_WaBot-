@@ -11,7 +11,7 @@ let handler = async (m, { conn, args }) => {
   const groupId = args[0] || m.chat;
 
   try {
-    await conn.sendMessage(m.chat, { text: `𝕮𝖍𝖎𝖓𝖆 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 💋 𝐒𝐞 𝐝𝐞𝐬𝐩𝐢𝐝𝐞.\n> fue un honor compartir con ustedes.` }, { quoted: m });
+    await conn.sendMessage(m.chat, { text: `${botName} 🌸 se despide del grupo.\n> fue un honor compartir con ustedes.` }, { quoted: m });
     await conn.groupLeave(groupId);
   } catch (error) {
     console.error(error);
