@@ -26,19 +26,30 @@ let handler = async (m, { conn }) => {
 
 ⏤͟͟͞͞𝐂𝕆𝐌𝔸𝐍𝔻𝐎𝕊 𝐏𝔸𝐑𝔸 𝐎𝕎𝐍𝔼𝐑
 
-✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #autoadmin
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#autoadmin*
 > ✧ La bot le dará admin al creador. 
-✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #update
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#update*
 > ✧ Actualiza la bot a la última versión. 
-✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍  #restart
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍  *#restart*
 > ✧ Reinicia la Bot. 
-✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #bcprivado
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#bcprivado*
 > ✧ La bot dará un aviso en chats privados. 
-✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #bcgrupos
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#bcgrupos*
 > ✧ La bot dará un aviso en Grupos.
-✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #kickall
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#kickall*
 > ✧ La creadora vaciara un grupo.
-
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#setname*
+> ✧ Cambia el nombre del bot. 
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#setbanner*
+> ✧ Cambia el banner del bot.
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#setmoneda*
+> ✧ Cambia la moneda del bot.
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#viewbanner*
+> ✧ Ve el banner configurado.
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#delbanner*
+> ✧ Elimina el banner configurado.
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#resetpreferences*
+> ✧ Elimina la personalización.
 `;
  
 await conn.sendMessage(
