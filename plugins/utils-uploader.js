@@ -13,27 +13,27 @@ let mime = (q.msg || q).mimetype || ''
 switch (command) {
 case 'tourl': {
 if (!mime) return conn.reply(m.chat, `❀ Por favor, responde a una *Imagen* o *Vídeo.*`, m)
-await m.react('🕒')
+//await m.react('🕒')
 const media = await q.download()
 const isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
 const link = await uploadImage(media)
 const txt = `乂  *L I N K - E N L A C E*  乂\n\n*» Enlace* : ${link}\n*» Tamaño* : ${formatBytes(media.length)}\n*» Expiración* : ${isTele ? 'No expira' : 'Desconocido'}\n\n> *${dev}*`
 await conn.sendFile(m.chat, media, 'thumbnail.jpg', txt, fkontak)
-await m.react('✔️')
+//await m.react('✔️')
 break
 }
 case 'catbox': {
 if (!mime) return conn.reply(m.chat, `❀ Por favor, responde a una *Imagen* o *Vídeo.*`, m)
-await m.react('🕒')
+//await m.react('🕒')
 const media = await q.download()
 const isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
 const link = await catbox(media)
 const txt = `*乂 C A T B O X - U P L O A D E R 乂*\n\n*» Enlace* : ${link}\n*» Tamaño* : ${formatBytes(media.length)}\n*» Expiración* : ${isTele ? 'No expira' : 'Desconocido'}\n\n> *${dev}*`
 await conn.sendFile(m.chat, media, 'thumbnail.jpg', txt, fkontak)
-await m.react('✅')
+//await m.react('✅')
 break
 }}} catch (error) {
-await m.react('❌')
+//await m.react('❌')
 await conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`, m)
 }}
 
