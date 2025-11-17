@@ -35,23 +35,23 @@ export async function before(m, { conn, participants, groupMetadata }) {
   else if ([WAMessageStubType.GROUP_PARTICIPANT_REMOVE, WAMessageStubType.GROUP_PARTICIPANT_LEAVE].includes(m.messageStubType)) memberCount -= 1;
 
 const welcomeMessage = formatText(chat.sWelcome || `╭┈──̇─̇─̇────̇─̇─̇──◯◝
-┊「 *Bienvenido (⁠ ⁠ꈍ⁠ᴗ⁠ꈍ⁠)* 」
-┊︶︶︶︶︶︶︶︶︶︶︶
-┊  *Nombre ›* @user
-┊  *Grupo ›* @group
+┊ \`「 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 」\`
+│  ────୨ৎ────
+┊  \`𝗡𝗼𝗺𝗯𝗿𝗲: ›\` @user
+┊  \`𝗚𝗿𝘂𝗽𝗼: ›\` @group
 ┊┈─────̇─̇─̇─────◯◝ @type
-┊➤ *Usa /menu para ver los comandos.*
-┊➤ *Ahora somos @users miembros.*
+┊★ *Usa /menu para ver los comandos.*
+┊★ *Ahora somos @users miembros.*
 ┊ ︿︿︿︿︿︿︿︿︿︿︿
 ╰─────────────────╯`, memberCount);
 
   const byeMessage = formatText(chat.sBye || `╭┈──̇─̇─̇────̇─̇─̇──◯◝
-┊「 *Hasta pronto (⁠╥⁠﹏⁠╥⁠)* 」
+┊ \`「 𝐆𝐎𝐎𝐃𝐁𝐘𝐄 」\`
 ┊︶︶︶︶︶︶︶︶︶︶︶
-┊  *Nombre ›* @user
+┊  \`𝗡𝗼𝗺𝗯𝗿𝗲:\` › @user
 ┊┈─────̇─̇─̇─────◯◝ @type
-┊➤ *Ojalá que vuelva pronto.*
-┊➤ *Ahora somos @users miembros.*
+┊★ *Ojalá que vuelva pronto.*
+┊★ *Ahora somos @users miembros.*
 ┊ ︿︿︿︿︿︿︿︿︿︿︿
 ╰─────────────────╯`, memberCount);
 
