@@ -20,7 +20,6 @@ let handler = async (m, { conn }) => {
 
 ╭━━I N F O-B O-T━━
 ┃Creador: ${author}
-┃Tiempo activo: *${tiempo}*
 ┃Baileys: Multi device
 ┃Usuario: *${m.pushName}*
 ╰━━━━━━━━━━━━━
