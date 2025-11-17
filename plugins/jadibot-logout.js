@@ -19,7 +19,7 @@ let handler = async (m, { conn, prefa, msgglobal }) => {
   }
 
   try {
-    await m.reply('🫗 Cerrando sesión del Socket...');
+    await m.reply('🌸 Cerrando sesión del Socket...');
 
     await conn.logout();
 
@@ -31,7 +31,7 @@ let handler = async (m, { conn, prefa, msgglobal }) => {
     }, 2000);
 
     setTimeout(() => {
-     m.reply(`🕸 Sessión cerrada.`);
+     m.reply(`🌸 Sessión cerrada.`);
     }, 3000);
   } catch (err) {
     console.error(err);
