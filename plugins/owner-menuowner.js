@@ -14,27 +14,28 @@ let handler = async (m, { conn, usedPrefix }) => {
   
   // Texto del menú
   let menu = `
-¡𝗛𝗼𝗹𝗮! 𝗦𝗼𝘆 𝕮𝖍𝖎𝖓𝖆 - 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳
+¡𝐇𝐨𝐥𝐚 𝐔𝐬𝐮𝐚𝐫𝐢𝐨! 𝐒𝐨𝐲 ${botName} 𝐀𝐪𝐮𝐢 𝐭𝐢𝐞𝐧𝐞𝐬 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬.
 
 ╭━━I N F O-B O-T━━
-┃Creador: ⏤͟͟͞͞𝐂𝐡𝐢𝐧𝐚 🔥
+┃Creador: ${author}
 ┃Tiempo activo: *${tiempo}*
 ┃Baileys: Multi device
 ┃Usuario: *${m.pushName}*
 ╰━━━━━━━━━━━━━
+
 ⏤͟͟͞͞𝐂𝕆𝐌𝔸𝐍𝔻𝐎𝕊 𝐏𝔸𝐑𝔸 𝐎𝕎𝐍𝔼𝐑
 
-✶̸᳟ׄׄ🔥ׅׅׅ⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #autoadmin
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #autoadmin
 > ✧ La bot le dará admin al creador. 
-✶̸᳟ׄׄ🔥ׅׅׅ⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #update
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #update
 > ✧ Actualiza la bot a la última versión. 
-✶̸᳟ׄׄ🔥ׅׅׅ⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍  #restart
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍  #restart
 > ✧ Reinicia la Bot. 
-✶̸᳟ׄׄ🔥ׅׅׅ⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #bcprivado
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #bcprivado
 > ✧ La bot dará un aviso en chats privados. 
-✶̸᳟ׄׄ🔥ׅׅׅ⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #bcgrupos
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #bcgrupos
 > ✧ La bot dará un aviso en Grupos.
-✶̸᳟ׄׄ🔥ׅׅׅ⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #kickall
+✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ #kickall
 > ✧ La creadora vaciara un grupo.
 `
 
@@ -43,8 +44,8 @@ let handler = async (m, { conn, usedPrefix }) => {
     text: menu,
     contextInfo: {
       externalAdReply: {
-        title:`𝕮𝖍𝖎𝖓𝖆 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 🔥🇨🇳`,
-        body: '⏤͟͟͞͞𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝐂𝐡𝐢𝐧𝐚 💋',
+        title:`${botName}`,
+        body: `${copy} ${author}`,
         thumbnailUrl: media,
         sourceUrl: 'https://github.com/ittschinitaaa', // pon tu enlace
         mediaType: 1,
