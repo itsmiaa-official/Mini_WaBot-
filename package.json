@@ -1,5 +1,5 @@
 {
-"name": "Aenira",
+"name": "Sumi-Wa",
 "version": "1.0.0",
 "description": "WhatsApp Bot Multi Device",
 "main": "index.js",
@@ -13,14 +13,14 @@
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/ittschinitaaa/Aenira-bot.git"
+"url": "git+https://github.com/ittschinitaaa/Sumi-Wa.git"
 },  
 "author": "ittschinitaaa",
 "license": "MIT-License",
 "bugs": {
-"url": "https://github.com/ittschinitaaa/Aenira-bot/issues"
+"url": "https://github.com/ittschinitaaa/Sumi-Wa/issues"
 },
-"homepage": "https://github.com/ittschinitaaa/Aenira-bot#readme",
+"homepage": "https://github.com/ittschinitaaa/Sumi-Wa#readme",
 "dependencies": {
 "@hapi/boom": "^10.0.1",
 "@vitalets/google-translate-api": "^8.0.0",
