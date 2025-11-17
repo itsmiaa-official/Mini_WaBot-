@@ -300,9 +300,9 @@ await conn.sendMessage(
     contextInfo: {
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: my.ch,//"120363345778623279@newsletter",
+        newsletterJid: my.ch,
         serverMessageId: '',
-        newsletterName: my.name1 //"Canal de prueba"  
+        newsletterName: my.name1 
       },
       externalAdReply: {
         title: `${botName}`,
