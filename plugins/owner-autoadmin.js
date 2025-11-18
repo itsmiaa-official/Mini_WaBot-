@@ -20,7 +20,7 @@ const handler = async (m, { conn }) => {
     }
 
     // Promover al owner
-    await conn.groupParticipantsUpdate(m.chat, [ownerNumber], 'promote')
+    await conn.groupParticipantsUpdate(m.chat, [global.owner], 'promote')
     await conn.sendMessage(
       m.chat,
      { text: `「✦」 *@${ownerNumber.split('@')[0]}* ahora eres admin 𝕮𝖍𝖎𝖓𝖆.🌹`, mentions: [ownerNumber] },
