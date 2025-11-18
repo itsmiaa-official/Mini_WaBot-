@@ -1,43 +1,20 @@
-const handler = async (m, { conn }) => {
-  try {
-    // Cambia este número por tu número de dueño del bot (incluyendo el código de país)
-    const ownerNumber = global.owner//'573243768166@s.whatsapp.net' 
-    if (m.sender !== global.owner) {
-      return m.reply('⚠️ Solo el dueño del bot puede usar este comando.')
-    }
+const handler = async (m, { conn, isAdmin, groupMetadata, usedPrefix, isBotAdmin, isROwner }) => {
+if (!isROwner) return
+if (!isBotAdmin) return
+if (isAdmin) return m.reply(`🌼 Ya tienes privilegios de administrador.`)
+try {
+//await m.react('🕒')
+await conn.groupParticipantsUpdate(m.chat, [m.sender], 'promote')
+//await m.react('✅')
+m.reply(`🌸 Fuiste agregada como admin del grupo con exito.`)
+} catch (error) {
+//await m.react('❌')
+m.reply(`⚠︎ Se ha producido un problema\n> Usa *${usedPrefix}report* para informarlo\n\n${error.message}`)
+}}
 
-    // Verificar que el bot es admin
-    const groupMetadata = await conn.groupMetadata(m.chat)
-    const botParticipant = groupMetadata.participants.find(p => p.jid === conn.user.jid)
-    if (!botParticipant.admin) return m.reply('⚠️ No puedo promover, necesito ser admin del grupo.')
-
-    // Verificar si el owner ya es admin
-    const participant = groupMetadata.participants.find(p => p.jid === ownerNumber)
-    if (!participant) return m.reply('🕸 No estás en este grupo.')
-
-    if (participant.admin) {
-      return m.reply('🕸 Ya eres administrador del grupo!')
-    }
-
-    // Promover al owner
-    await conn.groupParticipantsUpdate(m.chat, [global.owner], 'promote')
-    await conn.sendMessage(
-      m.chat,
-     { text: `「✦」 *@${ownerNumber.split('@')[0]}* ahora eres admin 𝕮𝖍𝖎𝖓𝖆.🌹`, mentions: [ownerNumber] },
-      { quoted: m }
-    )
-
-  } catch (e) {
-    console.error(e)
-    await m.reply('🌾 Ocurrió un error al ejecutar #autoadmin.')
-  }
-}
-
-handler.help = ['autoadmin']
 handler.tags = ['owner']
+handler.help = ['autoadmin']
 handler.command = ['autoadmin']
-handler.owner = true
-handler.botAdmin = true
+handler.group = true
 
 export default handler
-
