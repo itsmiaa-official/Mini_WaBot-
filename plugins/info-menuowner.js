@@ -24,10 +24,8 @@ let handler = async (m, { conn }) => {
 ┃Usuario: *${m.pushName}*
 ╰━━━━━━━━━━━━━
 
-⏤͟͟͞͞𝐂𝕆𝐌𝔸𝐍𝔻𝐎𝕊 𝐏𝔸𝐑𝔸 𝐎𝕎𝐍𝔼𝐑
+\`𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 𝐩𝐚𝐫𝐚 𝐎𝐰𝐧𝐞𝐫𝐬\`
 
-✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#autoadmin*
-> ✧ La bot le dará admin al creador. 
 ✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍ *#update*
 > ✧ Actualiza la bot a la última versión. 
 ✶̸᳟ׄׄ🌸⠞̸̷̶ׁ֪ ─࡙ׄ─࠭╍  *#restart*
