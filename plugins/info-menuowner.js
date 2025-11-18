@@ -14,7 +14,9 @@ let handler = async (m, { conn }) => {
         const imagenes = globalConfig.imagenes.length > 0 ? globalConfig.imagenes : defaultConfig.imagenes;
 
         const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
-
+      
+        m.react('👑');
+        
         const menuMessage = `
 ¡𝐇𝐨𝐥𝐚 𝐔𝐬𝐮𝐚𝐫𝐢𝐨! 𝐒𝐨𝐲 ${botName} 𝐀𝐪𝐮𝐢 𝐭𝐢𝐞𝐧𝐞𝐬 𝐥𝐚 𝐥𝐢𝐬𝐭𝐚 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬.
 
