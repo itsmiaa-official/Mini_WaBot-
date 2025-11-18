@@ -14,7 +14,9 @@ let handler = async (m, { conn }) => {
         const imagenes = globalConfig.imagenes.length > 0 ? globalConfig.imagenes : defaultConfig.imagenes;
 
         const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
-
+      
+        m.react('🌸');
+        
         const menuMessage = `
 ├┈ ↷ \`${botName}.\`
 ├┈┈• ✐; ₊˚✦୧︰ \`${vs}.\`
