@@ -15,7 +15,7 @@ let handler = async (m, { conn }) => {
 
         const randomimagenesUrl = imagenes[Math.floor(Math.random() * imagenes.length)];
       
-        m.react('🌸');
+        await conn.sendMessage(m.chat, { react: { text: '🌸', key: m.key } })
         
         const menuMessage = `
 ├┈ ↷ \`${botName}.\`
