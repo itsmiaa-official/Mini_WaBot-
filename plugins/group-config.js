@@ -9,7 +9,8 @@ let handler = async (m, { conn, command }) => {
       }
       await conn.groupSettingUpdate(m.chat, 'announcement')
         .then(() => {
-          conn.reply(m.chat, `🔥 El grupo ha sido cerrado correctamente.`, m);
+         await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
+          // conn.reply(m.chat, `🔥 El grupo ha sido cerrado correctamente.`, m);
         })
         .catch((err) => conn.reply(m.chat, `❌ Error al cerrar el grupo: ${err.message}`, m));
     } else if (command === 'open') {
@@ -18,7 +19,8 @@ let handler = async (m, { conn, command }) => {
       }
       await conn.groupSettingUpdate(m.chat, 'not_announcement')
         .then(() => {
-          conn.reply(m.chat, `🔥 El grupo ha sido abierto correctamente.`, m);
+         await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
+          //conn.reply(m.chat, `🔥 El grupo ha sido abierto correctamente.`, m);
         })
         .catch((err) => conn.reply(m.chat, `❌ Error al abrir el grupo: ${err.message}`, m));
     } else {
