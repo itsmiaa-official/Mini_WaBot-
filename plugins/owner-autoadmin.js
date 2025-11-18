@@ -1,7 +1,7 @@
 const handler = async (m, { conn }) => {
   try {
     // Cambia este número por tu número de dueño del bot (incluyendo el código de país)
-    const ownerNumber = `${owner}` //'573243768166@s.whatsapp.net' 
+    const ownerNumber = global.owner//'573243768166@s.whatsapp.net' 
     if (m.sender !== ownerNumber) {
       return m.reply('⚠️ Solo el dueño del bot puede usar este comando.')
     }
