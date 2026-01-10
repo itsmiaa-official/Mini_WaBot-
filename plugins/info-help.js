@@ -6,8 +6,8 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix }) => {
 
   const name = await conn.getName(m.sender)
-  const fecha = moment.tz('America/California').format('DD/MM/YYYY')
-  const hora = moment.tz('America/California').format('HH:mm:ss')
+  const fecha = moment.tz('America/Argentina/Buenos_Aires').format('DD/MM/YYYY')
+  const hora = moment.tz('America/Argentina/Buenos_Aires').format('HH:mm:ss')
   const uptime = clockString(process.uptime() * 1000)
 
   // 🤖 BOT PRINCIPAL O SUBBOT
@@ -67,12 +67,6 @@ let handler = async (m, { conn, usedPrefix }) => {
         sourceUrl: global.redes
       }
     }
-  }, { quoted: m })
-
-  // 📌 DESPUÉS: VIDEO
-  await conn.sendMessage(m.chat, {
-    video: { url: 'https://qu.ax/squFj' },
-    caption: '🍃 Gracias por usar *Senko AI*'
   }, { quoted: m })
 }
 
