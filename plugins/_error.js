@@ -1,22 +1,25 @@
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, command }) => {
     try {
-        // Aquí puedes poner cualquier prueba que quieras
-        throw new Error('Prueba de error para debug'); 
+        // Aquí no hacemos nada, solo se usa para escuchar errores reales
+        // Puedes probarlo ejecutando comandos que fallan
     } catch (err) {
-        // Obtenemos el stack trace limpio
-        let stack = err.stack || err.message || err.toString();
-        // Recortamos para que no sea demasiado largo
-        if (stack.length > 1000) stack = stack.slice(0, 1000) + '...';
-        // Enviamos el error al chat
-        await conn.sendMessage(m.chat, { 
-            text: `🛑 *Error Detectado*\n\n*Mensaje:* ${err.message}\n*Stack:* \n${stack}`, 
-            mentions: [m.sender]
+        console.error("❌ Error detectado en plugin:", m.plugin || 'Desconocido');
+        console.error("→ Comando:", command || 'Desconocido');
+        console.error("→ Mensaje:", err.message);
+        console.error("→ Stack:", err.stack);
+
+        await conn.sendMessage(m.chat, {
+            text: `🛑 *Error Detectado* 
+*Plugin:* ${m.plugin || 'Desconocido'}
+*Comando:* ${command || 'Desconocido'}
+*Mensaje:* ${err.message}
+*Stack:* \`\`\`${err.stack}\`\`\``
         }, { quoted: m });
     }
 };
 
-handler.help = ['debug', 'error']
-handler.tags = ['owner', 'info']
-handler.command = ['debug', 'error']
+handler.help = ['debugerror'];
+handler.tags = ['debug'];
+handler.command = ['debugerror'];
 
 export default handler;
