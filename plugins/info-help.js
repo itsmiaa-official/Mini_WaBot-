@@ -46,24 +46,24 @@ let handler = async (m, { conn, usedPrefix }) => {
     menu += `╰───────────────✿\n`
   }
 
-  await conn.sendMessage(m.chat, {
-    caption: menu.trim(),
-    contextInfo: {
-      forwardedNewsletterMessageInfo: {
-        newsletterJid: my.ch,
-        newsletterName: my.name1,
-        serverMessageId: -1
-      },
-      externalAdReply: {
-        title: global.botname,
-        body: global.dev,
-        thumbnailUrl: banner,
-        mediaType: 1,
-        renderLargerThumbnail: true,
-        sourceUrl: "instagram.com"
-      }
+await conn.sendMessage(m.chat, {
+  text: menu.trim(),
+  contextInfo: {
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: my.ch,
+      newsletterName: my.name1,
+      serverMessageId: -1
+    },
+    externalAdReply: {
+      title: global.botname,
+      body: global.dev,
+      thumbnailUrl: banner,
+      mediaType: 1,
+      renderLargerThumbnail: true,
+      sourceUrl: "https://instagram.com"
     }
-  }, { quoted: m })
+  }
+}, { quoted: m })
 }
 
 handler.help = ['menu']
