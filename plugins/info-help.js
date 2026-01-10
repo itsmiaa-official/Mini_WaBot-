@@ -52,7 +52,7 @@ await conn.sendMessage(m.chat, {
     forwardedNewsletterMessageInfo: {
       newsletterJid: my.ch,
       newsletterName: my.name1,
-      serverMessageId: -1
+      serverMessageId: 1
     },
     externalAdReply: {
       title: global.botname,
