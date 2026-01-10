@@ -34,12 +34,12 @@ let { say } = cfonts
 
 console.log(chalk.magentaBright('\n✧ Iniciando...'))
 
-say('Sumi-Wa 🌸', {
+say('Makima', {
   font: 'simple',
   align: 'left',
   colors: ['cyan']
 })
-say('Powered By ittschinitaaa', {
+say('Powered By China', {
   font: 'console',
   align: 'center',
   colors: ['yellow']
