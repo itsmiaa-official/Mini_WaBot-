@@ -10,21 +10,21 @@ global.owner = ["923297474483","5492644996684"]
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.botname = '𝐒𝐮𝐦𝐢 𝐒𝐚𝐤𝐮𝐫𝐚𝐬𝐚𝐰𝐚 🌸'
-global.namebot = '𝐒𝐮𝐦𝐢-𝐖𝐚 🌸'
+global.botname = '𝐌𝐚𝐤Ꭵᩥ𝐦𝐚 🧡'
+global.namebot = '𝐌𝐚𝐤𝐢-𝐖𝐚 🧡'
 global.vs = '1.0.0'
-global.bot = '𝐀𝐞𝐧𝐢𝐫𝐚'
-global.packname = '🌸̶۫̄͟Ⓢ︎𓏲S͟u͟m͟m͟i͟𓍲̈͜𓊓̵̬𝐁o̸t̸ 🌸'
-global.wm = '𝐒𝐮𝐦𝐢-𝐁𝐨𝐭 🌸'
+global.bot = '𝐌𝐚𝐤𝐢𝐦𝐚'
+global.packname = '🌸̶۫̄͟Ⓢ︎𓏲S͟u͟m͟m͟i͟𓍲̈͜𓊓̵̬𝐁oo̸t̸🌸'
+global.wm = '𝐌𝐚𝐤𝐢𝐦𝐚'
 global.author = '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ'
 global.dev = '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜɪɴᴀ 🔥'
-global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🩷 𝐛y'
+global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🧡 𝐛y'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
 global.banner = 'https://files.catbox.moe/w2rxig.jpg'
 global.icon = 'https://files.catbox.moe/469tnf.jpg'
-global.currency = 'StarCoins'
+global.currency = '¥MakiCoins'
 global.sessions = 'sessions/session-bot'
 global.jadi = 'sessions/session-sub'
 
