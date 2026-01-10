@@ -50,18 +50,18 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   // 📌 PRIMERO: BANNER (IMAGEN)
   await conn.sendMessage(m.chat, {
-    image: { url: global.banner }, // ✅ banner por URL
+//    image: { url: global.banner }, // ✅ banner por URL
     caption: menu.trim(),
     contextInfo: {
       forwardedNewsletterMessageInfo: {
-        newsletterJid: global.my.ch,
-        newsletterName: global.my.name1,
+        newsletterJid: my.ch,
+        newsletterName: my.name1,
         serverMessageId: -1
       },
       externalAdReply: {
         title: global.botname,
         body: global.dev,
-        thumbnailUrl: global.banner,
+        thumbnailUrl: banner,
         mediaType: 1,
         renderLargerThumbnail: true,
         sourceUrl: "instagram.com"
