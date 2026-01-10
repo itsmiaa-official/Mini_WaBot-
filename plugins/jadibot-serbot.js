@@ -197,7 +197,7 @@ let chtxt = ` ֯　ׅ👤ㅤ *Usuario ›* ${userName}
 
 > *¡Conviértete en un sub-bot ahora!*\n https://wa.me/${m.sender.split('@')[0]}?text=#code`
 
-let ppch = await sock.profilePictureUrl(m.sender, 'image').catch(_ => "https://stellarwa.xyz/files/1757206448404.jpeg")
+let ppch = await sock.profilePictureUrl(m.sender, 'image').catch(_ => "https://files.catbox.moe/469tnf.jpg")
 await global.conn.sendMessage(my.ch2, { text: chtxt,
 contextInfo: { 
 externalAdReply: {
