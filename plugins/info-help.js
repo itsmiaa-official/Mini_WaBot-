@@ -10,11 +10,9 @@ let handler = async (m, { conn, usedPrefix }) => {
   const hora = moment.tz('America/Argentina/Buenos_Aires').format('HH:mm:ss')
   const uptime = clockString(process.uptime() * 1000)
 
-  // 🤖 BOT PRINCIPAL O SUBBOT
   const isPrincipal = conn.user.jid === global.conn.user.jid
   const botType = isPrincipal ? '🤖 Bot Principal' : '🧩 Sub Bot'
 
-  // 📂 LEER PLUGINS
   const pluginsPath = path.join(process.cwd(), 'plugins')
   const files = fs.readdirSync(pluginsPath).filter(f => f.endsWith('.js'))
 
@@ -48,9 +46,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     menu += `╰───────────────✿\n`
   }
 
-  // 📌 PRIMERO: BANNER (IMAGEN)
   await conn.sendMessage(m.chat, {
-//    image: { url: global.banner }, // ✅ banner por URL
     caption: menu.trim(),
     contextInfo: {
       forwardedNewsletterMessageInfo: {
