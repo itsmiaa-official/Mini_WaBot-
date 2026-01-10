@@ -192,8 +192,8 @@ let chtxt = ` ֯　ׅ👤ㅤ *Usuario ›* ${userName}
  ׄ 💋 ׅ り *Browser ›* Firefox (Windows)
  ׄ 🧡 ׅ り *WhatsApp ›* ${waType}
  ׄ 💋 ׅ り *Visita ›* instagram.com/its.chinitaaa_
- ׄ 🧡 ׅ り *Bot ›* ${wm}
- ׄ 💋 ׅ り *Versión del bot ›* ${vs}
+ ׄ 🧡 ׅ り *Bot ›* ${packname}
+ ׄ 💋 ׅ り *Versión del bot ›* ^${vs}
 
 > *¡Conviértete en un sub-bot ahora!*\n https://wa.me/${m.sender.split('@')[0]}?text=#code`
 
