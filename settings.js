@@ -18,12 +18,12 @@ global.packname = '🌸̶۫̄͟Ⓢ︎𓏲S͟u͟m͟m͟i͟𓍲̈͜𓊓̵̬𝐁o̸t
 global.wm = '𝐒𝐮𝐦𝐢-𝐁𝐨𝐭 🌸'
 global.author = '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ'
 global.dev = '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜɪɴᴀ 🔥'
-global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🩷 𝐛𝐲'
+global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🩷 𝐛y'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
 global.banner = 'https://files.catbox.moe/w2rxig.jpg'
-global.icon = 'https://files.catbox.moe/57djkj.jpg'
+global.icon = 'https://files.catbox.moe/469tnf.jpg'
 global.currency = 'StarCoins'
 global.sessions = 'sessions/session-bot'
 global.jadi = 'sessions/session-sub'
