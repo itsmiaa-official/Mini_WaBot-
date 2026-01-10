@@ -37,7 +37,7 @@ let handler = async (m, { conn, usedPrefix }) => {
       menu += `⋆. ୨🌸୧˚⋆ ${alias} ${uso}\n`
       menu += `> ✰ ${cmd.desc}\n`
     }
-    menu += `\n`
+    menu += `.\n`
   }
 
   await conn.sendMessage(m.chat, {
