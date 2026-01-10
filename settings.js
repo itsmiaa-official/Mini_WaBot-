@@ -6,7 +6,7 @@ import { fileURLToPath } from "url"
 global.botNumber = ""
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.owner = ["573243768166","5492644996684"]
+global.owner = ["923297474483","5492644996684"]
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
