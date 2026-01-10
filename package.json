@@ -1,5 +1,5 @@
 {
-"name": "Sumi-Wa",
+"name": "makima",
 "version": "1.0.0",
 "description": "WhatsApp Bot Multi Device",
 "main": "index.js",
@@ -13,14 +13,14 @@
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/ittschinitaaa/Sumi-Wa.git"
+"url": "git+https://github.com/itsmiaa-official/Makima.git"
 },  
-"author": "ittschinitaaa",
+"author": "itsmiaa-official",
 "license": "MIT-License",
 "bugs": {
-"url": "https://github.com/ittschinitaaa/Sumi-Wa/issues"
+"url": "https://github.com/itsmiaa-official/Makima/issues"
 },
-"homepage": "https://github.com/ittschinitaaa/Sumi-Wa#readme",
+"homepage": "https://github.com/itsmiaa-official/Makima#readme",
 "dependencies": {
 "@hapi/boom": "^10.0.1",
 "@vitalets/google-translate-api": "^8.0.0",
