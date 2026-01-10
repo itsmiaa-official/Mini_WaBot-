@@ -5,7 +5,7 @@
 ## **𝖨𝖭𝖲𝖳𝖠𝖫𝖠𝖢𝖨𝖮𝖭**
 
 ```bash
-git clone https://github.com/itsmiaa-official/Aiko.git
+https://github.com/itsmiaa-official/Makima.git
 ```
 ```bash
 yarn install
