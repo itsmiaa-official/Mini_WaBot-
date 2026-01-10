@@ -8,7 +8,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   const botId = conn.user.jid;
 
   const ppUrl = await conn.profilePictureUrl(m.messageStubParameters[0], 'image')
-    .catch(() => "https://stellarwa.xyz/files/1752115005119.jpg");
+    .catch(() => "https://files.catbox.moe/469tnf.jpg");
 
   const name = nombre || conn.getName(m.messageStubParameters[0]);
   const actionUser = m.key.participant ? await conn.getName(m.key.participant) : null;
@@ -62,9 +62,9 @@ const welcomeMessage = formatText(chat.sWelcome || `╭┈──̇─̇─̇─�
     contextInfo: {
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363402839382986@newsletter",
+        newsletterJid: my.ch2,
         serverMessageId: '',
-        newsletterName: "ᥴһіᥒᥲ mі𝗍zᥙkі • ᥆𝖿іᥴіᥲᥣ ᥴһᥲᥒᥒᥱᥣ"
+        newsletterName: my.name2
       },
       externalAdReply: {
         title: namebot,
