@@ -54,7 +54,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     caption: menu.trim(),
     contextInfo: {
       forwardedNewsletterMessageInfo: {
-        newsletterJid: global.my.ch1,
+        newsletterJid: global.my.ch,
         newsletterName: global.my.name1,
         serverMessageId: -1
       },
