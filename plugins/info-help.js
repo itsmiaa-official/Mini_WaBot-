@@ -30,7 +30,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   for (const cat of Object.keys(categories).sort()) {
     const catName = cat.charAt(0).toUpperCase() + cat.slice(1)
-    menu += `\n\`⋆.୨${catName}୧˚⋆\`\n`
+    menu += `\n\`⋆.୨ ${catName} ୧˚⋆\`\n`
     for (const cmd of categories[cat].sort((a, b) => a.name.localeCompare(b.name))) {
       const alias = cmd.alias && cmd.alias.length ? `${cmd.alias.join(' • ')}` : ''
       const uso = cmd.uso ? `${cmd.uso}` : ''
