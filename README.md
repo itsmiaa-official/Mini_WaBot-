@@ -3,8 +3,14 @@
 ---
 ```bash
 git clone https://github.com/itsmiaa-official/Aiko.git
+```
+```bash
 yarn install
+```
+```bash
 npm install
+```
+```bash
 npm start
 ```
 ---
