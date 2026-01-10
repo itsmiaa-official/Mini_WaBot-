@@ -49,6 +49,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 await conn.sendMessage(m.chat, {
   text: menu.trim(),
   contextInfo: {
+    isForwarded: true,
     forwardedNewsletterMessageInfo: {
       newsletterJid: my.ch,
       newsletterName: my.name1,
