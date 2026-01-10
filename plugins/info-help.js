@@ -10,12 +10,11 @@ let txt = `
 > ¡Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aqui tienes la lista de comandos.
 
 
-⭐ 𝖳𝖨𝖯𝖮: » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
-🪻 𝖵𝖤𝖱𝖲𝖨𝖮́𝖭: » ${vs}
-🍯 𝖯𝖫𝖴𝖦𝖨𝖭𝖲: » ${totalCommands}
-🍄 𝖫𝖨𝖡𝖱𝖤𝖱𝖨𝖠: » 
+⭐ TIPO: » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
+🪻 VERSIÓN: » ${vs}
+🍯 PLUGINS: » ${totalCommands}
 
-╭─🍥 *Anime* 🍥─╮
+ANIME:
 ⋆. ୨🌸୧˚⋆ /angry _<mention>_
 > ✰ Estar enojado.
 ⋆. ୨🌸୧˚⋆ /bath _<mention>_
@@ -150,9 +149,8 @@ let txt = `
 > ✰ Saludar.
 ⋆. ୨🌸୧˚⋆ /wink _<mention>_
 > ✰ Guiñar.
-╰───────────────✿
 
-╭─🍥 *Download* 🍥─╮
+DOWNLOAD:
 ⋆. ୨🌸୧˚⋆ /facebook • /fb _<url>_
 > ✰ Descarga videos de facebook.
 ⋆. ୨🌸୧˚⋆ /mediafire • /mf _<url|query>_
@@ -163,7 +161,7 @@ let txt = `
 > ✰ Descarga videos de tiktok.
 ╰───────────────✿
 
-╭─🍥 *Grupo* 🍥─╮
+GRUPO:
 ⋆. ୨🌸୧˚⋆ /bot _<on|off>_
 > ✰ Activa y desactiva el bot en el grupo.
 ⋆. ୨🌸୧˚⋆ /close • /open 
@@ -194,14 +192,12 @@ let txt = `
 > ✰ Menciona a todos los usuarios del grupo.
 ⋆. ୨🌸୧˚⋆ /tagall 
 > ✰ Menciona a todos los usuarios con estilo.
-╰───────────────✿
 
-╭─🍥 *Ia* 🍥─╮
+IA:
 ⋆. ୨🌸୧˚⋆ /ia • /chatgpt _<query>_
 > ✰ Realiza una petición a chatgpt.
-╰───────────────✿
 
-╭─🍥 *Info* 🍥─╮
+INFO:
 ⋆. ୨🌸୧˚⋆ /menu • /help _<category>_
 > ✰ Muestra la lista de comandos.
 ⋆. ୨🌸୧˚⋆ /ping • /p 
@@ -210,9 +206,8 @@ let txt = `
 > ✰ Muestra los colaboradores de la bot.
 ⋆. ୨🌸୧˚⋆ /uptime 
 > ✰ Muestra el tiempo activa de la bot.
-╰───────────────✿
 
-╭─🍥 *Nsfw* 🍥─╮
+NSFW:
 ⋆. ୨🌸୧˚⋆ /anal _<mention>_
 > ✰ Hacer un anal.
 ⋆. ୨🌸୧˚⋆ /blowjob • /bj _<mention>_
@@ -245,9 +240,8 @@ let txt = `
 > ✰ Chupar las tetas de un usuario.
 ⋆. ୨🌸୧˚⋆ /undress • /encuerar _<mention>_
 > ✰ Encuerate o encuera a un usuario.
-╰───────────────✿
 
-╭─🍥 *Sockets* 🍥─╮
+SOCKETS:
 ⋆. ୨🌸୧˚⋆ /bots • /sockets 
 > ✰ Muestra el número de sockets conectados.
 ⋆. ୨🌸୧˚⋆ /leave 
@@ -258,9 +252,8 @@ let txt = `
 > ✰ Vincular un nuevo socket a tu número.
 ⋆. ୨🌸୧˚⋆ /self _<on|off>_
 > ✰ Haz privado o público tu socket.
-╰───────────────✿
 
-╭─🍥 *Utils* 🍥─╮
+UTILS:
 ⋆. ୨🌸୧˚⋆ /brat _<texto>_
 > ✰ Crea un sticker con texto.
 ⋆. ୨🌸୧˚⋆ /get _<url>_
@@ -271,7 +264,6 @@ let txt = `
 > ✰ Mejora la calidad de una imagen.
 ⋆. ୨🌸୧˚⋆ /sticker • /s 
 > ✰ Convierte imágenes o videos a stickers.
-╰───────────────✿
 `.trim()
 await conn.sendMessage(m.chat, { 
 text: txt,
