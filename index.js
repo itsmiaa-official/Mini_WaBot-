@@ -1,184 +1,4 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
-
-import './settings.js'
-import { startSub } from './lib/conexion.js'
-import cfonts from 'cfonts'
-import { createRequire } from 'module'
-import { fileURLToPath, pathToFileURL } from 'url'
-import { platform } from 'process'
-import fs, { readdirSync, unlinkSync, existsSync, watch } from 'fs'
-import yargs from 'yargs'
-import { spawn } from 'child_process'
-import lodash from 'lodash'
-import chalk from 'chalk'
-import syntaxerror from 'syntax-error'
-import pino from 'pino'
-import path, { join } from 'path'
-import { makeWASocket, protoType, serialize } from './lib/simple.js'
-import { Low, JSONFile } from 'lowdb'
-import store from './lib/store.js'
-import { useMultiFileAuthState, fetchLatestBaileysVersion, makeCacheableSignalKeyStore, jidNormalizedUser, DisconnectReason } from '@whiskeysockets/baileys'
-import readline from 'readline'
-import NodeCache from 'node-cache'
-import pkg from 'google-libphonenumber'
-const { PhoneNumberUtil } = pkg
-const phoneUtil = PhoneNumberUtil.getInstance()
-const { chain } = lodash
-
-// ───────────── Global helpers ─────────────
-globalThis.__filename = (pathURL = import.meta.url, rmPrefix = platform !== 'win32') =>
-  rmPrefix ? (/file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString()
-global.__dirname = (pathURL) => path.dirname(globalThis.__filename(pathURL, true))
-globalThis.__require = (dir = import.meta.url) => createRequire(dir)
-
-console.log(chalk.magentaBright('\n✧ Iniciando Makima...'))
-cfonts.say('Makima', { font: 'simple', align: 'left', colors: ['cyan'] })
-cfonts.say('Powered By China', { font: 'console', align: 'center', colors: ['yellow'] })
-
-protoType()
-serialize()
-
-globalThis.prefix = new RegExp('^[#!./]')
-
-// ───────────── Base de datos ─────────────
-globalThis.db = new Low(new JSONFile('datos.json'))
-globalThis.DATABASE = globalThis.db
-
-globalThis.loadDatabase = async () => {
-  if (globalThis.db.READ) return new Promise(resolve => setInterval(() => {
-    if (!globalThis.db.READ) {
-      clearInterval(this)
-      resolve(globalThis.db.data ?? globalThis.loadDatabase())
-    }
-  }, 1000))
-
-  if (globalThis.db.data !== null) return
-  globalThis.db.READ = true
-  await globalThis.db.read().catch(console.error)
-  globalThis.db.READ = null
-  globalThis.db.data = { users: {}, chats: {}, settings: {}, ...(globalThis.db.data || {}) }
-  globalThis.db.chain = chain(globalThis.db.data)
-}
-await globalThis.loadDatabase()
-
-// ───────────── Conexión ─────────────
-const { state, saveState, saveCreds } = await useMultiFileAuthState('./sessions')
-const msgRetryCache = new NodeCache({ stdTTL: 0, checkperiod: 0 })
-const userDevicesCache = new NodeCache({ stdTTL: 0, checkperiod: 0 })
-const { version } = await fetchLatestBaileysVersion()
-
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
-const question = (text) => new Promise(resolve => rl.question(text, resolve))
-
-let opcion = '1' // QR por defecto
-// Si quieres, puedes agregar lógica de code/text aquí similar a la tuya
-
-const connectionOptions = {
-  logger: pino({ level: 'silent' }),
-  printQRInTerminal: opcion === '1',
-  browser: ['MacOs', 'Safari'],
-  auth: {
-    creds: state.creds,
-    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'fatal' }).child({ level: 'fatal' })),
-  },
-  markOnlineOnConnect: false,
-  generateHighQualityLinkPreview: true,
-  syncFullHistory: false,
-  getMessage: async (key) => {
-    try {
-      const jid = jidNormalizedUser(key.remoteJid)
-      const msg = await store.loadMessage(jid, key.id)
-      return msg?.message || ''
-    } catch {
-      return ''
-    }
-  },
-  msgRetryCounterCache: msgRetryCache,
-  userDevicesCache,
-  cachedGroupMetadata: jid => globalThis.conn?.chats?.[jid] ?? {},
-  version,
-  keepAliveIntervalMs: 55000,
-  maxIdleTimeMs: 60000
-}
-
-globalThis.conn = makeWASocket(connectionOptions)
-conn.ev.on('creds.update', saveCreds)
-
-// ───────────── Connection Update ─────────────
-async function connectionUpdate(update) {
-  const { connection, lastDisconnect } = update
-  if (connection === 'open') {
-    await startSub()
-    console.log(chalk.greenBright('\n✔ Bot Online!\n'))
-  }
-  if (connection === 'close') {
-    const code = lastDisconnect?.error?.output?.statusCode
-    if ([401, 440, 428, 405].includes(code)) console.log(chalk.red('→ Cierra la sesión del Owner'))
-    console.log(chalk.yellow('→ Reconectando...'))
-    await reloadHandler(true)
-  }
-}
-conn.ev.on('connection.update', connectionUpdate)
-
-// ───────────── Reload Handler ─────────────
-let handler = await import('./handler.js')
-globalThis.reloadHandler = async (restartConn = false) => {
-  try {
-    const Handler = await import(`./handler.js?update=${Date.now()}`)
-    if (Object.keys(Handler || {}).length) handler = Handler
-  } catch (e) { console.error(e) }
-
-  if (restartConn) {
-    conn.ev.removeAllListeners()
-    globalThis.conn = makeWASocket(connectionOptions)
-  }
-
-  conn.handler = handler.handler?.bind(conn)
-  conn.ev.on('messages.upsert', conn.handler)
-  conn.ev.on('connection.update', connectionUpdate)
-  conn.ev.on('creds.update', saveCreds)
-}
-
-// ───────────── Plugins ─────────────
-const pluginFolder = join(__dirname, './plugins/index')
-const pluginFilter = f => f.endsWith('.js')
-globalThis.plugins = {}
-
-async function filesInit() {
-  for (const filename of readdirSync(pluginFolder).filter(pluginFilter)) {
-    try {
-      const module = await import(join(pluginFolder, filename))
-      globalThis.plugins[filename] = module.default || module
-    } catch (e) {
-      console.error(`Error cargando plugin '${filename}':\n${e}`)
-    }
-  }
-}
-await filesInit()
-
-globalThis.reload = async (_ev, filename) => {
-  if (!pluginFilter(filename)) return
-  const dir = join(pluginFolder, filename)
-  if (!existsSync(dir)) return delete globalThis.plugins[filename]
-  const err = syntaxerror(readFileSync(dir), filename, { sourceType: 'module', allowAwaitOutsideFunction: true })
-  if (err) console.error(`Syntax error in '${filename}':\n${err}`)
-  else {
-    try {
-      const module = await import(`${dir}?update=${Date.now()}`)
-      globalThis.plugins[filename] = module.default || module
-    } catch (e) { console.error(e) }
-  }
-}
-watch(pluginFolder, globalThis.reload)
-
-// ───────────── Tmp Cleaner ─────────────
-setInterval(() => {
-  const tmpDir = join(__dirname, 'tmp')
-  if (!existsSync(tmpDir)) return
-  readdirSync(tmpDir).forEach(file => unlinkSync(join(tmpDir, file)))
-}, 30 * 1000)
-
-/*process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
 import './settings.js'
 import { startSub } from './lib/conexion.js'
 import cfonts from 'cfonts'
@@ -190,7 +10,6 @@ import fs, { readdirSync, statSync, unlinkSync, existsSync, mkdirSync, readFileS
 import yargs from 'yargs';
 import { spawn, execSync } from 'child_process'
 import lodash from 'lodash'
-import { format } from 'util' // debo eliminar si no funciona
 import chalk from 'chalk'
 import syntaxerror from 'syntax-error'
 import pino from 'pino'
@@ -543,7 +362,7 @@ function clockString(ms) {
   const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
   const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
   return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
-} ----
+}*/
 
 _quickTest().catch(console.error)
 
@@ -567,4 +386,4 @@ async function joinChannels(conn) {
     await conn.newsletterFollow(value).catch(() => {})
     }
   }
-}*/
+}
