@@ -64,7 +64,7 @@ let handler = async (m, { conn, usedPrefix }) => {
         thumbnailUrl: global.banner,
         mediaType: 1,
         renderLargerThumbnail: true,
-        sourceUrl: global.redes
+        sourceUrl: "instagram.com"
       }
     }
   }, { quoted: m })
