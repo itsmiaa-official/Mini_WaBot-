@@ -135,7 +135,7 @@ await conn.sendMessage(m.chat, {
 text: txt,
 contextInfo: {
 mentionedJid: [userId],
-isForwarded: true,
+isForwarded: false,
 forwardedNewsletterMessageInfo: {
 newsletterJid: my.ch,
 serverMessageId: '',
