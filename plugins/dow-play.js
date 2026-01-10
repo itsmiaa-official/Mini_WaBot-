@@ -62,14 +62,14 @@ ${dev}`
 
         await conn.sendMessage(m.chat, {
           audio: { url: json.result.download.url },
-          mimetype: 'audio',
+          mimetype: 'audio/mpeg', 
           fileName: json.result.download.filename || `${json.result.metadata?.title || title}.mp3`,
           contextInfo: {
             externalAdReply: {
               title: title,
               body: `${dev}`,
               mediaType: 1,
-              thumbnail: thumb,
+              tthumbnail thumb,
               mediaUrl: url,
               sourceUrl: url,
               renderLargerThumbnail: true
