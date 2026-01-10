@@ -7,8 +7,6 @@ let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
 let txt = `
-̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
-︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶•︶
 > ¡Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aqui tienes la lista de comandos.
 
 
