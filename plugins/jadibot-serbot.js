@@ -18,8 +18,8 @@ let crm3 = "SBpbmZvLWRvbmFyLmpz"
 let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
-let rtx = ` \`🌷 Vincula el Socket usando el código QR. 🌷\`\n\nSigue las instrucciones:\n🌿 *Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Escanea el código QR.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
-let rtx2 = ` \`🌷Vincula el Socket usando el código de 8 dígitos. 🌷\`\n\nSigue las instrucciones:\n🌿 *Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Vincular con el número de telefono › Introduce el código de 8 dígitos.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
+let rtx = ` \`🧡 Vincula el Socket usando el código QR. 🧡\`\n\nSigue las instrucciones:\n🇦🇱 *Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Escanea el código QR.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
+let rtx2 = ` \`🧡Vincula el Socket usando el código de 8 dígitos. 🧡\`\n\nSigue las instrucciones:\n🇦🇱 *Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Vincular con el número de telefono › Introduce el código de 8 dígitos.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -186,22 +186,22 @@ let isWABusiness = sock.authState?.creds?.platform === 'smba' || sock.authState?
 const waType = isWABusiness ? 'Business' : 'Messenger'
 const userName = sock.authState.creds.me.name || global.db.data.users[m.sender].name || m.pushName || 'Anónimo'
 
-let chtxt = ` ֯　ׅ🍭ㅤ *Usuario ›* ${userName}
+let chtxt = ` ֯　ׅ👤ㅤ *Usuario ›* ${userName}
 
- ׄ 🍒 ׅ り *Método de conexión ›* ${method}
- ׄ 🍫 ׅ り *Browser ›* Firefox (Windows)
- ׄ 🍒 ׅ り *WhatsApp ›* ${waType}
- ׄ 🍫 ׅ り *Visita ›* instagram.com/its.chinitaaa_
- ׄ 🍒 ׅ り *Bot ›* ${wm}
- ׄ 🍫 ׅ り *Versión del bot ›* ^1.0.0
+ ׄ 🧡 ׅ り *Método de conexión ›* ${method}
+ ׄ 💋 ׅ り *Browser ›* Firefox (Windows)
+ ׄ 🧡 ׅ り *WhatsApp ›* ${waType}
+ ׄ 💋 ׅ り *Visita ›* https://chinaxp.vercel.app
+ ׄ 🧡 ׅ り *Bot ›* ${wm}
+ ׄ 💋 ׅ り *Versión del bot ›* ${vs}
 
 > *¡Conviértete en un sub-bot ahora!*\n https://wa.me/${m.sender.split('@')[0]}?text=#code`
 
 let ppch = await sock.profilePictureUrl(m.sender, 'image').catch(_ => "https://stellarwa.xyz/files/1757206448404.jpeg")
-await global.conn.sendMessage(my.ch, { text: chtxt,
+await global.conn.sendMessage(my.ch2, { text: chtxt,
 contextInfo: { 
 externalAdReply: {
-title: "【🍒 𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝗰𝗶𝗼́𝗻 𝗚𝗲𝗻𝗲𝗿𝗮𝗹 🍒】",
+title: "【🧡 𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝗰𝗶𝗼́𝗻 𝗚𝗲𝗻𝗲𝗿𝗮𝗹 🧡】",
 body: '⭐ ¡𝙉𝙪𝙚𝙫𝙤 𝙎𝙪𝙗-𝘽𝙤𝙩 𝙘𝙤𝙣𝙚𝙘𝙩𝙖𝙙𝙤! ⭐',
 thumbnailUrl: ppch,
 sourceUrl: redes,
@@ -212,7 +212,7 @@ renderLargerThumbnail: false
 } catch {
 console.log(chalk.gray('[ 🐼  ]  Error al enviar el mensaje al canal.'))
 }
-await conn.sendMessage(m.chat, {text: `*[𝐒𝐔𝐁-𝐁𝐎𝐓 𝐂𝐎𝐍𝐄𝐂𝐓𝐀𝐃𝐎 𝐂𝐎𝐍 𝐄𝐗𝐈𝐓𝐎]*\n> 𝐀𝐡𝐨𝐫𝐚 𝐟𝐨𝐫𝐦𝐚𝐬 𝐩𝐚𝐫𝐭𝐞 𝐝𝐞 𝐥𝐚 𝐟𝐚𝐦𝐢𝐥𝐢𝐚 𝐝𝐞 *𝐒𝐮𝐛-𝐁𝐨𝐭𝐬.*` }, { quoted: m })
+await conn.sendMessage(m.chat, {text: `🟢 𝖢𝖮𝖭𝖤𝖷𝖨𝖮́𝖭 𝖤𝖷𝖨𝖳𝖮𝖲𝖠...\n> *𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽@ 𝖺 𝗅𝖺 𝖿𝖺𝗆𝗂𝗅𝗂𝖺 𝖽𝖾 𝗌𝗎𝖻-𝖻𝗈𝗍𝗌...*` }, { quoted: m })
 delete commandFlags[m.sender]
 }
 
