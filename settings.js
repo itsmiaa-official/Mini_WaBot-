@@ -22,7 +22,7 @@ global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🩷 𝐛𝐲'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.banner = 'https://files.catbox.moe/sgul0u.jpg'
+global.banner = 'https://files.catbox.moe/w2rxig.jpg'
 global.icon = 'https://files.catbox.moe/57djkj.jpg'
 global.currency = 'StarCoins'
 global.sessions = 'sessions/session-bot'
