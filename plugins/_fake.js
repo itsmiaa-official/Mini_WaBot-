@@ -3,9 +3,9 @@ export async function before(m, { conn }) {
 var canal = 'https://whatsapp.com/channel/0029Vb73g1r1NCrTbefbFQ2T'
 var canal2 = 'https://whatsapp.com/channel/0029Vb6GYInD8SDuyzHk3f3l'
 var canal3 = 'https://whatsapp.com/channel/0029Vb6KW2Y0AgW5RA4QIS1B'
-var api = 'https://api.stellarwa.xyz'
-var git = 'https://github.com/ittschinitaaa'
-var md = 'https://github.com/ittschinitaaa/Aenira-bot'
+var api = 'https://chinaxp.vercel.app'
+var git = 'https://github.com/itsmiaa-official'
+var md = 'https://github.com/itsmiaa-official/Makima'
 
 globalThis.redes = [canal, canal2, canal3, api, git, md].getRandom()
 
