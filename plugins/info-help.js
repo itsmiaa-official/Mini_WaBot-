@@ -30,14 +30,14 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   for (const cat of Object.keys(categories).sort()) {
     const catName = cat.charAt(0).toUpperCase() + cat.slice(1)
-    menu += `\n╭─🍥 *${catName}* 🍥─╮\n`
+    menu += `\n\`⋆.୨${catName}୧˚⋆\`\n`
     for (const cmd of categories[cat].sort((a, b) => a.name.localeCompare(b.name))) {
       const alias = cmd.alias && cmd.alias.length ? `${cmd.alias.join(' • ')}` : ''
       const uso = cmd.uso ? `${cmd.uso}` : ''
       menu += `⋆. ୨🌸୧˚⋆ ${alias} ${uso}\n`
       menu += `> ✰ ${cmd.desc}\n`
     }
-    menu += `╰───────────────✿\n`
+    menu += `\n`
   }
 
   await conn.sendMessage(m.chat, {
