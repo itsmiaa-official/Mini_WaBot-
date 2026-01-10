@@ -34,8 +34,8 @@ let handler = async (m, { conn, usedPrefix }) => {
     for (const cmd of categories[cat].sort((a, b) => a.name.localeCompare(b.name))) {
       const alias = cmd.alias && cmd.alias.length ? `${cmd.alias.join(', ')})` : ''
       const uso = cmd.uso ? `\nUso: ${usedPrefix}${cmd.name} ${cmd.uso}` : ''
-      menu += `✿ ${usedPrefix}${cmd.name} ${alias}${uso}\n\n`
-      menu += `> ✰ ${cmd.desc}`
+      menu += `✿ ${usedPrefix}${cmd.name} ${alias}${uso}\n`
+      menu += `> ✰ ${cmd.desc}\n`
     }
     menu += `╰───────────────✿\n`
   }
