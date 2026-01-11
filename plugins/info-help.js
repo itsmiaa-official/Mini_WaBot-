@@ -17,7 +17,7 @@ let txt = `
 
 ׅㅤ𓏸𓈒ㅤׄ *ᴜsᴇʀs ::* ${totalreg}
 ׅㅤ𓏸𓈒ㅤׄ *ᴄᴏᴍᴍᴀɴᴅs ::* ${totalCommands}
-ׅㅤ𓏸𓈒ㅤׄ *ɪɴsᴛᴀɢʀᴀᴍ ::* its.chinitaaa_
+ׅㅤ𓏸𓈒ㅤׄ *ɪɴsᴛᴀɢʀᴀᴍ ::* instagram.com/its.chinitaaa_
 
 乂 *ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs* 乂
 
