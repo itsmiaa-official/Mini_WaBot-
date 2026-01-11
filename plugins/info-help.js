@@ -8,9 +8,9 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 
 let txt = `
 > . ﹡ ﹟ 🌹 ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
-> . ﹡ ﹟ 🌷 ׄ ⬭ *sᴏʏ ${botname}*
 
-〆⁾ ㅤׄㅤ⸼ㅤׄ *͜🌱* ㅤ֢ㅤ⸱ㅤᯭִ*
+*ㅤꨶ〆⁾ ㅤׄㅤ⸼ㅤׄ *͜🌱* ㅤ֢ㅤ⸱ㅤᯭִ*
+ㅤ𓏸𓈒ㅤׄ *sᴏʏ ::* ${botname}
 ׅㅤ𓏸𓈒ㅤׄ *ᴅᴇᴠᴇʟᴏᴘᴇʀ ::* ${author}
 ׅㅤ𓏸𓈒ㅤׄ *ᴛɪᴘᴏ ::* ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
 ׅㅤ𓏸𓈒ㅤׄ *ᴠᴇʀsɪᴏɴ ::* ${vs}
