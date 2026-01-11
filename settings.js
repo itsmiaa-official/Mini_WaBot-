@@ -16,9 +16,9 @@ global.vs = '1.0.0'
 global.bot = '𝐌𝐚𝐤𝐢𝐦𝐚'
 global.packname = '   ̶۫̄͟𓏲𝐌𝐚𝐤꯭Ꭵᩥ𝐦𝐚𓍲̈͜𓊓̵̬'
 global.wm = '𝐌𝐚𝐤𝐢𝐦𝐚'
-global.author = '𝑪𝑯𝑰𝑵𝑰𝑻𝑨 | ᵒᶠᶦᶜᶦᵃˡ'
-global.dev = '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʜɪɴᴀ 🔥'
-global.copy = '𝐌𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 🧡 𝐛y'
+global.author = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎'
+global.dev = '𝗠𝗮𝗱𝗲 🧡 𝗪𝗶𝘁𝗵 𝗕𝘆 𝕮𝖍𝖎𝖓𝖆'
+global.copy = '𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝕮𝖍𝖎𝖓𝖆'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
