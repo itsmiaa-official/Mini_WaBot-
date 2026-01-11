@@ -7,276 +7,159 @@ let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
 let txt = `
-> ¡Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aqui tienes la lista de comandos.
+> . ﹡ ﹟ 🌹 ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
+> . ﹡ ﹟ 🌷 ׄ ⬭ *sᴏʏ ${botname}*
 
+〆⁾ ㅤׄㅤ⸼ㅤׄ *͜🌱* ㅤ֢ㅤ⸱ㅤᯭִ*
+ׅㅤ𓏸𓈒ㅤׄ *ᴅᴇᴠᴇʟᴏᴘᴇʀ ::* ${author}
+ׅㅤ𓏸𓈒ㅤׄ *ᴛɪᴘᴏ ::* ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
+ׅㅤ𓏸𓈒ㅤׄ *ᴠᴇʀsɪᴏɴ ::* ${vs}
 
-\`⭐ TIPO:\` » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
-\`🪻 VERSIÓN:\` » ${vs}
-\`🍯 PLUGINS:\` » ${totalCommands}
+ׅㅤ𓏸𓈒ㅤׄ *ᴜsᴇʀs ::* ${totalreg}
+ׅㅤ𓏸𓈒ㅤׄ *ᴄᴏᴍᴍᴀɴᴅs ::* ${totalCommands}
+ׅㅤ𓏸𓈒ㅤׄ *ɪɴsᴛᴀɢʀᴀᴍ ::* its.chinitaaa_
 
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐀𝐍𝐈𝐌𝐄\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖠𝗇𝗂𝗆𝖾... 
+乂 *ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs* 乂
 
-⋆. ୨🌸୧˚⋆ /angry _<mention>_
-> ✰ Estar enojado.
-⋆. ୨🌸୧˚⋆ /bath _<mention>_
-> ✰ Bañarse.
-⋆. ୨🌸୧˚⋆ /bite • /morder _<mention>_
-> ✰ Morder.
-⋆. ୨🌸୧˚⋆ /bleh _<mention>_
-> ✰ Sacar la lengua.
-⋆. ୨🌸୧˚⋆ /blowkiss _<mention>_
-> ✰ Lanzar un beso.
-⋆. ୨🌸୧˚⋆ /blush _<mention>_
-> ✰ Sonrojarse.
-⋆. ୨🌸୧˚⋆ /bonk _<mention>_
-> ✰ Golpear.
-⋆. ୨🌸୧˚⋆ /bored • /aburrido _<mention>_
-> ✰ Estar aburrido.
-⋆. ୨🌸୧˚⋆ /bully _<mention>_
-> ✰ Hacer bullying.
-⋆. ୨🌸୧˚⋆ /call _<mention>_
-> ✰ Llamar a alguien.
-⋆. ୨🌸୧˚⋆ /clap _<mention>_
-> ✰ Aplaudir.
-⋆. ୨🌸୧˚⋆ /coffee • /cafe _<mention>_
-> ✰ Tomar café.
-⋆. ୨🌸୧˚⋆ /cold _<mention>_
-> ✰ Mucho frío.
-⋆. ୨🌸୧˚⋆ /comfort _<mention>_
-> ✰ Consolar a alguien.
-⋆. ୨🌸୧˚⋆ /cringe _<mention>_
-> ✰ Sentir cringe.
-⋆. ୨🌸୧˚⋆ /cry _<mention>_
-> ✰ Llorar.
-⋆. ୨🌸୧˚⋆ /cuddle _<mention>_
-> ✰ Acurrucarse.
-⋆. ୨🌸୧˚⋆ /curious _<mention>_
-> ✰ Sentir curiosidad.
-⋆. ୨🌸୧˚⋆ /dance _<mention>_
-> ✰ Bailar.
-⋆. ୨🌸୧˚⋆ /dramatic • /drama _<mention>_
-> ✰ Hacer un drama.
-⋆. ୨🌸୧˚⋆ /draw _<mention>_
-> ✰ Hacer un dibujo.
-⋆. ୨🌸୧˚⋆ /drunk _<mention>_
-> ✰ Estar borracho.
-⋆. ୨🌸୧˚⋆ /eat • /nom • /comer _<mention>_
-> ✰ Comer.
-⋆. ୨🌸୧˚⋆ /gaming _<mention>_
-> ✰ Jugar videojuegos.
-⋆. ୨🌸୧˚⋆ /handhold _<mention>_
-> ✰ Tomar de la mano.
-⋆. ୨🌸୧˚⋆ /happy • /feliz _<mention>_
-> ✰ Saltos de felicidad.
-⋆. ୨🌸୧˚⋆ /heat _<mention>_
-> ✰ Sentir calor.
-⋆. ୨🌸୧˚⋆ /highfive _<mention>_
-> ✰ Chocar los cinco.
-⋆. ୨🌸୧˚⋆ /hug _<mention>_
-> ✰ Dar un abrazo.
-⋆. ୨🌸୧˚⋆ /impregnate • /preg _<mention>_
-> ✰ Embarazar.
-⋆. ୨🌸୧˚⋆ /jump _<mention>_
-> ✰ Saltar de felicidad.
-⋆. ୨🌸୧˚⋆ /kill _<mention>_
-> ✰ Asesinar.
-⋆. ୨🌸୧˚⋆ /kiss • /muak _<mention>_
-> ✰ Dar un beso.
-⋆. ୨🌸୧˚⋆ /kisscheek • /beso _<mention>_
-> ✰ Besar en la mejilla.
-⋆. ୨🌸୧˚⋆ /laugh _<mention>_
-> ✰ Reírse.
-⋆. ୨🌸୧˚⋆ /lick _<mention>_
-> ✰ Lamer.
-⋆. ୨🌸୧˚⋆ /love • /amor _<mention>_
-> ✰ Sentir atracción.
-⋆. ୨🌸୧˚⋆ /nope _<mention>_
-> ✰ Expresar desacuerdo.
-⋆. ୨🌸୧˚⋆ /pat _<mention>_
-> ✰ Dar una caricia.
-⋆. ୨🌸୧˚⋆ /peek _<mention>_
-> ✰ Espiar a alguien.
-⋆. ୨🌸୧˚⋆ /pout _<mention>_
-> ✰ Hacer pucheros.
-⋆. ୨🌸୧˚⋆ /punch _<mention>_
-> ✰ Dar un puñetazo.
-⋆. ୨🌸୧˚⋆ /push _<mention>_
-> ✰ Empujar a alguien.
-⋆. ୨🌸୧˚⋆ /run • /correr _<mention>_
-> ✰ Correr.
-⋆. ୨🌸୧˚⋆ /sad • /triste _<mention>_
-> ✰ Sentir tristeza.
-⋆. ୨🌸୧˚⋆ /scared _<mention>_
-> ✰ Estar asustado.
-⋆. ୨🌸୧˚⋆ /scream _<mention>_
-> ✰ Gritar fuerte.
-⋆. ୨🌸୧˚⋆ /seduce _<mention>_
-> ✰ Seducir.
-⋆. ୨🌸୧˚⋆ /shy • /timido _<mention>_
-> ✰ Sentir timidez.
-⋆. ୨🌸୧˚⋆ /sing _<mention>_
-> ✰ Cantarle a alguien.
-⋆. ୨🌸୧˚⋆ /slap _<mention>_
-> ✰ Dar una bofetada.
-⋆. ୨🌸୧˚⋆ /sleep _<mention>_
-> ✰ Dormir.
-⋆. ୨🌸୧˚⋆ /smile _<mention>_
-> ✰ Sonreír.
-⋆. ୨🌸୧˚⋆ /smoke • /fumar _<mention>_
-> ✰ Fumar.
-⋆. ୨🌸୧˚⋆ /smug _<mention>_
-> ✰ Presumir.
-⋆. ୨🌸୧˚⋆ /sniff _<mention>_
-> ✰ Olfatear a alguien.
-⋆. ୨🌸୧˚⋆ /snuggle _<mention>_
-> ✰ Acurrucarse con alguien.
-⋆. ୨🌸୧˚⋆ /spit • /escupir _<mention>_
-> ✰ Escupir.
-⋆. ୨🌸୧˚⋆ /stare _<mention>_
-> ✰ Mirar fijamente.
-⋆. ୨🌸୧˚⋆ /step • /pisar _<mention>_
-> ✰ Pisar.
-⋆. ୨🌸୧˚⋆ /think _<mention>_
-> ✰ Pensar.
-⋆. ୨🌸୧˚⋆ /thinkhard _<mention>_
-> ✰ Pensar intensamente.
-⋆. ୨🌸୧˚⋆ /tickle _<mention>_
-> ✰ Hacer cosquillas.
-⋆. ୨🌸୧˚⋆ /trip _<mention>_
-> ✰ Tropezar accidentalmente.
-⋆. ୨🌸୧˚⋆ /walk _<mention>_
-> ✰ Caminar.
-⋆. ୨🌸୧˚⋆ /wave _<mention>_
-> ✰ Saludar.
-⋆. ୨🌸୧˚⋆ /wink _<mention>_
-> ✰ Guiñar.
+ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ ᴀɴɪᴍᴇ ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /angry _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /bath _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /bite › /morder _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /bleh _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /blowkiss _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /blush _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /bonk _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /bored › /aburrido _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /bully _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /call _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /clap _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /coffee › /cafe _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /cold _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /comfort _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /cringe _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /cry _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /cuddle _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /curious _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /dance _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /dramatic › /drama _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /draw _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /drunk _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /eat › /nom › /comer _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /gaming _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /handhold _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /happy › /feliz _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /heat _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /highfive _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /hug _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /impregnate › /preg _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /jump _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /kill _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /kiss › /muak _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /kisscheek › /beso _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /laugh _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /lick _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /love › /amor _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /nope _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /pat _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /peek _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /pout _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /punch _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /push _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /run › /correr _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /sad › /triste _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /scared _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /scream _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /seduce _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /shy › /timido _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /sing _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /slap _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /sleep _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /smile _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /smoke › /fumar _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /smug _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /sniff _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /snuggle _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /spit › /escupir _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /stare _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /step › /pisar _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /think _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /thinkhard _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /tickle _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /trip _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /walk _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /wave _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /wink _<mention>_
+*.・。.・゜✭・ . ・✫・゜・。.*
 
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌... 
+  ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ ᴅᴏᴡɴʟᴏᴀᴅs ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /facebook › /fb _<url>_.
+֯　ׅ🍃ֶ֟፝֯ㅤ /mediafire › /mf _<url|query>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /play › play2 › /mp3 › /mp4 › /playaudio › /playvideo _<url|query>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /tiktok › /tt _<url|query>_
+*.・。.・゜✭・ . ・✫・゜・。.*
 
-⋆. ୨🌸୧˚⋆ /facebook • /fb _<url>_
-> ✰ Descarga videos de facebook.
-⋆. ୨🌸୧˚⋆ /mediafire • /mf _<url|query>_
-> ✰ Descarga archivos de mediafire.
-⋆. ୨🌸୧˚⋆ /play • play2 • /mp3 • /mp4 • /playaudio • /playvideo _<url|query>_
-> ✰ Descarga videos de youtube.
-⋆. ୨🌸୧˚⋆ /tiktok • /tt _<url|query>_
-> ✰ Descarga videos de tiktok.
+  ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ ɢʀᴜᴘᴏ ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /bot _<on|off>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /group open/close
+֯　ׅ🍃ֶ֟፝֯ㅤ /demote _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /gpbanner › /groupimg 
+֯　ׅ🍃ֶ֟፝֯ㅤ /gpdesc › groupdesc 
+֯　ׅ🍃ֶ֟፝֯ㅤ /gpname › /groupname 
+֯　ׅ🍃ֶ֟፝֯ㅤ /groupinfo › /gp 
+֯　ׅ🍃ֶ֟፝֯ㅤ /kick _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /kickall › /purgar 
+֯　ׅ🍃ֶ֟፝֯ㅤ /link › /linkgrupo 
+֯　ׅ🍃ֶ֟፝֯ㅤ /on › /off _<welcome|alerts|alertas|antilinks|antienlaces|onlyadmin|adminonly|nsfw>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /promote _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /setprimary _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /tag › /hidetag _<text>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /tagall 
+*.・。.・゜✭・ . ・✫・゜・。.*
 
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐆𝐑𝐔𝐏𝐎\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖦𝗋𝗎𝗉𝗈𝗌... 
+  ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ  ɪᴀ ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /ia › /chatgpt _<query>_
+*.・。.・゜✭・ . ・✫・゜・。.*
 
-⋆. ୨🌸୧˚⋆ /bot _<on|off>_
-> ✰ Activa y desactiva el bot en el grupo.
-⋆. ୨🌸୧˚⋆ /group open/close
-> ✰ Cierra y abre el grupo.
-⋆. ୨🌸୧˚⋆ /demote _<mention>_
-> ✰ Degrada a un usuario de administrador.
-⋆. ୨🌸୧˚⋆ /gpbanner • /groupimg 
-> ✰ Cambia la imagen del grupo.
-⋆. ୨🌸୧˚⋆ /gpdesc • groupdesc 
-> ✰ Cambia la descripción del grupo.
-⋆. ୨🌸୧˚⋆ /gpname • /groupname 
-> ✰ Cambia el nombre del grupo.
-⋆. ୨🌸୧˚⋆ /groupinfo • /gp 
-> ✰ Muestra la información del grupo.
-⋆. ୨🌸୧˚⋆ /kick _<mention>_
-> ✰ Expulsa a un usuario del grupo.
-⋆. ୨🌸୧˚⋆ /kickall • /purgar 
-> ✰ Expulsa a todos los usuarios del grupo (modo purga).
-⋆. ୨🌸୧˚⋆ /link • /linkgrupo 
-> ✰ Obtiene el enlace mágico del grupo.
-⋆. ୨🌸୧˚⋆ /on • /off _<welcome|alerts|alertas|antilinks|antienlaces|onlyadmin|adminonly|nsfw>_
-> ✰ Desactiva o activa las configuraciones del grupo.
-⋆. ୨🌸୧˚⋆ /promote _<mention>_
-> ✰ Promueve a un usuario a administrador.
-⋆. ୨🌸୧˚⋆ /setprimary _<mention>_
-> ✰ Establece un bot como primario del grupo.
-⋆. ୨🌸୧˚⋆ /tag • /hidetag _<text>_
-> ✰ Menciona a todos los usuarios del grupo.
-⋆. ୨🌸୧˚⋆ /tagall 
-> ✰ Menciona a todos los usuarios con estilo.
+  ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ ɪɴғᴏ ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /menu › /help
+֯　ׅ🍃ֶ֟፝֯ㅤ /ping › /p 
+֯　ׅ🍃ֶ֟፝֯ㅤ /uptime 
+*.・。.・゜✭・ . ・✫・゜・。.*
 
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐈𝐀\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖨𝖠...
+  ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ ɴsғᴡ ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /anal _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /blowjob › /bj _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /boobjob _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /cum _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /danbooru › /dbooru _<tag>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /fap › /paja _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /footjob _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /fuck › /coger _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /gelbooru › /gbooru _<tag>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /grabboobs _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /grope _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /lickpussy _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /sixnine › /69 _<mention>_.
+֯　ׅ🍃ֶ֟፝֯ㅤ /spank › /nalgada _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /suckboobs _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /undress › /encuerar _<mention>_
+*.・。.・゜✭・ . ・✫・゜・。.*
 
-⋆. ୨🌸୧˚⋆ /ia • /chatgpt _<query>_
-> ✰ Realiza una petición a chatgpt.
+  ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ sᴏᴄᴋᴇᴛs ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /bots › /sockets 
+֯　ׅ🍃ֶ֟፝֯ㅤ /leave 
+֯　ׅ🍃ֶ֟፝֯ㅤ /logout 
+֯　ׅ🍃ֶ֟፝֯ㅤ /qr › /code 
+֯　ׅ🍃ֶ֟፝֯ㅤ /self _<on|off>_
+*.・。.・゜✭・ . ・✫・゜・。.*
 
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝖼𝗂𝗈𝗇 𝖽𝖾 𝗅𝖺 𝖻𝗈𝗍... 
-
-⋆. ୨🌸୧˚⋆ /menu • /help _<category>_
-> ✰ Muestra la lista de comandos.
-⋆. ୨🌸୧˚⋆ /ping • /p 
-> ✰ Muestra la velocidad del Bot.
-⋆. ୨🌸୧˚⋆ /uptime 
-> ✰ Muestra el tiempo activa de la bot.
-
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐍𝐒𝐅𝐖\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖭𝖲𝖥𝖶 (𝗉𝖺𝗋𝖺 𝖺𝖽𝗎𝗅𝗍𝗈𝗌)...
-
-⋆. ୨🌸୧˚⋆ /anal _<mention>_
-> ✰ Hacer un anal.
-⋆. ୨🌸୧˚⋆ /blowjob • /bj _<mention>_
-> ✰ Dale una mamada a un usuario.
-⋆. ୨🌸୧˚⋆ /boobjob _<mention>_
-> ✰ Hacerle una rusa a un usuario.
-⋆. ୨🌸୧˚⋆ /cum _<mention>_
-> ✰ Venirse en alguien.
-⋆. ୨🌸୧˚⋆ /danbooru • /dbooru _<tag>_
-> ✰ Buscar imágenes en danbooru.
-⋆. ୨🌸୧˚⋆ /fap • /paja _<mention>_
-> ✰ Haserse una paja.
-⋆. ୨🌸୧˚⋆ /footjob _<mention>_
-> ✰ Hacer una paja con los pies a un usuario.
-⋆. ୨🌸୧˚⋆ /fuck • /coger _<mention>_
-> ✰ Coger a un usuario.
-⋆. ୨🌸୧˚⋆ /gelbooru • /gbooru _<tag>_
-> ✰ Buscar imágenes en gelbooru.
-⋆. ୨🌸୧˚⋆ /grabboobs _<mention>_
-> ✰ Agarrar las tetas de un usuario.
-⋆. ୨🌸୧˚⋆ /grope _<mention>_
-> ✰ Manosear las nalgas a un usuario.
-⋆. ୨🌸୧˚⋆ /lickpussy _<mention>_
-> ✰ Lamer un coño de un usuario.
-⋆. ୨🌸୧˚⋆ /sixnine • /69 _<mention>_
-> ✰ Hacer un 69 con un usuario.
-⋆. ୨🌸୧˚⋆ /spank • /nalgada _<mention>_
-> ✰ Darle una nalgada a un usuario.
-⋆. ୨🌸୧˚⋆ /suckboobs _<mention>_
-> ✰ Chupar las tetas de un usuario.
-⋆. ୨🌸୧˚⋆ /undress • /encuerar _<mention>_
-> ✰ Encuerate o encuera a un usuario.
-
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐒𝐎𝐂𝐊𝐄𝐓𝐒\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖲𝗎𝖻-𝖡𝗈𝗍𝗌... 
-
-⋆. ୨🌸୧˚⋆ /bots • /sockets 
-> ✰ Muestra el número de sockets conectados.
-⋆. ୨🌸୧˚⋆ /leave 
-> ✰ El bot abandona el grupo actual.
-⋆. ୨🌸୧˚⋆ /logout 
-> ✰ Cierra la sesión del socket.
-⋆. ୨🌸୧˚⋆ /qr • /code 
-> ✰ Vincular un nuevo socket a tu número.
-⋆. ୨🌸୧˚⋆ /self _<on|off>_
-> ✰ Haz privado o público tu socket.
-
-𓂃˖˳·˖ ִֶָ ⋆ \`𝐔𝐓𝐈𝐋𝐒\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗎𝗍𝗂𝗅𝗂𝖽𝖺𝖽𝖾𝗌... 
-
-⋆. ୨🌸୧˚⋆ /brat _<texto>_
-> ✰ Crea un sticker con texto.
-⋆. ୨🌸୧˚⋆ /get _<url>_
-> ✰ Realiza solicitudes get a páginas web.
-⋆. ୨🌸୧˚⋆ /getpic • /pfp _<mention>_
-> ✰ Ver la foto de perfil de un usuario.
-⋆. ୨🌸୧˚⋆ /hd 
-> ✰ Mejora la calidad de una imagen.
-⋆. ୨🌸୧˚⋆ /sticker • /s 
-> ✰ Convierte imágenes o videos a stickers.
+  ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ ᴜᴛɪʟs ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
+֯　ׅ🍃ֶ֟፝֯ㅤ /brat _<texto>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /get _<url>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /getpic › /pfp _<mention>_
+֯　ׅ🍃ֶ֟፝֯ㅤ /hd 
+֯　ׅ🍃ֶ֟፝֯ㅤ /sticker › /s
+*.・。.・゜✭・ . ・✫・゜・。.*
 `.trim()
 await conn.sendMessage(m.chat, { 
 text: txt,
