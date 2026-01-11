@@ -12,7 +12,7 @@ var handler = async (m, { conn, args }) => {
         await conn.groupSettingUpdate(m.chat, 'not_announcement');
         return conn.reply(
             m.chat,
-            '🕸 *Grupo abierto*\nAhora todos los participantes pueden enviar mensajes.',
+            '> ꕥ *Grupo abierto*',
             m
         );
     }
@@ -21,7 +21,7 @@ var handler = async (m, { conn, args }) => {
         await conn.groupSettingUpdate(m.chat, 'announcement');
         return conn.reply(
             m.chat,
-            '🕸 *Grupo cerrado*\nSolo los administradores pueden enviar mensajes.',
+            '> ꕥ *Grupo cerrado*',
             m
         );
     }
@@ -33,9 +33,9 @@ var handler = async (m, { conn, args }) => {
     );
 };
 
-handler.help = ['close', 'cerrar', 'open', 'abrir'];
-handler.tags = ['open', 'abrir', 'close', 'cerrar'];
-handler.command = ['close', 'cerrar', 'abrir','open'];
+handler.help = ['group open', 'group close'];
+handler.tags = ['group'];
+handler.command = ['group'];
 handler.admin = true;
 handler.botAdmin = true;
 
