@@ -168,7 +168,7 @@ mentionedJid: [userId],
 isForwarded: true,
 forwardedNewsletterMessageInfo: {
 newsletterJid: my.ch,
-serverMessageId: '',
+serverMessageId: '0',
 newsletterName: my.name1
 },
 externalAdReply: {
