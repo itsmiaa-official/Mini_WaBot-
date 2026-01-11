@@ -10,11 +10,13 @@ let txt = `
 > ¡Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aqui tienes la lista de comandos.
 
 
-⭐ TIPO: » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
-🪻 VERSIÓN: » ${vs}
-🍯 PLUGINS: » ${totalCommands}
+\`⭐ TIPO:\` » ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
+\`🪻 VERSIÓN:\` » ${vs}
+\`🍯 PLUGINS:\` » ${totalCommands}
 
-ANIME:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐀𝐍𝐈𝐌𝐄\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖠𝗇𝗂𝗆𝖾... 
+
 ⋆. ୨🌸୧˚⋆ /angry _<mention>_
 > ✰ Estar enojado.
 ⋆. ୨🌸୧˚⋆ /bath _<mention>_
@@ -150,7 +152,9 @@ ANIME:
 ⋆. ୨🌸୧˚⋆ /wink _<mention>_
 > ✰ Guiñar.
 
-DOWNLOAD:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌... 
+
 ⋆. ୨🌸୧˚⋆ /facebook • /fb _<url>_
 > ✰ Descarga videos de facebook.
 ⋆. ୨🌸୧˚⋆ /mediafire • /mf _<url|query>_
@@ -159,9 +163,10 @@ DOWNLOAD:
 > ✰ Descarga videos de youtube.
 ⋆. ୨🌸୧˚⋆ /tiktok • /tt _<url|query>_
 > ✰ Descarga videos de tiktok.
-╰───────────────✿
 
-GRUPO:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐆𝐑𝐔𝐏𝐎\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖦𝗋𝗎𝗉𝗈𝗌... 
+
 ⋆. ୨🌸୧˚⋆ /bot _<on|off>_
 > ✰ Activa y desactiva el bot en el grupo.
 ⋆. ୨🌸୧˚⋆ /group open/close
@@ -193,11 +198,15 @@ GRUPO:
 ⋆. ୨🌸୧˚⋆ /tagall 
 > ✰ Menciona a todos los usuarios con estilo.
 
-IA:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐈𝐀\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖨𝖠...
+
 ⋆. ୨🌸୧˚⋆ /ia • /chatgpt _<query>_
 > ✰ Realiza una petición a chatgpt.
 
-INFO:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝖼𝗂𝗈𝗇 𝖽𝖾 𝗅𝖺 𝖻𝗈𝗍... 
+
 ⋆. ୨🌸୧˚⋆ /menu • /help _<category>_
 > ✰ Muestra la lista de comandos.
 ⋆. ୨🌸୧˚⋆ /ping • /p 
@@ -207,7 +216,9 @@ INFO:
 ⋆. ୨🌸୧˚⋆ /uptime 
 > ✰ Muestra el tiempo activa de la bot.
 
-NSFW:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐍𝐒𝐅𝐖\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖭𝖲𝖥𝖶 (𝗉𝖺𝗋𝖺 𝖺𝖽𝗎𝗅𝗍𝗈𝗌)...
+
 ⋆. ୨🌸୧˚⋆ /anal _<mention>_
 > ✰ Hacer un anal.
 ⋆. ୨🌸୧˚⋆ /blowjob • /bj _<mention>_
@@ -241,7 +252,9 @@ NSFW:
 ⋆. ୨🌸୧˚⋆ /undress • /encuerar _<mention>_
 > ✰ Encuerate o encuera a un usuario.
 
-SOCKETS:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐒𝐎𝐂𝐊𝐄𝐓𝐒\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖲𝗎𝖻-𝖡𝗈𝗍𝗌... 
+
 ⋆. ୨🌸୧˚⋆ /bots • /sockets 
 > ✰ Muestra el número de sockets conectados.
 ⋆. ୨🌸୧˚⋆ /leave 
@@ -253,7 +266,9 @@ SOCKETS:
 ⋆. ୨🌸୧˚⋆ /self _<on|off>_
 > ✰ Haz privado o público tu socket.
 
-UTILS:
+𓂃˖˳·˖ ִֶָ ⋆ \`𝐔𝐓𝐈𝐋𝐒\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
+✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗎𝗍𝗂𝗅𝗂𝖽𝖺𝖽𝖾𝗌... 
+
 ⋆. ୨🌸୧˚⋆ /brat _<texto>_
 > ✰ Crea un sticker con texto.
 ⋆. ୨🌸୧˚⋆ /get _<url>_
