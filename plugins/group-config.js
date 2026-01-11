@@ -10,6 +10,8 @@ var handler = async (m, { conn, args }) => {
 
     if (args[0] === 'open') {
         await conn.groupSettingUpdate(m.chat, 'not_announcement');
+
+        await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
         return conn.reply(
             m.chat,
             '> ꕥ *Grupo abierto*',
@@ -19,6 +21,8 @@ var handler = async (m, { conn, args }) => {
 
     if (args[0] === 'close') {
         await conn.groupSettingUpdate(m.chat, 'announcement');
+
+        await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
         return conn.reply(
             m.chat,
             '> ꕥ *Grupo cerrado*',
