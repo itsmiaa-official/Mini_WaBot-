@@ -34,7 +34,7 @@ var handler = async (m, { conn, args }) => {
 };
 
 handler.help = ['close', 'cerrar', 'open', 'abrir'];
-handler.tags = ['group'];
+handler.tags = ['open', 'abrir', 'close', 'cerrar'];
 handler.command = ['close', 'cerrar', 'abrir','open'];
 handler.admin = true;
 handler.botAdmin = true;
