@@ -164,7 +164,7 @@ DOWNLOAD:
 GRUPO:
 ⋆. ୨🌸୧˚⋆ /bot _<on|off>_
 > ✰ Activa y desactiva el bot en el grupo.
-⋆. ୨🌸୧˚⋆ /close • /open 
+⋆. ୨🌸୧˚⋆ /group open/close
 > ✰ Cierra y abre el grupo.
 ⋆. ୨🌸୧˚⋆ /demote _<mention>_
 > ✰ Degrada a un usuario de administrador.
