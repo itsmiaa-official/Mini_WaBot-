@@ -6,6 +6,8 @@ let userId = mentionedJid && mentionedJid[0] ? mentionedJid[0] : m.sender
 let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
+await conn.sendMessage(m.chat, { react: { text: '🧡', key: m.key } })
+  
 let txt = `
 > . ﹡ ﹟ 🌹 ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
 
