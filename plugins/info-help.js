@@ -15,7 +15,7 @@ let txt = `
 \`🍯 PLUGINS:\` » ${totalCommands}
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐀𝐍𝐈𝐌𝐄\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖠𝗇𝗂𝗆𝖾... 
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖠𝗇𝗂𝗆𝖾... 
 
 ⋆. ୨🌸୧˚⋆ /angry _<mention>_
 > ✰ Estar enojado.
@@ -153,7 +153,7 @@ let txt = `
 > ✰ Guiñar.
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌... 
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖣𝖾𝗌𝖼𝖺𝗋𝗀𝖺𝗌... 
 
 ⋆. ୨🌸୧˚⋆ /facebook • /fb _<url>_
 > ✰ Descarga videos de facebook.
@@ -165,7 +165,7 @@ let txt = `
 > ✰ Descarga videos de tiktok.
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐆𝐑𝐔𝐏𝐎\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖦𝗋𝗎𝗉𝗈𝗌... 
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖦𝗋𝗎𝗉𝗈𝗌... 
 
 ⋆. ୨🌸୧˚⋆ /bot _<on|off>_
 > ✰ Activa y desactiva el bot en el grupo.
@@ -199,25 +199,23 @@ let txt = `
 > ✰ Menciona a todos los usuarios con estilo.
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐈𝐀\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖨𝖠...
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝖨𝖠...
 
 ⋆. ୨🌸୧˚⋆ /ia • /chatgpt _<query>_
 > ✰ Realiza una petición a chatgpt.
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝖼𝗂𝗈𝗇 𝖽𝖾 𝗅𝖺 𝖻𝗈𝗍... 
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝖼𝗂𝗈𝗇 𝖽𝖾 𝗅𝖺 𝖻𝗈𝗍... 
 
 ⋆. ୨🌸୧˚⋆ /menu • /help _<category>_
 > ✰ Muestra la lista de comandos.
 ⋆. ୨🌸୧˚⋆ /ping • /p 
 > ✰ Muestra la velocidad del Bot.
-⋆. ୨🌸୧˚⋆ /staff 
-> ✰ Muestra los colaboradores de la bot.
 ⋆. ୨🌸୧˚⋆ /uptime 
 > ✰ Muestra el tiempo activa de la bot.
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐍𝐒𝐅𝐖\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖭𝖲𝖥𝖶 (𝗉𝖺𝗋𝖺 𝖺𝖽𝗎𝗅𝗍𝗈𝗌)...
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖭𝖲𝖥𝖶 (𝗉𝖺𝗋𝖺 𝖺𝖽𝗎𝗅𝗍𝗈𝗌)...
 
 ⋆. ୨🌸୧˚⋆ /anal _<mention>_
 > ✰ Hacer un anal.
@@ -253,7 +251,7 @@ let txt = `
 > ✰ Encuerate o encuera a un usuario.
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐒𝐎𝐂𝐊𝐄𝐓𝐒\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖲𝗎𝖻-𝖡𝗈𝗍𝗌... 
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝗉𝖺𝗋𝖺 𝖲𝗎𝖻-𝖡𝗈𝗍𝗌... 
 
 ⋆. ୨🌸୧˚⋆ /bots • /sockets 
 > ✰ Muestra el número de sockets conectados.
@@ -267,7 +265,7 @@ let txt = `
 > ✰ Haz privado o público tu socket.
 
 𓂃˖˳·˖ ִֶָ ⋆ \`𝐔𝐓𝐈𝐋𝐒\` ⋆  ִֶָ˖·˳˖𓂃 ִֶָ
-✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗎𝗍𝗂𝗅𝗂𝖽𝖺𝖽𝖾𝗌... 
+> ✿ 𝖢𝗈𝗆𝖺𝗇𝖽𝗈𝗌 𝖽𝖾 𝗎𝗍𝗂𝗅𝗂𝖽𝖺𝖽𝖾𝗌... 
 
 ⋆. ୨🌸୧˚⋆ /brat _<texto>_
 > ✰ Crea un sticker con texto.
