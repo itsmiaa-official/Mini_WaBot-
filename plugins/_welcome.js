@@ -25,7 +25,8 @@ async function generarBienvenida({ userId, groupMetadata, chat }) {
   const caption = `❀ 𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽𝗈 𝖺 *${groupMetadata.subject}*
 ✰ *${username}*
 
-${mensaje}
+• _Ahora somos ${groupSize} Miembros._
+ꕥ Fecha » ${fecha}
 
 > ✐ Usa *#help* para ver los comandos.
 > ☄︎ https://chinaxzzp.vercel.app`
@@ -58,7 +59,8 @@ async function generarDespedida({ userId, groupMetadata, chat }) {
 
 ✰ *${username}*
 
-${mensaje}
+• _Ahora somos ${groupSize} Miembros._
+ꕥ Fecha » ${fecha}
 
 > ✐ Usa *#help* para ver los comandos.
 > ☄︎ https://chinaxzzp.vercel.app`
