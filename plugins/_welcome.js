@@ -95,7 +95,6 @@ const welcomeMessage = formatText(chat.sWelcome || `╭┈──̇─̇─̇─�
     await conn.sendMessage(m.chat, { image: { url: ppUrl }, caption, ...fakeContext });
   }
 }
-*/
 
 
 
