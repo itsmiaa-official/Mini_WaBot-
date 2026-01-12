@@ -93,7 +93,7 @@ handler.before = async function (m, { conn, groupMetadata }) {
           mentionedJid: mentions,
           externalAdReply: {
             title: botname,
-            body: `${textbot}`,
+            body: dev,
             mediaType: 1,
             thumbnailUrl: IMAGE_URL,
             renderLargerThumbnail: true,
@@ -123,7 +123,7 @@ handler.before = async function (m, { conn, groupMetadata }) {
           mentionedJid: mentions,
           externalAdReply: {
             title: botname,
-            body: `${textbot}`,
+            body: dev,
             mediaType: 1,
             thumbnailUrl: IMAGE_URL,
             renderLargerThumbnail: true,
