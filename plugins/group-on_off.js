@@ -48,6 +48,7 @@ let handler = async (m, { conn, args, command }) => {
 
       // inicio
       case 'goodbye'':
+      case 'despedida':
       chatData.goodbye = status;
       reply('despedida');
       break;
