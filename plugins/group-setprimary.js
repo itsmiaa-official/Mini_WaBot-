@@ -12,7 +12,7 @@ const handler = async (m, { conn }) => {
   const chat = globalThis.db.data.chats[m.chat]
   if (!who) return conn.reply(m.chat, `🕸 Por favor menciona un bot para convertirlo en primario.`, m)
 
-  if (!subBots.includes(who)) return conn.reply(m.chat, `🕸 El usuario mencionado no es un Socket de 𝕮𝖍𝖎𝖓𝖆 𝕸𝖎𝖙𝖟𝖚𝖐𝖎 💋🔥.`, m)
+  if (!subBots.includes(who)) return conn.reply(m.chat, `🕸 El usuario mencionado no es un Socket de ${botname}...`, m)
 
   if (chat.primaryBot === who) {
     return conn.reply(m.chat, `@${who.split`@`[0]} ya es el Bot principal del Grupo.`, m, { mentions: [who] });
