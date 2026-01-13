@@ -5,7 +5,7 @@
 ## **𝖨𝖭𝖲𝖳𝖠𝖫𝖠𝖢𝖨𝖮𝖭**
 
 ```bash
-https://github.com/itsmiaa-official/Makima.git
+https://github.com/itsmiaa-official/Mafia_Wa-Bot && cd Mafia_Wa-Bot
 ```
 ```bash
 yarn install
