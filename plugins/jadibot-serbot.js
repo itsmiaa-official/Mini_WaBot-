@@ -18,8 +18,8 @@ let crm3 = "SBpbmZvLWRvbmFyLmpz"
 let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
-let rtx = ` \`🧡 Vincula el Socket usando el código QR. 🧡\`\n\nSigue las instrucciones:\n*Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Escanea el código QR.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
-let rtx2 = ` \`🧡Vincula el Socket usando el código de 8 dígitos. 🧡\`\n\nSigue las instrucciones:\n🇦*Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Vincular con el número de telefono › Introduce el código de 8 dígitos.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
+let rtx = ` \`Vincula el Socket usando el código QR.\`\n\nSigue las instrucciones:\n*Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Escanea el código QR.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
+let rtx2 = ` \`Vincula el Socket usando el código de 8 dígitos.\`\n\nSigue las instrucciones:\n🇦*Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Vincular con el número de telefono › Introduce el código de 8 dígitos.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -186,14 +186,14 @@ let isWABusiness = sock.authState?.creds?.platform === 'smba' || sock.authState?
 const waType = isWABusiness ? 'Business' : 'Messenger'
 const userName = sock.authState.creds.me.name || global.db.data.users[m.sender].name || m.pushName || 'Anónimo'
 
-let chtxt = ` ֯　ׅ👤ㅤ *Usuario ›* ${userName}
+let chtxt = ` ֯　ׅ🥷🏻ㅤ *Usuario ›* ${userName}
 
- ׄ 🧡 ׅ り *Método de conexión ›* ${method}
- ׄ 💋 ׅ り *Browser ›* Firefox (Windows)
- ׄ 🧡 ׅ り *WhatsApp ›* ${waType}
- ׄ 💋 ׅ り *Visita ›* instagram.com/its.chinitaaa_
- ׄ 🧡 ׅ り *Bot ›* ${packname}
- ׄ 💋 ׅ り *Versión del bot ›* ^${vs}
+ ׄ ⚔️ ׅ り *Método de conexión ›* ${method}
+ ׄ 🛡 ׅ り *Browser ›* Firefox (Windows)
+ ׄ 💸 ׅ り *WhatsApp ›* ${waType}
+ ׄ ⭐ ׅ り *Visita ›* instagram.com/its.chinitaaa_
+ ׄ 🥷🏻 ׅ り *Bot ›* ${packname}
+ ׄ 💵 ׅ り *Versión del bot ›* ^${vs}
 
 > *¡Conviértete en un sub-bot ahora!*\n https://wa.me/${m.sender.split('@')[0]}?text=#code`
 
@@ -201,7 +201,7 @@ let ppch = await sock.profilePictureUrl(m.sender, 'image').catch(_ => "https://f
 await global.conn.sendMessage(my.ch2, { text: chtxt,
 contextInfo: { 
 externalAdReply: {
-title: "【🧡 𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝗰𝗶𝗼́𝗻 𝗚𝗲𝗻𝗲𝗿𝗮𝗹 🧡】",
+title: "【🥷🏻 𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝗰𝗶𝗼́𝗻 𝗚𝗲𝗻𝗲𝗿𝗮𝗹 🥷🏻】",
 body: '⭐ ¡𝙉𝙪𝙚𝙫𝙤 𝙎𝙪𝙗-𝘽𝙤𝙩 𝙘𝙤𝙣𝙚𝙘𝙩𝙖𝙙𝙤! ⭐',
 thumbnailUrl: ppch,
 sourceUrl: redes,
