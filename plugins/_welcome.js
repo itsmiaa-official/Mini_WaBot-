@@ -1,3 +1,154 @@
+import { WAMessageStubType } from '@whiskeysockets/baileys'
+
+const IMAGE_URL = 'https://files.catbox.moe/8yhxtr.jpg'
+
+async function generarBienvenida({ userId, groupMetadata, chat }) {
+  const username = `@${userId.split('@')[0]}`
+
+  const fecha = new Date().toLocaleDateString('es-ES', {
+    timeZone: 'America/Argentina/Buenos_Aires',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+
+  const groupSize = groupMetadata.participants.length + 1
+  const desc = typeof groupMetadata.desc === 'string'
+    ? groupMetadata.desc
+    : 'Sin descripción'
+
+  const mensaje = (chat.sWelcome || 'Edita con el comando "setwelcome"')
+    .replace(/{usuario}/g, username)
+    .replace(/{grupo}/g, `*${groupMetadata.subject}*`)
+    .replace(/{desc}/g, desc)
+
+  const caption = `❀ 𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽𝗈 𝖺 *${groupMetadata.subject}*
+✰ *${username}*
+
+${mensaje}
+
+> ✐ Usa *#help* para ver los comandos.
+> ☄︎ https://chinaxzzp.vercel.app`
+
+return { pp: IMAGE_URL, caption, mentions: [userId] }
+  //return { caption, mentions: [userId] }
+}
+
+async function generarDespedida({ userId, groupMetadata, chat }) {
+  const username = `@${userId.split('@')[0]}`
+
+  const fecha = new Date().toLocaleDateString('es-ES', {
+    timeZone: 'America/Argentina/Buenos_Aires',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+
+  const groupSize = groupMetadata.participants.length - 1
+  const desc = typeof groupMetadata.desc === 'string'
+    ? groupMetadata.desc
+    : 'Sin descripción'
+
+  const mensaje = (chat.sBye || 'Edita con el comando "setbye"')
+    .replace(/{usuario}/g, username)
+    .replace(/{grupo}/g, groupMetadata.subject)
+    .replace(/{desc}/g, `*${desc}*`)
+
+  const caption = `❀ 𝖠𝖽𝗂𝗈𝗌 𝖽𝖾 *${groupMetadata.subject}*
+
+✰ *${username}*
+
+${mensaje}
+
+> ✐ Usa *#help* para ver los comandos.
+> ☄︎ https://chinaxzzp.vercel.app`
+  
+return { pp: IMAGE_URL, caption, mentions: [userId] }
+  // return { caption, mentions: [userId] }
+}
+
+let handler = m => m
+
+handler.before = async function (m, { conn, groupMetadata }) {
+  if (!m.messageStubType || !m.isGroup) return !0
+
+  const chat = global.db.data.chats[m.chat]
+  if (!chat) return !0
+
+  const primaryBot = chat.primaryBot
+  if (primaryBot && conn.user.jid !== primaryBot) throw !1
+
+  const userId = m.messageStubParameters[0]
+
+  // 🔥 BIENVENIDA
+  if (chat.welcome && m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
+    const { caption, mentions } =
+      await generarBienvenida({ userId, groupMetadata, chat })
+
+    await conn.sendMessage(
+      m.chat,
+      {
+        text: caption,
+        contextInfo: {
+          mentionedJid: mentions,
+          externalAdReply: {
+            title: botname,
+            body: author,
+            mediaType: 1,
+            thumbnailUrl: IMAGE_URL,
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+            sourceUrl: 'https://www.instagram.com/its.chinitaaa_'
+          }
+        }
+      },
+      { quoted: null }
+    )
+  }
+
+  // 🔥 DESPEDIDA
+  if (
+    chat.goodbye &&
+    (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE ||
+     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE)
+  ) {
+    const { caption, mentions } =
+      await generarDespedida({ userId, groupMetadata, chat })
+
+    await conn.sendMessage(
+      m.chat,
+      {
+        text: caption,
+        contextInfo: {
+          mentionedJid: mentions,
+          externalAdReply: {
+            title: botname,
+            body: author,
+            mediaType: 1,
+            thumbnailUrl: IMAGE_URL,
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+            sourceUrl: 'https://www.instagram.com/its.chinitaaa_'
+          }
+        }
+      },
+      { quoted: null }
+    )
+  }
+}
+
+export { generarBienvenida, generarDespedida }
+export default handler
+
+
+
+/*
+• _Ahora somos ${groupSize} Miembros._
+ꕥ Fecha » ${fecha}
+  */
+
+
+/*
 import { WAMessageStubType } from '@whiskeysockets/baileys';
 
 export async function before(m, { conn, participants, groupMetadata }) {
@@ -96,150 +247,4 @@ const welcomeMessage = formatText(chat.sWelcome || `╭┈──̇─̇─̇─�
   }
 }
 
-
-
-/*
-import { WAMessageStubType } from '@whiskeysockets/baileys'
-
-const IMAGE_URL = 'https://files.catbox.moe/8yhxtr.jpg'
-
-async function generarBienvenida({ userId, groupMetadata, chat }) {
-  const username = `@${userId.split('@')[0]}`
-
-  const fecha = new Date().toLocaleDateString('es-ES', {
-    timeZone: 'America/Argentina/Buenos_Aires',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  })
-
-  const groupSize = groupMetadata.participants.length + 1
-  const desc = typeof groupMetadata.desc === 'string'
-    ? groupMetadata.desc
-    : 'Sin descripción'
-
-  const mensaje = (chat.sWelcome || 'Edita con el comando "setwelcome"')
-    .replace(/{usuario}/g, username)
-    .replace(/{grupo}/g, `*${groupMetadata.subject}*`)
-    .replace(/{desc}/g, desc)
-
-  const caption = `❀ 𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽𝗈 𝖺 *${groupMetadata.subject}*
-✰ *${username}*
-
-• _Ahora somos ${groupSize} Miembros._
-ꕥ Fecha » ${fecha}
-
-> ✐ Usa *#help* para ver los comandos.
-> ☄︎ https://chinaxzzp.vercel.app`
-
-return { pp: IMAGE_URL, caption, mentions: [userId] }
-  //return { caption, mentions: [userId] }
-}
-
-async function generarDespedida({ userId, groupMetadata, chat }) {
-  const username = `@${userId.split('@')[0]}`
-
-  const fecha = new Date().toLocaleDateString('es-ES', {
-    timeZone: 'America/Argentina/Buenos_Aires',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  })
-
-  const groupSize = groupMetadata.participants.length - 1
-  const desc = typeof groupMetadata.desc === 'string'
-    ? groupMetadata.desc
-    : 'Sin descripción'
-
-  const mensaje = (chat.sBye || 'Edita con el comando "setbye"')
-    .replace(/{usuario}/g, username)
-    .replace(/{grupo}/g, groupMetadata.subject)
-    .replace(/{desc}/g, `*${desc}*`)
-
-  const caption = `❀ 𝖠𝖽𝗂𝗈𝗌 𝖽𝖾 *${groupMetadata.subject}*
-
-✰ *${username}*
-
-• _Ahora somos ${groupSize} Miembros._
-ꕥ Fecha » ${fecha}
-
-> ✐ Usa *#help* para ver los comandos.
-> ☄︎ https://chinaxzzp.vercel.app`
-  
-return { pp: IMAGE_URL, caption, mentions: [userId] }
-  // return { caption, mentions: [userId] }
-}
-
-let handler = m => m
-
-handler.before = async function (m, { conn, groupMetadata }) {
-  if (!m.messageStubType || !m.isGroup) return !0
-
-  const chat = global.db.data.chats[m.chat]
-  if (!chat) return !0
-
-  const primaryBot = chat.primaryBot
-  if (primaryBot && conn.user.jid !== primaryBot) throw !1
-
-  const userId = m.messageStubParameters[0]
-
-  // 🔥 BIENVENIDA
-  if (chat.welcome && m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
-    const { caption, mentions } =
-      await generarBienvenida({ userId, groupMetadata, chat })
-
-    await conn.sendMessage(
-      m.chat,
-      {
-        text: caption,
-        contextInfo: {
-          mentionedJid: mentions,
-          externalAdReply: {
-            title: botname,
-            body: dev,
-            mediaType: 1,
-            thumbnailUrl: IMAGE_URL,
-            renderLargerThumbnail: true,
-            showAdAttribution: false,
-            sourceUrl: 'https://www.instagram.com/its.chinitaaa_'
-          }
-        }
-      },
-      { quoted: null }
-    )
-  }
-
-  // 🔥 DESPEDIDA
-  if (
-    chat.goodbye &&
-    (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE ||
-     m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE)
-  ) {
-    const { caption, mentions } =
-      await generarDespedida({ userId, groupMetadata, chat })
-
-    await conn.sendMessage(
-      m.chat,
-      {
-        text: caption,
-        contextInfo: {
-          mentionedJid: mentions,
-          externalAdReply: {
-            title: botname,
-            body: dev,
-            mediaType: 1,
-            thumbnailUrl: IMAGE_URL,
-            renderLargerThumbnail: true,
-            showAdAttribution: false,
-            sourceUrl: 'https://www.instagram.com/its.chinitaaa_'
-          }
-        }
-      },
-      { quoted: null }
-    )
-  }
-}
-
-export { generarBienvenida, generarDespedida }
-export default handler
 */
