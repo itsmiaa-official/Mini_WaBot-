@@ -12,7 +12,7 @@ global.owner = ["923297474483","5492644996684"]
 
 global.botname = '𝕸𝖆𝖋𝖎𝖆 𝕭𝖔𝖙 🥷🏻'
 global.namebot = '𝐌𝐚𝐟𝐢𝐚_𝐖𝐚'
-global.vs = '𝟐.𝟎.𝟎'
+global.vs = '1.0.0 (Lite)'
 global.bot = '𝐌𝐚𝐟𝐢𝐚-𝐁𝐨𝐭'
 global.packname = '𝕸𝖆𝖋𝖎𝖆-𝕭𝖔𝖙 🥷🏻'
 global.wm = '𝐌𝐚𝐟𝐢𝐚ᵇᵒᵗ'
