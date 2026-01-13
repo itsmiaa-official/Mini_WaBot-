@@ -1,5 +1,5 @@
 {
-"name": "makima",
+"name": "Mafia_Wa-Bot",
 "version": "1.0.0",
 "description": "WhatsApp Bot Multi Device",
 "main": "index.js",
@@ -13,14 +13,14 @@
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/itsmiaa-official/Makima.git"
+"url": "git+https://github.com/itsmiaa-official/Mafia_Wa-Bot.git"
 },  
 "author": "itsmiaa-official",
 "license": "MIT-License",
 "bugs": {
-"url": "https://github.com/itsmiaa-official/Makima/issues"
+"url": "https://github.com/itsmiaa-official/Mafia_Wa-Bot/issues"
 },
-"homepage": "https://github.com/itsmiaa-official/Makima#readme",
+"homepage": "https://github.com/itsmiaa-official/Mafia_Wa-Bot#readme",
 "dependencies": {
 "@hapi/boom": "^10.0.1",
 "@vitalets/google-translate-api": "^8.0.0",
