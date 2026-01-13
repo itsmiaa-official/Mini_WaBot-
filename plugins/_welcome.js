@@ -1,6 +1,6 @@
 import { WAMessageStubType } from '@whiskeysockets/baileys'
 
-const IMAGE_URL = 'https://files.catbox.moe/8yhxtr.jpg'
+const IMAGE_URL = 'https://files.catbox.moe/a8o9db.jpg'
 
 async function generarBienvenida({ userId, groupMetadata, chat }) {
   const username = `@${userId.split('@')[0]}`
