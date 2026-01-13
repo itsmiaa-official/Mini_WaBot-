@@ -6,12 +6,12 @@ let userId = mentionedJid && mentionedJid[0] ? mentionedJid[0] : m.sender
 let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
-await conn.sendMessage(m.chat, { react: { text: '🧡', key: m.key } })
+await conn.sendMessage(m.chat, { react: { text: '💸', key: m.key } })
   
 let txt = `
-> . ﹡ ﹟ 🌹 ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
+> . ﹡ ﹟ 🥷🏻 ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
 
-*ㅤꨶ〆⁾ ㅤׄㅤ⸼ㅤׄ *͜🌱* ㅤ֢ㅤ⸱ㅤᯭִ*
+*ㅤꨶ〆⁾ ㅤׄㅤ⸼ㅤׄ *͜⚔️* ㅤ֢ㅤ⸱ㅤᯭִ*
 ㅤ𓏸𓈒ㅤׄ *sᴏʏ ::* ${botname}
 ׅㅤ𓏸𓈒ㅤׄ *ᴅᴇᴠᴇʟᴏᴘᴇʀ ::* ${author}
 ׅㅤ𓏸𓈒ㅤׄ *ᴛɪᴘᴏ ::* ${(conn.user.jid == global.conn.user.jid ? '𝗣rіᥒᥴі⍴ᥲᥣ 🌷' : '𝗦ᥙᑲ-𝗕᥆𝗍 ❤')}
