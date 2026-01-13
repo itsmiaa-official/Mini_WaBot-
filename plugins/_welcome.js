@@ -24,8 +24,7 @@ async function generarBienvenida({ userId, groupMetadata, chat }) {
 
   const caption = `❀ 𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽𝗈 𝖺 *${groupMetadata.subject}*
 ✰ *${username}*
-
-${mensaje}
+• Disfruta tu estadía en el grupo!!! ★
 
 > ✐ Usa *#help* para ver los comandos.
 > ☄︎ https://chinaxzzp.vercel.app`
@@ -57,8 +56,7 @@ async function generarDespedida({ userId, groupMetadata, chat }) {
   const caption = `❀ 𝖠𝖽𝗂𝗈𝗌 𝖽𝖾 *${groupMetadata.subject}*
 
 ✰ *${username}*
-
-${mensaje}
+• Vuelve pronto al grupo!!! ★
 
 > ✐ Usa *#help* para ver los comandos.
 > ☄︎ https://chinaxzzp.vercel.app`
@@ -93,7 +91,7 @@ handler.before = async function (m, { conn, groupMetadata }) {
           mentionedJid: mentions,
           externalAdReply: {
             title: botname,
-            body: author,
+            body: dev,
             mediaType: 1,
             thumbnailUrl: IMAGE_URL,
             renderLargerThumbnail: true,
@@ -123,7 +121,7 @@ handler.before = async function (m, { conn, groupMetadata }) {
           mentionedJid: mentions,
           externalAdReply: {
             title: botname,
-            body: author,
+            body: dev,
             mediaType: 1,
             thumbnailUrl: IMAGE_URL,
             renderLargerThumbnail: true,
