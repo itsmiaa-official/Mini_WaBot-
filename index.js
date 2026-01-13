@@ -34,7 +34,7 @@ let { say } = cfonts
 
 console.log(chalk.magentaBright('\n✧ Iniciando...'))
 
-say('Makima', {
+say('Mafia_Wa-Bot', {
   font: 'simple',
   align: 'left',
   colors: ['cyan']
@@ -353,7 +353,7 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn?.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
-  const bio = `🔥𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 | 🇨🇳 𝖀𝖕𝖙𝖎𝖒𝖊 : ${uptime}`;
+  const bio = `${botname} | 🥷🏻 𝖀𝖕𝖙𝖎𝖒𝖊 : ${uptime}`;
   await conn?.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
@@ -362,7 +362,8 @@ function clockString(ms) {
   const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
   const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
   return [d, 'd ️', h, 'h ', m, 'm ', s, 's '].map((v) => v.toString().padStart(2, 0)).join('');
-}*/
+}
+*/
 
 _quickTest().catch(console.error)
 
