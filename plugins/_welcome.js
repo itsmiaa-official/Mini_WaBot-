@@ -24,6 +24,7 @@ async function generarBienvenida({ userId, groupMetadata, chat }) {
 
   const caption = `❀ 𝖡𝗂𝖾𝗇𝗏𝖾𝗇𝗂𝖽𝗈 𝖺 *${groupMetadata.subject}*
 ✰ *${username}*
+
 • Disfruta tu estadía en el grupo!!! ★
 
 > ✐ Usa *#help* para ver los comandos.
@@ -56,6 +57,7 @@ async function generarDespedida({ userId, groupMetadata, chat }) {
   const caption = `❀ 𝖠𝖽𝗂𝗈𝗌 𝖽𝖾 *${groupMetadata.subject}*
 
 ✰ *${username}*
+
 • Vuelve pronto al grupo!!! ★
 
 > ✐ Usa *#help* para ver los comandos.
