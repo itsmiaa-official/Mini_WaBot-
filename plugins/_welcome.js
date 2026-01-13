@@ -108,7 +108,7 @@ handler.before = async function (m, { conn, groupMetadata }) {
 
   // 🔥 DESPEDIDA
   if (
-    chat.goodbye &&
+    chat.welcome &&
     (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE ||
      m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE)
   ) {
