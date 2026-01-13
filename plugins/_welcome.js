@@ -28,7 +28,7 @@ async function generarBienvenida({ userId, groupMetadata, chat }) {
 • Disfruta tu estadía en el grupo!!! ★
 
 > ✐ Usa *#help* para ver los comandos.
-> ☄︎ https://chinaxzzp.vercel.app`
+> ☄︎ mitzuki.vercel.app`
 
 return { pp: IMAGE_URL, caption, mentions: [userId] }
   //return { caption, mentions: [userId] }
@@ -61,7 +61,7 @@ async function generarDespedida({ userId, groupMetadata, chat }) {
 • Vuelve pronto al grupo!!! ★
 
 > ✐ Usa *#help* para ver los comandos.
-> ☄︎ https://chinaxzzp.vercel.app`
+> ☄︎ mitzuki.vercel.app`
   
 return { pp: IMAGE_URL, caption, mentions: [userId] }
   // return { caption, mentions: [userId] }
