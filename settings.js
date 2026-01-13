@@ -24,7 +24,7 @@ global.copy = '𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝕮𝖍𝖎𝖓𝖆'
 
 global.banner = 'https://files.catbox.moe/w2rxig.jpg'
 global.icon = 'https://files.catbox.moe/469tnf.jpg'
-global.currency = '¥MakiCoins'
+global.currency = 'Dólares 💸'
 global.sessions = 'sessions/session-bot'
 global.jadi = 'sessions/session-sub'
 
