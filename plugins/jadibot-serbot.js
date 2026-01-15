@@ -19,7 +19,7 @@ let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
 let rtx = ` \`Vincula el Socket usando el código QR.\`\n\nSigue las instrucciones:\n*Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Escanea el código QR.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
-let rtx2 = ` \`Vincula el Socket usando el código de 8 dígitos.\`\n\nSigue las instrucciones:\n🇦*Mas opciones › Dispositivos vinculados › Vincular un nuevo dispositivo › Vincular con el número de telefono › Introduce el código de 8 dígitos.*\n\n_Recuerda que es recomendable no usar tu cuenta principal para registrar un socket._\n↺ El codigo es valido por 60 segundos.`
+let rtx2 = ` '\`✤\` Vincula tu *cuenta* usando el *codigo.*\n\n> ✥ Sigue las *instrucciones*\n\n*›* Click en los *3 puntos*\n*›* Toque *dispositivos vinculados*\n*›* Vincular *nuevo dispositivo*\n*›* Selecciona *Vincular con el número de teléfono*\n\nꕤ *`Importante`*\n> ₊·( 🜸 ) ➭ Este *Código* solo funciona en el *número que lo solicito*`
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
