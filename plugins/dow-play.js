@@ -16,7 +16,8 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   // --- LÓGICA DE DESCARGA DIRECTA ---
   if (isMode && /youtube\.com|youtu\.be/i.test(queryOrUrl)) {
     const mode = args[0].toLowerCase();
-    await m.react("⏳");
+    await conn.sendMessage(m.chat, { react: { text: '⏳', key: m.key } })
+  
 
     try {
       const apiUrl = `https://rest.apicausas.xyz/api/v1/descargas/youtube?url=${encodeURIComponent(queryOrUrl)}&type=${mode}&apikey=${CAUSA_API_KEY}`;
@@ -43,18 +44,21 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
           caption: `🎬 *Título:* ${title}`, 
           mimetype: "video/mp4"
         }, { quoted: m });
-        await m.react("📽️");
+        await conn.sendMessage(m.chat, { react: { text: '📽', key: m.key } })
+  
       }
       return;
     } catch (e) {
       console.error("Error en descarga:", e);
-      await m.react("❌");
+      await conn.sendMessage(m.chat, { react: { text: '❌', key: m.key } })
+  
       return conn.reply(m.chat, `💔 *¡Rayos!* Hubo un problema al procesar el audio. Puede que el servidor esté saturado.`, m);
     }
   }
 
   // --- LÓGICA DE BÚSQUEDA ---
-  await m.react("🔍");
+  await conn.sendMessage(m.chat, { react: { text: '🔍', key: m.key } })
+  
   try {
     const search = await yts(queryOrUrl);
     const video = search.videos[0];
@@ -63,7 +67,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 
     const caption = `
 *⎯⎯ㅤㅤִㅤㅤ୨   ❀  ୧ㅤㅤִ   ㅤ⎯⎯*
-> 🌱 <${video.title}>
+> ➪ <${video.title}>
    *⎯⎯ㅤㅤִㅤㅤ୨   ❒  ୧ㅤㅤִ   ㅤ⎯⎯*
 > ₊·( ❀ ) \`Duración »\` *${video.timestamp}*
 > ₊·( ꕥ ) \`Vistas »\` *${video.views.toLocaleString()}*
