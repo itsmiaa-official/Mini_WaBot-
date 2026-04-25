@@ -24,15 +24,16 @@ const handler = async (m, { conn, args, command }) => {
 
     // 📸 PREVIEW (imagen + info)
     const caption = `
-*⎯⎯ㅤㅤִㅤㅤ୨   ❀  ୧ㅤㅤִ   ㅤ⎯⎯*
-> ➪ <${video.title}>
+   *⎯⎯ㅤㅤִㅤㅤ୨   ❀  ୧ㅤㅤִ   ㅤ⎯⎯*
+   > ➪ <${video.title}>
    *⎯⎯ㅤㅤִㅤㅤ୨   ❒  ୧ㅤㅤִ   ㅤ⎯⎯*
-> ⏱️ \`Duración »\` *${video.timestamp}*
-> 👀 \`Vistas »\` *${video.views.toLocaleString()}*
-> 🔗 \`Link »\` ${video.url}
+> ₊·( ❀ ) \`Duración »\` *${video.timestamp}*
+> ₊·( ꕥ ) \`Vistas »\` *${video.views.toLocaleString()}*
+> ₊·( ✥ ) \`Calidad »\` 130kbps
+> ₊·( ꕤ ) \`Enlace »\` ${video.url}
    *⎯⎯ㅤㅤִㅤㅤ୨   ❒  ୧ㅤㅤִ   ㅤ⎯⎯*
-
-> ⏳ Descargando ${type}...
+   
+> ➪ \`Descargando ${type}\`
 `;
 
     await conn.sendMessage(m.chat, {
