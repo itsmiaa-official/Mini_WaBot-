@@ -3,77 +3,36 @@ import yts from "yt-search";
 
 const CAUSA_API_KEY = 'causa-53f9867cf7fdec8a';
 
-const handler = async (m, { conn, args, usedPrefix, command }) => {
-  const name = conn.getName(m.sender);
-
+const handler = async (m, { conn, args, command }) => {
   if (!args[0]) {
-    return conn.reply(m.chat, `> ✰ *¡Hey ${name}!* ¿Qué buscas?\n\nEjemplo:\n${usedPrefix}play + canción`, m);
+    return conn.reply(m.chat, 
+`🎧 Usa:
+• playaudio <canción>
+• playvideo <video>`, m);
   }
 
-  const isMode = ["audio", "video"].includes(args[0].toLowerCase());
-  const queryOrUrl = isMode ? args.slice(1).join(" ") : args.join(" ");
+  const query = args.join(" ");
+  const type = command === 'playvideo' ? 'video' : 'audio';
 
-  // --- DESCARGA DIRECTA ---
-  if (isMode && /youtube\.com|youtu\.be/i.test(queryOrUrl)) {
-    const mode = args[0].toLowerCase();
-    await conn.sendMessage(m.chat, { react: { text: '⏳', key: m.key } });
-
-    try {
-      const apiUrl = `https://rest.apicausas.xyz/api/v1/descargas/youtube?url=${encodeURIComponent(queryOrUrl)}&type=${mode}&apikey=${CAUSA_API_KEY}`;
-      const res = await fetch(apiUrl);
-      const json = await res.json();
-
-      if (!json.status || !json.data) throw new Error("API inválida");
-
-      const { title, download } = json.data;
-      const downloadUrl = download.url;
-
-      if (mode === 'audio') {
-        await conn.sendMessage(m.chat, { 
-          audio: { url: downloadUrl }, 
-          mimetype: "audio/mp4",
-          fileName: `${title}.mp3`,
-          ptt: false
-        }, { quoted: m });
-        await m.react("🎧");
-      } else {
-        await conn.sendMessage(m.chat, { 
-          video: { url: downloadUrl }, 
-          caption: `🎬 *Título:* ${title}`, 
-          mimetype: "video/mp4"
-        }, { quoted: m });
-        await conn.sendMessage(m.chat, { react: { text: '📽', key: m.key } });
-      }
-      return;
-    } catch (e) {
-      console.error(e);
-      await conn.sendMessage(m.chat, { react: { text: '❌', key: m.key } });
-      return conn.reply(m.chat, `💔 Error al descargar.`, m);
-    }
-  }
-
-  // --- BÚSQUEDA ---
   await conn.sendMessage(m.chat, { react: { text: '🔍', key: m.key } });
 
   try {
-    const search = await yts(queryOrUrl);
+    const search = await yts(query);
     const video = search.videos[0];
 
-    if (!video) return conn.reply(m.chat, `😵 No encontré nada con: "${queryOrUrl}"`, m);
+    if (!video) return conn.reply(m.chat, '❌ No encontré resultados', m);
 
+    // 📸 PREVIEW (imagen + info)
     const caption = `
 *⎯⎯ㅤㅤִㅤㅤ୨   ❀  ୧ㅤㅤִ   ㅤ⎯⎯*
 > ➪ <${video.title}>
    *⎯⎯ㅤㅤִㅤㅤ୨   ❒  ୧ㅤㅤִ   ㅤ⎯⎯*
-> ₊·( ❀ ) \`Duración »\` *${video.timestamp}*
-> ₊·( ꕥ ) \`Vistas »\` *${video.views.toLocaleString()}*
-> ₊·( ✥ ) \`Calidad »\` 130kbps
-> ₊·( ꕤ ) \`Enlace »\` ${video.url}
+> ⏱️ \`Duración »\` *${video.timestamp}*
+> 👀 \`Vistas »\` *${video.views.toLocaleString()}*
+> 🔗 \`Link »\` ${video.url}
    *⎯⎯ㅤㅤִㅤㅤ୨   ❒  ୧ㅤㅤִ   ㅤ⎯⎯*
 
-> ✰ Usa:
-> *${usedPrefix}${command} audio ${video.url}*
-> *${usedPrefix}${command} video ${video.url}*
+> ⏳ Descargando ${type}...
 `;
 
     await conn.sendMessage(m.chat, {
@@ -81,15 +40,45 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
       caption
     }, { quoted: m });
 
+    await conn.sendMessage(m.chat, { react: { text: '⏳', key: m.key } });
+
+    // 🎧🎬 DESCARGA
+    const apiUrl = `https://rest.apicausas.xyz/api/v1/descargas/youtube?url=${video.url}&type=${type}&apikey=${CAUSA_API_KEY}`;
+    const res = await fetch(apiUrl);
+    const json = await res.json();
+
+    if (!json.status) throw new Error("API error");
+
+    const { title, download } = json.data;
+
+    if (type === 'audio') {
+      await conn.sendMessage(m.chat, {
+        audio: { url: download.url },
+        mimetype: "audio/mp4",
+        fileName: `${title}.mp3`
+      }, { quoted: m });
+
+      await m.react("🎧");
+
+    } else {
+      await conn.sendMessage(m.chat, {
+        video: { url: download.url },
+        caption: `🎬 *${title}*`,
+        mimetype: "video/mp4"
+      }, { quoted: m });
+
+      await m.react("📽");
+    }
+
   } catch (e) {
     console.error(e);
-    conn.reply(m.chat, `💔 Error en la búsqueda.`, m);
+    conn.reply(m.chat, '💔 Error al procesar la descarga', m);
   }
 };
 
-handler.help = ['play <texto>'];
+handler.help = ['playaudio <texto>', 'playvideo <texto>'];
 handler.tags = ['descargas'];
-handler.command = ['play', 'yt', 'playaudio'];
+handler.command = ['playaudio', 'playvideo'];
 
 export default handler;
 
