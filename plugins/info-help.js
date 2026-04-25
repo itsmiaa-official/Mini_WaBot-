@@ -9,9 +9,9 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 await conn.sendMessage(m.chat, { react: { text: '🤍', key: m.key } })
   
 let txt = `
-> . ﹡ ﹟ 🥷🏻 ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
+> . ﹡ ﹟ ➪ ׄ ⬭ *ʜᴏʟᴀ, ¿ᴄᴏᴍᴏ ᴇsᴛᴀs? * @${userId.split('@')[0]}
 
-*ㅤꨶ〆⁾ ㅤׄㅤ⸼ㅤׄ *͜⚔️* ㅤ֢ㅤ⸱ㅤᯭִ*
+*ㅤꨶ〆⁾ ㅤׄㅤ⸼ㅤׄ *͜♰* ㅤ֢ㅤ⸱ㅤᯭִ*
 ㅤ𓏸𓈒ㅤׄ *sᴏʏ ::* ${botname}
 ׅㅤ𓏸𓈒ㅤׄ *ᴅᴇᴠᴇʟᴏᴘᴇʀ ::* ${author}
 ׅㅤ𓏸𓈒ㅤׄ *ᴛɪᴘᴏ ::* ${(conn.user.jid == global.conn.user.jid ? '𝗣rᎥᩥᥒᥴi⍴ᥲᥣ' : '𝗦ᥙᑲ-𝗕𑄝𝗍')}
@@ -21,7 +21,7 @@ let txt = `
 ׅㅤ𓏸𓈒ㅤׄ *ᴄᴏᴍᴍᴀɴᴅs ::* ${totalCommands}
 ׅㅤ𓏸𓈒ㅤׄ *ɪɴsᴛᴀɢʀᴀᴍ ::* instagram.com/_.benjaxzz
 
-乂 *ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs* 乂
+乂 *𝖫𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌* 乂
 
 ׄꤥ ╾ׅ╼ㅤׄㅤꤪꤨ \`ᴀɴɪᴍᴇ\` ㅤꤪꤨ   ╾ׅ╼ㅤׄꤥㅤׅ
 ֯　ׅ🍃ֶ֟፝֯ㅤ /angry _<mention>_
