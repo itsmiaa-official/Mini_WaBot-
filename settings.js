@@ -22,7 +22,7 @@ global.copy = '𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 @_.𝗯𝗲𝗻𝗷𝗮𝘅
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.banner = 'https://files.catbox.moe/eaw7el.png'
+global.banner = 'https://files.catbox.moe/zxelx0.jpg' // 'https://files.catbox.moe/eaw7el.png'
 global.icon = 'https://files.catbox.moe/zxelx0.jpg'
 global.currency = 'Dólares 💸'
 global.sessions = 'sessions/session-bot'
