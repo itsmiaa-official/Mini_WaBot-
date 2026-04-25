@@ -169,9 +169,9 @@ contextInfo: {
 mentionedJid: [userId],
 isForwarded: true,
 forwardedNewsletterMessageInfo: {
-newsletterJid: my.ch3,
+newsletterJid: my.ch,
 serverMessageId: '0',
-newsletterName: my.name3
+newsletterName: my.name
 },
 externalAdReply: {
 title: `${botname} | ${vs}`,
