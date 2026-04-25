@@ -7,35 +7,33 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   const name = conn.getName(m.sender);
 
   if (!args[0]) {
-    return conn.reply(m.chat, `> ✰ *¡Hey ${name}!* ¿Qué buscas?\n\nEjemplo:\n${usedPrefix}play + canción`, m, { contextInfo });
+    return conn.reply(m.chat, `> ✰ *¡Hey ${name}!* ¿Qué buscas?\n\nEjemplo:\n${usedPrefix}play + canción`, m);
   }
 
   const isMode = ["audio", "video"].includes(args[0].toLowerCase());
   const queryOrUrl = isMode ? args.slice(1).join(" ") : args.join(" ");
 
-  // --- LÓGICA DE DESCARGA DIRECTA ---
+  // --- DESCARGA DIRECTA ---
   if (isMode && /youtube\.com|youtu\.be/i.test(queryOrUrl)) {
     const mode = args[0].toLowerCase();
-    await conn.sendMessage(m.chat, { react: { text: '⏳', key: m.key } })
-  
+    await conn.sendMessage(m.chat, { react: { text: '⏳', key: m.key } });
 
     try {
       const apiUrl = `https://rest.apicausas.xyz/api/v1/descargas/youtube?url=${encodeURIComponent(queryOrUrl)}&type=${mode}&apikey=${CAUSA_API_KEY}`;
       const res = await fetch(apiUrl);
       const json = await res.json();
 
-      if (!json.status || !json.data) throw new Error("La API no devolvió datos válidos.");
+      if (!json.status || !json.data) throw new Error("API inválida");
 
       const { title, download } = json.data;
       const downloadUrl = download.url;
 
       if (mode === 'audio') {
-        // Enviar como audio (se puede cambiar a document si falla)
         await conn.sendMessage(m.chat, { 
           audio: { url: downloadUrl }, 
-          mimetype: "audio/mp4", // MP4 es más compatible para audios de YT
+          mimetype: "audio/mp4",
           fileName: `${title}.mp3`,
-          ptt: false // Cambia a true si quieres que sea nota de voz
+          ptt: false
         }, { quoted: m });
         await m.react("🎧");
       } else {
@@ -44,21 +42,19 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
           caption: `🎬 *Título:* ${title}`, 
           mimetype: "video/mp4"
         }, { quoted: m });
-        await conn.sendMessage(m.chat, { react: { text: '📽', key: m.key } })
-  
+        await conn.sendMessage(m.chat, { react: { text: '📽', key: m.key } });
       }
       return;
     } catch (e) {
-      console.error("Error en descarga:", e);
-      await conn.sendMessage(m.chat, { react: { text: '❌', key: m.key } })
-  
-      return conn.reply(m.chat, `💔 *¡Rayos!* Hubo un problema al procesar el audio. Puede que el servidor esté saturado.`, m);
+      console.error(e);
+      await conn.sendMessage(m.chat, { react: { text: '❌', key: m.key } });
+      return conn.reply(m.chat, `💔 Error al descargar.`, m);
     }
   }
 
-  // --- LÓGICA DE BÚSQUEDA ---
-  await conn.sendMessage(m.chat, { react: { text: '🔍', key: m.key } })
-  
+  // --- BÚSQUEDA ---
+  await conn.sendMessage(m.chat, { react: { text: '🔍', key: m.key } });
+
   try {
     const search = await yts(queryOrUrl);
     const video = search.videos[0];
@@ -74,32 +70,26 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 > ₊·( ✥ ) \`Calidad »\` 130kbps
 > ₊·( ꕤ ) \`Enlace »\` ${video.url}
    *⎯⎯ㅤㅤִㅤㅤ୨   ❒  ୧ㅤㅤִ   ㅤ⎯⎯*
-`;
 
-    // IMPORTANTE: Los botones interactivos de WhatsApp Business API fallan en muchos mods/versiones.
-    // Si no funcionan, usa un mensaje de texto normal con las opciones.
-    const buttons = [
-      { buttonId: `${usedPrefix}${command} audio ${video.url}`, buttonText: { displayText: '🎵 Audio' }, type: 1 },
-      { buttonId: `${usedPrefix}${command} video ${video.url}`, buttonText: { displayText: '📹 Video' }, type: 1 }
-    ];
+> ✰ Usa:
+> *${usedPrefix}${command} audio ${video.url}*
+> *${usedPrefix}${command} video ${video.url}*
+`;
 
     await conn.sendMessage(m.chat, {
       image: { url: video.thumbnail },
-      caption,
-      footer: '\`Selecciona una opción abajo\`',
-      buttons,
-      headerType: 4,
+      caption
     }, { quoted: m });
 
   } catch (e) {
-    console.error("Error en búsqueda:", e);
+    console.error(e);
     conn.reply(m.chat, `💔 Error en la búsqueda.`, m);
   }
 };
 
 handler.help = ['play <texto>'];
 handler.tags = ['descargas'];
-handler.command = ['play', 'yt', 'playaudio']
+handler.command = ['play', 'yt', 'playaudio'];
 
 export default handler;
 
