@@ -71,7 +71,7 @@ const handler = async (m, { conn, args, command }) => {
 
   } catch (e) {
     console.error(e);
-    conn.reply(m.chat, '💔 Error al procesar la descarga', m);
+    //conn.reply(m.chat, '💔 Error al procesar la descarga', m);
   }
 };
 
