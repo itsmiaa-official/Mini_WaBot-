@@ -37,7 +37,7 @@ let chtxt = ` ֯　ׅ🇨🥷🏻ㅤ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨 ›* ${m.push
  ׄ 🛡 ׅ り *𝐕𝐞𝐫𝐬𝐢𝐨́𝐧 𝐝𝐞𝐥 𝐛𝐨𝐭 ›* ^1.0.0`
 
 let ppch = await this.profilePictureUrl(m.sender, 'image').catch(_ => "https://files.catbox.moe/ez2zgm.jpg")
-global.conn.sendMessage(my.ch, { text: chtxt,
+global.conn.sendMessage(my.ch2, { text: chtxt,
 contextInfo: { 
 externalAdReply: {
 title: "🥷🏻 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢́𝗡 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 🥷🏻",
