@@ -174,7 +174,7 @@ serverMessageId: '0',
 newsletterName: my.name3
 },
 externalAdReply: {
-title: botname,
+title: `${botname} | ${vs}`,
 body: dev,
 mediaType: 1,
 mediaUrl: redes,
