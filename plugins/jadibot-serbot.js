@@ -186,23 +186,23 @@ let isWABusiness = sock.authState?.creds?.platform === 'smba' || sock.authState?
 const waType = isWABusiness ? 'Business' : 'Messenger'
 const userName = sock.authState.creds.me.name || global.db.data.users[m.sender].name || m.pushName || 'Anónimo'
 
-let chtxt = ` ֯　ׅ🥷🏻ㅤ *Usuario ›* ${userName}
+let chtxt = ` ֯　ׅ➪ㅤ *Usuario ›* ${userName}
 
- ׄ ⚔️ ׅ り *Método de conexión ›* ${method}
- ׄ 🛡 ׅ り *Browser ›* Firefox (Windows)
- ׄ 💸 ׅ り *WhatsApp ›* ${waType}
- ׄ ⭐ ׅ り *Visita ›* instagram.com/its.chinitaaa_
- ׄ 🥷🏻 ׅ り *Bot ›* ${packname}
- ׄ 💵 ׅ り *Versión del bot ›* ^${vs}
+ ׄ ➪ ׅ り *Método de conexión ›* ${method}
+ ׄ ✰ ׅ り *Browser ›* Firefox (Windows)
+ ׄ ➪ ׅ り *WhatsApp ›* ${waType}
+ ׄ ✰ ׅ り *Visita ›* instagram.com/its.chinitaaa_
+ ׄ ➪ ׅ り *Bot ›* ${packname}
+ ׄ ✰ ׅ り *Versión del bot ›* ^${vs}
 
 > *¡Conviértete en un sub-bot ahora!*\n https://wa.me/${m.sender.split('@')[0]}?text=#code`
 
-let ppch = await sock.profilePictureUrl(m.sender, 'image').catch(_ => "https://files.catbox.moe/ez2zgm.jpg")
+let ppch = await sock.profilePictureUrl(m.sender, 'image').catch(_ => "https://files.catbox.moe/egl6gr.jpg")
 await global.conn.sendMessage(my.ch2, { text: chtxt,
 contextInfo: { 
 externalAdReply: {
-title: "【🥷🏻 𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝗰𝗶𝗼́𝗻 𝗚𝗲𝗻𝗲𝗿𝗮𝗹 🥷🏻】",
-body: '⭐ ¡𝙉𝙪𝙚𝙫𝙤 𝙎𝙪𝙗-𝘽𝙤𝙩 𝙘𝙤𝙣𝙚𝙘𝙩𝙖𝙙𝙤! ⭐',
+title: "【 𝙉𝙊𝙏𝙄𝙁𝙄𝘾𝘼𝘾𝙄𝙊́𝙉 𝙂𝙀𝙉𝙀𝙍𝘼𝙇 】",
+body: '✦ ¡𝙉𝙪𝙚𝙫𝙤 𝙎𝙪𝙗-𝘽𝙤𝙩 𝙘𝙤𝙣𝙚𝙘𝙩𝙖𝙙𝙤! ✦',
 thumbnailUrl: ppch,
 sourceUrl: redes,
 mediaType: 2,
