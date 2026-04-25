@@ -9,7 +9,7 @@ let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags
 await conn.sendMessage(m.chat, { react: { text: '🤍', key: m.key } })
   
 let txt = `
-> . ﹡ ﹟ ➪ ׄ ⬭ *ʜᴏʟᴀ, ¿ᴄᴏᴍᴏ ᴇsᴛᴀs? * @${userId.split('@')[0]}
+> . ﹡ ﹟ ➪ ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
 
 *ㅤꨶ〆⁾ ㅤׄㅤ⸼ㅤׄ *͜♰* ㅤ֢ㅤ⸱ㅤᯭִ*
 ㅤ𓏸𓈒ㅤׄ *sᴏʏ ::* ${botname}
