@@ -171,7 +171,7 @@ isForwarded: true,
 forwardedNewsletterMessageInfo: {
 newsletterJid: my.ch,
 serverMessageId: '0',
-newsletterName: my.name
+newsletterName: my.name1
 },
 externalAdReply: {
 title: `${botname} | ${vs}`,
