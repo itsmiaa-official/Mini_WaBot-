@@ -43,9 +43,6 @@ global.my = {
 
   ch2: '120363402839382986@newsletter', 
   name2: `=͟͟͞͞𝐒𝐩𝐚𝐜𝐞 𝐖𝐨𝐫𝐥𝐝 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐔𝐩𝐝𝐚𝐭𝐞'𝐬 ✰`,
-
- ch3: '120363407670600183@newsletter',
- name3: `𝕸𝖆𝖋𝖎𝖆 𝕭𝖔𝖙 𝕮𝖍𝖆𝖓𝖓𝖊𝖑 𝖀𝖕𝖉𝖆𝖙𝖊'𝖘 | ¡𝗡𝗲𝘄𝘀! 🥷🏻`, 
 }
 
 const file = fileURLToPath(import.meta.url)
