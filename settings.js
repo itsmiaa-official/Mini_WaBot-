@@ -10,15 +10,15 @@ global.owner = ["923297474483","5492644996684"]
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.botname = '𝕸𝖆𝖋𝖎𝖆 𝕭𝖔𝖙 🥷🏻'
-global.namebot = '𝐌𝐚𝐟𝐢𝐚_𝐖𝐚'
-global.vs = '0.5.𝟢 (Beta)'
-global.bot = '𝐌𝐚𝐟𝐢𝐚-𝐁𝐨𝐭'
-global.packname = '𝕸𝖆𝖋𝖎𝖆-𝕭𝖔𝖙 🥷🏻'
-global.wm = '𝐌𝐚𝐟𝐢𝐚ᵇᵒᵗ'
-global.author = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎'
-global.dev = '𝗠𝗮𝗱𝗲 🩷 𝗪𝗶𝘁𝗵 𝗕𝘆 𝕮𝖍𝖎𝖓𝖆'
-global.copy = '𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝕮𝖍𝖎𝖓𝖆'
+global.botname = '𝗡ᥡ᥊іrᥲ'
+global.namebot = '𝗡ᥡ᥊іrᥲ'
+global.vs = '2.0.𝟢 (Lite)'
+global.bot = '𝗡ᥡ᥊іrᥲ'
+global.packname = '𝗡ᥡ᥊іrᥲ'
+global.wm = '𝗡ᥡ᥊іrᥲ 𝗪ᥲ'
+global.author = '@_.𝗯𝗲𝗻𝗷𝗮𝘅𝘇𝘇'
+global.dev = '𝗠𝗮𝗱𝗲 🤍 𝗪𝗶𝘁𝗵 𝗕𝘆 @_.𝗯𝗲𝗻𝗷𝗮𝘅𝘇𝘇'
+global.copy = '𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 @_.𝗯𝗲𝗻𝗷𝗮𝘅𝘇𝘇'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
