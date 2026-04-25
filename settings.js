@@ -23,7 +23,7 @@ global.copy = '𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 𝕮𝖍𝖎𝖓𝖆'
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
 global.banner = 'https://files.catbox.moe/eaw7el.png'
-global.icon = 'https://files.catbox.moe/uqur0r.jpg'
+global.icon = 'https://files.catbox.moe/zxelx0.jpg'
 global.currency = 'Dólares 💸'
 global.sessions = 'sessions/session-bot'
 global.jadi = 'sessions/session-sub'
