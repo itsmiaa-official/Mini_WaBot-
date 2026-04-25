@@ -42,7 +42,7 @@ global.my = {
   name1: `𑊐𑊐ㅤׅ  𝗡𝕪𝘅𝕚𝗿𝕒 𝗼𝕗𝗳𝗶𝕔𝗶𝕒𝗹 ℂ𝗵𝕒𝗻𝕟𝗲𝕝ㅤׄ  ത᪲`,
 
   ch2: '120363402839382986@newsletter', 
-  name2: `=͟͟͞͞𝐒𝐩𝐚𝐜𝐞 𝐖𝐨𝐫𝐥𝐝 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐔𝐩𝐝𝐚𝐭𝐞'𝐬 ✰`,
+  name2: `𑊐𑊐ㅤׅ  𝗡𝕪𝘅𝕚𝗿𝕒 𝗼𝕗𝗳𝗶𝕔𝗶𝕒𝗹 𝕋𝗲𝕤𝘁ㅤׄ  ത᪲`,
 }
 
 const file = fileURLToPath(import.meta.url)
