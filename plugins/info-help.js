@@ -50,7 +50,7 @@ await conn.sendMessage(m.chat, {
       mediaType: 1,
       mediaUrl: redes,
       sourceUrl: redes,
-      thumbnail: banner, // 👈 ICONO
+      thumbnail: icon, // 👈 ICONO
       renderLargerThumbnail: false, // 👈 ICONO PEQUEÑO
       showAdAttribution: false
     }
