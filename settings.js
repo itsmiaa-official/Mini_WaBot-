@@ -12,7 +12,7 @@ global.owner = ["923297474483","5492644996684"]
 
 global.botname = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎'
 global.namebot = '𝕸𝖎𝖙𝖟𝖚𝖐𝖎'
-global.vs = '2.0.𝟢 💋'
+global.vs = '2.0.𝟢 🔥'
 global.bot = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 💋'
 global.packname = '𝕸𝖎𝖙𝖟𝖚𝖐𝖎-𝖂𝖆'
 global.wm = '𝕮𝖍𝖎𝖓𝖆 𝗪ᥲ'
