@@ -25,7 +25,7 @@ let txt = `
 ׅㅤ𓏸𓈒ㅤׄ *ᴛɪᴘᴏ ::* ${(conn.user.jid == global.conn.user.jid ? '𝗣rᎥᩥᥒᥴi⍴ᥲᥣ 🅥' : '𝗦ᥙᑲ-𝗕𑄝𝗍 🅑')}
 ׅㅤ𓏸𓈒ㅤׄ *ᴠᴇʀsɪᴏɴ ::* ${vs}
 
-ׅㅤ𓏸𓈒ㅤׄ *ᴜsᴇʀs ::* ${totalreg}
+ׅㅤ𓏸𓈒ㅤׄ *ᴜᴘᴛɪᴍᴇ ::* 
 ׅㅤ𓏸𓈒ㅤׄ *ᴄᴏᴍᴍᴀɴᴅs ::* ${totalCommands}
 ׅㅤ𓏸𓈒ㅤׄ *ɪɴsᴛᴀɢʀᴀᴍ ::* instagram.com/chn1tta
 
