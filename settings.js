@@ -10,15 +10,15 @@ global.owner = ["923297474483","5492644996684"]
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.botname = '𝗡ᥡ᥊іrᥲ'
-global.namebot = '𝗡ᥡ᥊іrᥲ'
-global.vs = '2.0.𝟢 (Lite)'
-global.bot = '𝗡ᥡ᥊іrᥲ'
-global.packname = '𝗡ᥡ᥊іrᥲ'
-global.wm = '𝗡ᥡ᥊іrᥲ 𝗪ᥲ'
-global.author = '@_.𝗯𝗲𝗻𝗷𝗮𝘅𝘇𝘇'
-global.dev = '𝗠𝗮𝗱𝗲 🤍 𝗪𝗶𝘁𝗵 𝗕𝘆 @_.𝗯𝗲𝗻𝗷𝗮𝘅𝘇𝘇'
-global.copy = '𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 @_.𝗯𝗲𝗻𝗷𝗮𝘅𝘇𝘇'
+global.botname = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎'
+global.namebot = '𝕸𝖎𝖙𝖟𝖚𝖐𝖎'
+global.vs = '2.0.𝟢 💋'
+global.bot = '𝕮𝖍𝖎𝖓𝖆𝕸𝖎𝖙𝖟𝖚𝖐𝖎 💋'
+global.packname = '𝕸𝖎𝖙𝖟𝖚𝖐𝖎-𝖂𝖆'
+global.wm = '𝕮𝖍𝖎𝖓𝖆 𝗪ᥲ'
+global.author = '@chn1tta'
+global.dev = '𝗠𝗮𝗱𝗲 🤍 𝗪𝗶𝘁𝗵 𝗕𝘆 @chn1tta'
+global.copy = '𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 @chn1tta'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
