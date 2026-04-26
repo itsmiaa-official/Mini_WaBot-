@@ -20,14 +20,14 @@ let txt = `
 > . ﹡ ﹟ ➪ ׄ ⬭ *¡ʜᴏʟᴀ!* @${userId.split('@')[0]}
 
 *ㅤꨶ〆⁾ ㅤׄㅤ⸼ㅤׄ *͜♰* ㅤ֢ㅤ⸱ㅤᯭִ*
-ㅤ𓏸𓈒ㅤׄ *sᴏʏ ::* ${botname}
+ㅤ𓏸𓈒ㅤׄ *sᴏʏ ::* ${botname} 💋
 ׅㅤ𓏸𓈒ㅤׄ *ᴅᴇᴠᴇʟᴏᴘᴇʀ ::* ${author}
 ׅㅤ𓏸𓈒ㅤׄ *ᴛɪᴘᴏ ::* ${(conn.user.jid == global.conn.user.jid ? '𝗣rᎥᩥᥒᥴi⍴ᥲᥣ 🅥' : '𝗦ᥙᑲ-𝗕𑄝𝗍 🅑')}
 ׅㅤ𓏸𓈒ㅤׄ *ᴠᴇʀsɪᴏɴ ::* ${vs}
 
 ׅㅤ𓏸𓈒ㅤׄ *ᴜsᴇʀs ::* ${totalreg}
 ׅㅤ𓏸𓈒ㅤׄ *ᴄᴏᴍᴍᴀɴᴅs ::* ${totalCommands}
-ׅㅤ𓏸𓈒ㅤׄ *ɪɴsᴛᴀɢʀᴀᴍ ::* instagram.com/_.benjaxzz
+ׅㅤ𓏸𓈒ㅤׄ *ɪɴsᴛᴀɢʀᴀᴍ ::* instagram.com/chn1tta
 
 
 乂 *𝖫𝗂𝗌𝗍𝖺 𝖽𝖾 𝖼𝗈𝗆𝖺𝗇𝖽𝗈𝗌* 乂
@@ -171,7 +171,7 @@ let icon = await (await fetch(banner)).buffer()
 await conn.sendMessage(m.chat, {
   document: Buffer.from('Menu'),
   mimetype: 'application/pdf',
-  fileName: `『 ${botname} Menu 』.pdf`,
+  fileName: `${botname} 💋`,
   fileLength: 999999999999,
   pageCount: 1,
   caption: txt,
