@@ -160,7 +160,7 @@ await conn.sendMessage(m.chat, {
   document: Buffer.from(txt),
   mimetype: 'text/plain',
   fileName: `${botname}-menu.txt`,
-  caption: `📄 Aquí tienes el menú de ${botname}`,
+  caption: `Aquí tienes el menú ૮(˶ᵔᵕᵔ˶)ა`,
   contextInfo: {
     mentionedJid: [userId],
     isForwarded: true,
@@ -175,7 +175,7 @@ await conn.sendMessage(m.chat, {
       mediaType: 1,
       mediaUrl: redes,
       sourceUrl: redes,
-      thumbnail: await (await fetch(icono)).buffer(), // 👈 ICONO PEQUEÑO
+      thumbnail: await (await fetch(banner)).buffer(), // 👈 ICONO PEQUEÑO
       showAdAttribution: false,
       renderLargerThumbnail: false // 👈 IMPORTANTE (icono chico)
     }
