@@ -5,7 +5,15 @@ let mentionedJid = await m.mentionedJid
 let userId = mentionedJid && mentionedJid[0] ? mentionedJid[0] : m.sender
 let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
-
+const fechaHora = new Date().toLocaleString('es-AR', {
+  timeZone: 'America/Argentina/Buenos_Aires',
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit'
+})
 await conn.sendMessage(m.chat, { react: { text: '🤍', key: m.key } })
 
 let txt = `
@@ -178,7 +186,7 @@ await conn.sendMessage(m.chat, {
     },
     externalAdReply: {
       title: `${botname} | ${vs}`,
-      body: dev,
+      body: `${fechaHora}`,
       mediaType: 1,
       mediaUrl: redes,
       sourceUrl: redes,
