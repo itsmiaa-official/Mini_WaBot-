@@ -1,60 +1,10 @@
-import menus from '../lib/menus.js'
-
-let handler = async (m, { conn, args, usedPrefix }) => {
-
-let user = m.sender
-
-// 🔥 SUBMENÚS
-if (args[0]) {
-  let menu = menus[args[0].toLowerCase()]
-  if (menu) {
-    return conn.sendMessage(m.chat, {
-      image: { url: global.banner },
-      caption: menu(usedPrefix),
-      mentions: [user]
-    }, { quoted: m })
-  }
+let handler = async (m, { conn }) => {
+  await conn.sendMessage(m.chat, {
+    text: "✅ MENU FUNCIONA"
+  }, { quoted: m })
 }
 
-// 🧠 TEXTO
-let txt = `✨ *${botname}*
-
-Hola @${user.split('@')[0]} 💋
-
-Selecciona una categoría 👇`
-
-// 📋 LISTA (ESTABLE EN TU BASE)
-let sections = [
-  {
-    title: "📂 Categorías",
-    rows: [
-      { title: "🌸 Anime", rowId: `${usedPrefix}menu anime` },
-      { title: "📥 Descargas", rowId: `${usedPrefix}menu downloads` },
-      { title: "👥 Grupo", rowId: `${usedPrefix}menu grupo` },
-      { title: "🧠 IA", rowId: `${usedPrefix}menu ia` },
-      { title: "📊 Info", rowId: `${usedPrefix}menu info` },
-      { title: "🛠️ Utils", rowId: `${usedPrefix}menu utils` },
-      { title: "🔞 NSFW", rowId: `${usedPrefix}menu nsfw` }
-    ]
-  }
-]
-
-// 🚀 MENÚ FINAL (ESTABLE PARA TU HANDLER)
-await conn.sendMessage(m.chat, {
-  image: { url: global.banner },
-  caption: txt,
-  footer: botname,
-  buttonText: "Ver opciones",
-  sections,
-  mentions: [user]
-}, { quoted: m })
-
-}
-
-handler.help = ['menu']
-handler.tags = ['main']
-handler.command = ['menu', 'help']
-
+handler.command = ['menu']
 export default handler
 
 /*import menus from '../lib/menus.js'
