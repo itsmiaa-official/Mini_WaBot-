@@ -1,10 +1,11 @@
 import menus from '../lib/menus.js'
+import { prepareWAMessageMedia } from '@whiskeysockets/baileys'
 
 let handler = async (m, { conn, args, usedPrefix }) => {
 
 let user = m.sender
 
-// 🔥 SUBMENÚS (cuando elige categoría)
+// 🔥 SUBMENÚS
 if (args[0]) {
   let menu = menus[args[0].toLowerCase()]
   if (menu) {
@@ -39,16 +40,20 @@ let sections = [
   }
 ]
 
-// 🚀 MENÚ PRO (TODO EN 1 SOLO MENSAJE)
+// 🖼️ PREPARAR IMAGEN (SOLUCIÓN AL ERROR)
+const media = await prepareWAMessageMedia(
+  { image: { url: global.banner } },
+  { upload: conn.waUploadToServer }
+)
+
+// 🚀 MENÚ PRO (TODO EN UNO)
 await conn.sendMessage(m.chat, {
   viewOnceMessage: {
     message: {
       interactiveMessage: {
         header: {
           hasMediaAttachment: true,
-          imageMessage: {
-            url: global.banner
-          }
+          imageMessage: media.imageMessage
         },
         body: {
           text: txt
