@@ -15,17 +15,19 @@ if (args[0]) {
   }
 }
 
-// 🧠 TEXTO PRINCIPAL
-let txt = `✨ *${botname}*
+// 🧠 TEXTO
+let txt = `
+✨ *${botname}*
 
 Hola @${user.split('@')[0]} 💋
 
-Selecciona una categoría desde “Ver opciones” 👇`
+Selecciona una categoría 👇
+`.trim()
 
-// 📋 LISTA (VER OPCIONES)
+// 📋 LISTA ESTABLE (SIN BUTTON TEXT)
 let sections = [
   {
-    title: "📂 Menú principal",
+    title: "📂 Categorías",
     rows: [
       { title: "🌸 Anime", rowId: `${usedPrefix}menu anime` },
       { title: "📥 Descargas", rowId: `${usedPrefix}menu downloads` },
@@ -38,11 +40,10 @@ let sections = [
   }
 ]
 
-// 🚀 MENÚ CON “VER OPCIONES”
+// 🚀 ENVIAR (ESTILO LISTA REAL)
 await conn.sendMessage(m.chat, {
   text: txt,
   footer: botname,
-  buttonText: "Ver opciones",
   sections,
   mentions: [user]
 }, { quoted: m })
