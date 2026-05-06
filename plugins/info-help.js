@@ -16,7 +16,7 @@ if (args[0]) {
   }
 }
 
-// 🧠 TEXTO
+// 🧠 TEXTO PRINCIPAL
 let txt = `✨ *${botname}*
 
 Hola @${user.split('@')[0]} 💋
@@ -28,46 +28,33 @@ let sections = [
   {
     title: "📂 Categorías",
     rows: [
-      { title: "🌸 Anime", id: `${usedPrefix}menu anime` },
-      { title: "📥 Descargas", id: `${usedPrefix}menu downloads` },
-      { title: "👥 Grupo", id: `${usedPrefix}menu grupo` },
-      { title: "🧠 IA", id: `${usedPrefix}menu ia` },
-      { title: "📊 Info", id: `${usedPrefix}menu info` },
-      { title: "🛠️ Utils", id: `${usedPrefix}menu utils` },
-      { title: "🔞 NSFW", id: `${usedPrefix}menu nsfw` }
+      { title: "🌸 Anime", rowId: `${usedPrefix}menu anime` },
+      { title: "📥 Descargas", rowId: `${usedPrefix}menu downloads` },
+      { title: "👥 Grupo", rowId: `${usedPrefix}menu grupo` },
+      { title: "🧠 IA", rowId: `${usedPrefix}menu ia` },
+      { title: "📊 Info", rowId: `${usedPrefix}menu info` },
+      { title: "🛠️ Utils", rowId: `${usedPrefix}menu utils` },
+      { title: "🔞 NSFW", rowId: `${usedPrefix}menu nsfw` }
     ]
   }
 ]
 
-// 🛍️ PRODUCTO (TARJETA VISUAL)
-const productMessage = {
-  product: {
-    productImage: { url: global.banner },
-    productId: '9999999999999999',
-    title: `${botname} | ${vs}`,
-    description: 'Menú interactivo del bot',
-    currencyCode: 'USD',
-    priceAmount1000: '0',
-    retailerId: '999',
-    url: 'https://wa.me/',
-    productImageCount: 1
-  },
-  businessOwnerJid: user
-}
-
-// 🚀 ENVIAR PRODUCTO (VISUAL)
-await conn.sendMessage(m.chat, productMessage, { quoted: m })
-
-// ⏱️ pequeño delay para efecto pro
-await new Promise(r => setTimeout(r, 500))
-
-// 📋 ENVIAR MENÚ
+// 🛍️ TARJETA PRODUCTO (VISUAL)
 await conn.sendMessage(m.chat, {
   text: txt,
   footer: botname,
   buttonText: "Ver opciones",
   sections,
-  mentions: [user]
+  contextInfo: {
+    externalAdReply: {
+      title: botname,
+      body: "Menú interactivo",
+      mediaType: 1,
+      thumbnailUrl: global.banner,
+      renderLargerThumbnail: true,
+      showAdAttribution: false
+    }
+  }
 }, { quoted: m })
 
 }
