@@ -4,6 +4,88 @@ let handler = async (m, { conn, args, usedPrefix }) => {
 
 let user = m.sender
 
+// 🔥 SUBMENÚS (cuando elige categoría)
+if (args[0]) {
+  let menu = menus[args[0].toLowerCase()]
+  if (menu) {
+    return conn.sendMessage(m.chat, {
+      image: { url: global.banner },
+      caption: menu(usedPrefix),
+      mentions: [user]
+    }, { quoted: m })
+  }
+}
+
+// 🧠 TEXTO PRINCIPAL
+let txt = `✨ *${botname}*
+
+Hola @${user.split('@')[0]} 💋
+
+Selecciona una categoría 👇`
+
+// 📋 CATEGORÍAS
+let sections = [
+  {
+    title: "📂 Categorías",
+    rows: [
+      { title: "🌸 Anime", id: `${usedPrefix}menu anime` },
+      { title: "📥 Descargas", id: `${usedPrefix}menu downloads` },
+      { title: "👥 Grupo", id: `${usedPrefix}menu grupo` },
+      { title: "🧠 IA", id: `${usedPrefix}menu ia` },
+      { title: "📊 Info", id: `${usedPrefix}menu info` },
+      { title: "🛠️ Utils", id: `${usedPrefix}menu utils` },
+      { title: "🔞 NSFW", id: `${usedPrefix}menu nsfw` }
+    ]
+  }
+]
+
+// 🚀 MENÚ PRO (TODO EN 1 SOLO MENSAJE)
+await conn.sendMessage(m.chat, {
+  viewOnceMessage: {
+    message: {
+      interactiveMessage: {
+        header: {
+          hasMediaAttachment: true,
+          imageMessage: {
+            url: global.banner
+          }
+        },
+        body: {
+          text: txt
+        },
+        footer: {
+          text: botname
+        },
+        nativeFlowMessage: {
+          buttons: [
+            {
+              name: "single_select",
+              buttonParamsJson: JSON.stringify({
+                title: "Ver opciones",
+                sections
+              })
+            }
+          ]
+        }
+      }
+    }
+  }
+}, { quoted: m })
+
+}
+
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'help']
+
+export default handler
+
+/*import menus from '../lib/menus.js'
+
+let handler = async (m, { conn, args, usedPrefix }) => {
+
+let user = m.sender
+
 // 🔥 SI ELIGE CATEGORÍA
 if (args[0]) {
   let menu = menus[args[0].toLowerCase()]
@@ -70,7 +152,7 @@ handler.help = ['menu']
 handler.tags = ['main']
 handler.command = ['menu', 'help']
 
-export default handler
+export default handler*/
 
 /*import fetch from 'node-fetch'
 
