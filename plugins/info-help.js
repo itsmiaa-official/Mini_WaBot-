@@ -16,14 +16,14 @@ if (args[0]) {
   }
 }
 
-// 🧠 TEXTO PRINCIPAL
+// 🧠 TEXTO
 let txt = `✨ *${botname}*
 
 Hola @${user.split('@')[0]} 💋
 
 Selecciona una categoría 👇`
 
-// 📋 LISTA
+// 📋 LISTA (ESTABLE EN TU BASE)
 let sections = [
   {
     title: "📂 Categorías",
@@ -39,22 +39,14 @@ let sections = [
   }
 ]
 
-// 🛍️ TARJETA PRODUCTO (VISUAL)
+// 🚀 MENÚ FINAL (ESTABLE PARA TU HANDLER)
 await conn.sendMessage(m.chat, {
-  text: txt,
+  image: { url: global.banner },
+  caption: txt,
   footer: botname,
   buttonText: "Ver opciones",
   sections,
-  contextInfo: {
-    externalAdReply: {
-      title: botname,
-      body: "Menú interactivo",
-      mediaType: 1,
-      thumbnailUrl: global.banner,
-      renderLargerThumbnail: true,
-      showAdAttribution: false
-    }
-  }
+  mentions: [user]
 }, { quoted: m })
 
 }
