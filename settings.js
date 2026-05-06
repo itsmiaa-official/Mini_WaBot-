@@ -22,7 +22,7 @@ global.copy = '𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 @chn1tta'
 
 // ✼ •• ┈┈┈┈๑⋅⋯ ୨˚୧ ⋯⋅๑┈┈┈┈ •• ✼
 
-global.banner = 'https://files.catbox.moe/uq770g.jpg' // 'https://files.catbox.moe/eaw7el.png'
+global.banner = 'https://files.catbox.moe/z4smgc.jpg' // 'https://files.catbox.moe/eaw7el.png'
 global.icon = 'https://files.catbox.moe/uq770g.jpg'
 global.currency = 'Dólares 💸'
 global.sessions = 'sessions/session-bot'
