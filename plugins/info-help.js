@@ -1,5 +1,4 @@
 import menus from '../lib/menus.js'
-import { prepareWAMessageMedia } from '@whiskeysockets/baileys'
 
 let handler = async (m, { conn, args, usedPrefix }) => {
 
@@ -17,14 +16,14 @@ if (args[0]) {
   }
 }
 
-// 🧠 TEXTO PRINCIPAL
+// 🧠 TEXTO
 let txt = `✨ *${botname}*
 
 Hola @${user.split('@')[0]} 💋
 
 Selecciona una categoría 👇`
 
-// 📋 CATEGORÍAS
+// 📋 LISTA
 let sections = [
   {
     title: "📂 Categorías",
@@ -40,41 +39,35 @@ let sections = [
   }
 ]
 
-// 🖼️ PREPARAR IMAGEN (SOLUCIÓN AL ERROR)
-const media = await prepareWAMessageMedia(
-  { image: { url: global.banner } },
-  { upload: conn.waUploadToServer }
-)
+// 🛍️ PRODUCTO (TARJETA VISUAL)
+const productMessage = {
+  product: {
+    productImage: { url: global.banner },
+    productId: '9999999999999999',
+    title: `${botname} | ${vs}`,
+    description: 'Menú interactivo del bot',
+    currencyCode: 'USD',
+    priceAmount1000: '0',
+    retailerId: '999',
+    url: 'https://wa.me/',
+    productImageCount: 1
+  },
+  businessOwnerJid: user
+}
 
-// 🚀 MENÚ PRO (TODO EN UNO)
+// 🚀 ENVIAR PRODUCTO (VISUAL)
+await conn.sendMessage(m.chat, productMessage, { quoted: m })
+
+// ⏱️ pequeño delay para efecto pro
+await new Promise(r => setTimeout(r, 500))
+
+// 📋 ENVIAR MENÚ
 await conn.sendMessage(m.chat, {
-  viewOnceMessage: {
-    message: {
-      interactiveMessage: {
-        header: {
-          hasMediaAttachment: true,
-          imageMessage: media.imageMessage
-        },
-        body: {
-          text: txt
-        },
-        footer: {
-          text: botname
-        },
-        nativeFlowMessage: {
-          buttons: [
-            {
-              name: "single_select",
-              buttonParamsJson: JSON.stringify({
-                title: "Ver opciones",
-                sections
-              })
-            }
-          ]
-        }
-      }
-    }
-  }
+  text: txt,
+  footer: botname,
+  buttonText: "Ver opciones",
+  sections,
+  mentions: [user]
 }, { quoted: m })
 
 }
