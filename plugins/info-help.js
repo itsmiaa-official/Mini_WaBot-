@@ -1,10 +1,58 @@
-let handler = async (m, { conn }) => {
-  await conn.sendMessage(m.chat, {
-    text: "✅ MENU FUNCIONA"
-  }, { quoted: m })
+import menus from '../lib/menus.js'
+
+let handler = async (m, { conn, args, usedPrefix }) => {
+
+let user = m.sender
+
+// 🔥 SUBMENÚS
+if (args[0]) {
+  let menu = menus[args[0].toLowerCase()]
+  if (menu) {
+    return conn.sendMessage(m.chat, {
+      text: menu(usedPrefix),
+      mentions: [user]
+    }, { quoted: m })
+  }
 }
 
-handler.command = ['menu']
+// 🧠 TEXTO PRINCIPAL
+let txt = `✨ *${botname}*
+
+Hola @${user.split('@')[0]} 💋
+
+Selecciona una categoría desde “Ver opciones” 👇`
+
+// 📋 LISTA (VER OPCIONES)
+let sections = [
+  {
+    title: "📂 Menú principal",
+    rows: [
+      { title: "🌸 Anime", rowId: `${usedPrefix}menu anime` },
+      { title: "📥 Descargas", rowId: `${usedPrefix}menu downloads` },
+      { title: "👥 Grupo", rowId: `${usedPrefix}menu grupo` },
+      { title: "🧠 IA", rowId: `${usedPrefix}menu ia` },
+      { title: "📊 Info", rowId: `${usedPrefix}menu info` },
+      { title: "🛠️ Utils", rowId: `${usedPrefix}menu utils` },
+      { title: "🔞 NSFW", rowId: `${usedPrefix}menu nsfw` }
+    ]
+  }
+]
+
+// 🚀 MENÚ CON “VER OPCIONES”
+await conn.sendMessage(m.chat, {
+  text: txt,
+  footer: botname,
+  buttonText: "Ver opciones",
+  sections,
+  mentions: [user]
+}, { quoted: m })
+
+}
+
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'help']
+
 export default handler
 
 /*import menus from '../lib/menus.js'
