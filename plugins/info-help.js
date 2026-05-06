@@ -1,53 +1,23 @@
-import menus from '../lib/menus.js'
+let handler = async (m, { conn }) => {
 
-let handler = async (m, { conn, args, usedPrefix }) => {
-
-let user = m.sender
-
-// 🔥 SUBMENÚS
-if (args[0]) {
-  let menu = menus[args[0].toLowerCase()]
-  if (menu) {
-    return conn.sendMessage(m.chat, {
-      text: menu(usedPrefix),
-      mentions: [user]
-    }, { quoted: m })
-  }
-}
-
-// 🧠 TEXTO
-let txt = `
-✨ *${botname}*
-
-Hola @${user.split('@')[0]} 💋
-
-Selecciona una categoría 👇
-`.trim()
-
-// 📋 LISTA ESTABLE (SIN BUTTON TEXT)
-let sections = [
-  {
-    title: "📂 Categorías",
-    rows: [
-      { title: "🌸 Anime", rowId: `${usedPrefix}menu anime` },
-      { title: "📥 Descargas", rowId: `${usedPrefix}menu downloads` },
-      { title: "👥 Grupo", rowId: `${usedPrefix}menu grupo` },
-      { title: "🧠 IA", rowId: `${usedPrefix}menu ia` },
-      { title: "📊 Info", rowId: `${usedPrefix}menu info` },
-      { title: "🛠️ Utils", rowId: `${usedPrefix}menu utils` },
-      { title: "🔞 NSFW", rowId: `${usedPrefix}menu nsfw` }
+  let menu = {
+    text: "👋 *MENÚ PRINCIPAL*\n\nPresiona *📂 Ver opciones* para ver las categorías.",
+    footer: "Bot Menu",
+    title: "Menú",
+    buttonText: "📂 Ver opciones",
+    sections: [
+      {
+        title: "📌 Categorías",
+        rows: [
+          { title: "🎌 Anime", rowId: ".ping" },
+          { title: "📥 Descargas", rowId: ".ping" },
+          { title: "🛠️ Tools", rowId: ".ping" }
+        ]
+      }
     ]
   }
-]
 
-// 🚀 ENVIAR (ESTILO LISTA REAL)
-await conn.sendMessage(m.chat, {
-  text: txt,
-  footer: botname,
-  sections,
-  mentions: [user]
-}, { quoted: m })
-
+  await conn.sendMessage(m.chat, menu, { quoted: m })
 }
 
 handler.help = ['menu']
