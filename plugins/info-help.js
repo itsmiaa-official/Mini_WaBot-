@@ -1,23 +1,118 @@
+import { fileURLToPath } from 'url'
+import { dirname } from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 let handler = async (m, { conn }) => {
 
-  let menu = {
-    text: "👋 *MENÚ PRINCIPAL*\n\nPresiona *📂 Ver opciones* para ver las categorías.",
-    footer: "Bot Menu",
-    title: "Menú",
-    buttonText: "📂 Ver opciones",
-    sections: [
-      {
-        title: "📌 Categorías",
-        rows: [
-          { title: "🎌 Anime", rowId: ".ping" },
-          { title: "📥 Descargas", rowId: ".ping" },
-          { title: "🛠️ Tools", rowId: ".ping" }
-        ]
-      }
-    ]
-  }
+const taguser = '@' + m.sender.split('@')[0]
 
-  await conn.sendMessage(m.chat, menu, { quoted: m })
+const menu = `
+Hola *${taguser}* 🌸
+
+Bienvenido a *Shadow-BOT-MD*
+Selecciona una categoría desde el botón de abajo.
+`.trim()
+
+const nativeFlowPayload = {
+  header: {
+    documentMessage: {
+      url: 'https://mmg.whatsapp.net',
+      mimetype: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      fileName: '🕷 Shadow-BOT-MD',
+      fileLength: '999999999',
+      pageCount: 0,
+      jpegThumbnail: `${global.banner}`,
+      contextInfo: {
+        mentionedJid: [m.sender],
+        forwardingScore: 999,
+        isForwarded: true
+      }
+    },
+    hasMediaAttachment: true
+  },
+
+  body: {
+    text: ''
+  },
+
+  footer: {
+    text: menu
+  },
+
+  nativeFlowMessage: {
+    buttons: [
+
+      {
+        name: 'single_select',
+        buttonParamsJson: JSON.stringify({
+          title: '📂 Ver Opciones',
+          sections: [
+            {
+              title: '🌸 MENÚ PRINCIPAL',
+              rows: [
+                {
+                  title: '🎌 Anime',
+                  description: 'Comandos anime',
+                  id: '.anime'
+                },
+                {
+                  title: '📥 Descargas',
+                  description: 'Comandos de descargas',
+                  id: '.descargas'
+                },
+                {
+                  title: '🛠️ Tools',
+                  description: 'Herramientas del bot',
+                  id: '.tools'
+                },
+                {
+                  title: '👑 Owner',
+                  description: 'Información del owner',
+                  id: '.owner'
+                },
+                {
+                  title: '⚡ Ping',
+                  description: 'Velocidad del bot',
+                  id: '.ping'
+                }
+              ]
+            }
+          ]
+        })
+      },
+
+      {
+        name: 'cta_url',
+        buttonParamsJson: JSON.stringify({
+          display_text: '🌐 Canal WhatsApp',
+          url: 'https://whatsapp.com/channel/0029VbArz9fAO7RGy2915k3O'
+        })
+      }
+
+    ]
+  },
+
+  contextInfo: {
+    mentionedJid: [m.sender],
+    forwardingScore: 999,
+    isForwarded: true
+  }
+}
+
+await conn.relayMessage(
+  m.chat,
+  {
+    viewOnceMessage: {
+      message: {
+        interactiveMessage: nativeFlowPayload
+      }
+    }
+  },
+  { quoted: m }
+)
+
 }
 
 handler.help = ['menu']
@@ -25,80 +120,6 @@ handler.tags = ['main']
 handler.command = ['menu', 'help']
 
 export default handler
-
-/*import menus from '../lib/menus.js'
-
-let handler = async (m, { conn, args, usedPrefix }) => {
-
-let user = m.sender
-
-// 🔥 SI ELIGE CATEGORÍA
-if (args[0]) {
-  let menu = menus[args[0].toLowerCase()]
-  if (menu) {
-    return conn.sendMessage(m.chat, {
-      image: { url: global.banner },
-      caption: menu(usedPrefix),
-      footer: botname,
-      buttons: [
-        { buttonId: `${usedPrefix}menu`, buttonText: { displayText: '⬅️ Volver al menú' }, type: 1 }
-      ],
-      mentions: [user]
-    }, { quoted: m })
-  }
-}
-
-// 🧠 MENÚ PRINCIPAL
-let txt = `
-✨ *${botname}*
-
-Hola @${user.split('@')[0]} 💋
-
-Selecciona una categoría 👇
-`.trim()
-
-// 📋 LISTA (VER OPCIONES)
-const sections = [
-  {
-    title: "📂 Categorías del menú",
-    rows: [
-      { title: "🌸 Anime", rowId: `${usedPrefix}menu anime` },
-      { title: "📥 Descargas", rowId: `${usedPrefix}menu downloads` },
-      { title: "👥 Grupo", rowId: `${usedPrefix}menu grupo` },
-      { title: "🧠 IA", rowId: `${usedPrefix}menu ia` },
-      { title: "📊 Info", rowId: `${usedPrefix}menu info` },
-      { title: "🛠️ Utils", rowId: `${usedPrefix}menu utils` },
-      { title: "🔞 NSFW", rowId: `${usedPrefix}menu nsfw` }
-    ]
-  }
-]
-
-// 🚀 MENÚ CON BOTÓN
-await conn.sendMessage(m.chat, {
-  image: { url: global.banner },
-  caption: txt,
-  footer: "Menú interactivo",
-  buttonText: "Ver opciones",
-  sections,
-  mentions: [user],
-  contextInfo: {
-    externalAdReply: {
-      title: botname,
-      body: "Selecciona una categoría",
-      thumbnailUrl: global.banner,
-      mediaType: 1,
-      renderLargerThumbnail: false
-    }
-  }
-}, { quoted: m })
-
-}
-
-handler.help = ['menu']
-handler.tags = ['main']
-handler.command = ['menu', 'help']
-
-export default handler*/
 
 /*import fetch from 'node-fetch'
 
